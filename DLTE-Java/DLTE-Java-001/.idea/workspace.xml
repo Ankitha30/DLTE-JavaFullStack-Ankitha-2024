@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe64bef0-78e3-4f4e-9156-712df362b970" name="Default Changelist" comment="" />
+    <list default="true" id="fe64bef0-78e3-4f4e-9156-712df362b970" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/basic/service/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/basic/service/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DLTE-java-001-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/DLTE-java-001-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/basic/service/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/basic/service/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-basic.service.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-basic.service.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/basic.service.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/basic.service.AppTest.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="2cQwOj9gqBCsNay41ejCv2dCVtk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,8 +33,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -42,6 +62,7 @@
       <updated>1708057079882</updated>
       <workItem from="1708057117237" duration="893000" />
       <workItem from="1708058032200" duration="1584000" />
+      <workItem from="1708072809532" duration="1215000" />
     </task>
     <servers />
   </component>
@@ -65,9 +86,9 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state width="1237" height="193" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1708065902046" />
-    <state x="349" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1708058087545">
+    <state x="349" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1708072812979">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="349" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1708058087545" />
+    <state x="349" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1708072812979" />
   </component>
 </project>
