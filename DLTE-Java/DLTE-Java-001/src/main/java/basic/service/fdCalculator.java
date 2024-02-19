@@ -2,7 +2,7 @@ package basic.service;
 
 import java.util.Scanner;
 
-public class simpleinterest {
+public class fdCalculator {
     public static void main(String[] args) {
         Double si,p,t,r;
         String name;
