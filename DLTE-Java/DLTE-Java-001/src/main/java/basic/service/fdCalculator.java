@@ -17,9 +17,9 @@ public class fdCalculator {
         System.out.println("Enter the tenure");
         t=s.nextDouble();
         si=p+(p*r*t/100);
-        System.out.println("Simple Interest FD");
+        System.out.print(name+" Simple Interest FD is ");
         System.out.println(si);
+        System.out.println("-----Thank You-------");
 
-
-    }
+}
 }

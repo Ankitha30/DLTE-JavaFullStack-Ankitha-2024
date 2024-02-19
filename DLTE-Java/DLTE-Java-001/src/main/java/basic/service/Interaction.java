@@ -24,7 +24,6 @@ public class Interaction {
         aadhaar=s.nextLong();
         System.out.println("enter the PaN number");
         borrowerPan=s.next();
-
         System.out.println("mention the mobile number");
         mobileNumber=s.nextLong();
         System.out.println("enter the email address");
