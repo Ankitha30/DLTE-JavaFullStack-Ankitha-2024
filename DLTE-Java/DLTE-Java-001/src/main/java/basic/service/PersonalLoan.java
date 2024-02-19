@@ -2,20 +2,14 @@ package basic.service;
 
 import java.util.Scanner;
 
-/*
-CLI : Car Loan
- */
-/*
-Personal details: name, aadhaar ,pan,address,mobile,email
-Income: salaried,self employed:INR
- */
-public class Interaction {
+
+public class PersonalLoan {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         String borrowerName="",borrowerPan="",borrowerAddress="",borrowerEmail="",borrowerIncomeType="";
         Long mobileNumber=0L,aadhaar=0L;
         Double n=0D;
-
+        System.out.println("------------WelCome--------");
         System.out.println("Fill your name");
         borrowerName=s.nextLine();
         System.out.println("Let Us know the Income type(salaried/self-employed)");

@@ -22,4 +22,5 @@ public class fdCalculator {
         System.out.println("-----Thank You-------");
 
 }
+
 }
