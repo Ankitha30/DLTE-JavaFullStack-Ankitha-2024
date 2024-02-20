@@ -45,8 +45,8 @@ public class TransactionAnalysis {
                             "2. least amount transferred\n" +
                             "3. maximum amount transferred\n" +
                             "4. number of transaction made to particular beneficiary\n" +
-                            "5. filter based on particular remarks"+
-                            "6. Sort based on amount in ascending\n"+ "7. Sort based on beneficiary in descending"+"8. Exit\n"
+                            "5. filter based on particular remarks\n"+
+                            "6. Sort based on amount in ascending\n"+ "7. Sort based on beneficiary in descending\n"+"8. Exit\n"
             );
             System.out.println("Enter your choice");
             int choice = scanner.nextInt();
@@ -87,7 +87,9 @@ public class TransactionAnalysis {
             }
         }
 
+
     }
+
 
     public void sortBeneficiary(Transaction[] myTransaction) {
         System.out.println("Before sorting amount");
@@ -139,7 +141,7 @@ public class TransactionAnalysis {
             if(each.getBeneficiary().equals(name))
                 transactioncount++;
         }
-        System.out.println("Number of Transaction Made by "+name+" is "+transactioncount);
+        System.out.println("Number of Transaction made to "+name+" is "+transactioncount);
     }
 
     public void minimumAmount(Transaction[] myTransaction) {
@@ -148,7 +150,11 @@ public class TransactionAnalysis {
             if(amount>each.getAmountInTransaction())
                 amount=each.getAmountInTransaction();
         }
-        System.out.println("Minimum Amount: "+amount);
+        System.out.println("Name       MinAmount");
+        for (Transaction each:myTransaction) {
+            if(each.getAmountInTransaction()==amount)
+                System.out.println(each.getBeneficiary()+" " + amount);
+        }
     }
 
     public void maximumAmount(Transaction[] myTransaction) {
@@ -157,7 +163,11 @@ public class TransactionAnalysis {
             if(amount<each.getAmountInTransaction())
                 amount=each.getAmountInTransaction();
         }
-        System.out.println("Maximum Amount: "+amount);
+        System.out.println("Name       MaxAmount");
+        for (Transaction each:myTransaction) {
+            if(each.getAmountInTransaction()==amount)
+            System.out.println(each.getBeneficiary()+" " + amount);
+        }
     }
 
 

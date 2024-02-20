@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe64bef0-78e3-4f4e-9156-712df362b970" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/TransactionAnalysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/Transaction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/Bond.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/BondAnalysis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/Bond.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/BondAnalysis.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/CreditCardAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/CreditCardAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/TransactionAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/TransactionAnalysis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/CreditCardAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/CreditCardAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/TransactionAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/TransactionAnalysis.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
