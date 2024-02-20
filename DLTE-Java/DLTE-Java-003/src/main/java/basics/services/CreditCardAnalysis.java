@@ -14,12 +14,13 @@ public class CreditCardAnalysis {
         CreditCardAnalysis analysis=new CreditCardAnalysis();
         System.out.println("---------WelCome--------------");
         System.out.println();
+        Scanner scanner = new Scanner(System.in);
         while(true) {
             System.out.println("---------Menu--------");
             System.out.println("1. Filter based on the given limit   2.Filter based on the date of bill payment  \n3.Update specific PIN of customer    4. Update the limit of customers those date of bill generation is 05th    \n5. Exit");
             System.out.println("Choose the option");
             int choice;
-            Scanner scanner = new Scanner(System.in);
+
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -59,7 +60,7 @@ public class CreditCardAnalysis {
                     for (CreditCard each: myBank){
 
                         if(each.getDateOfBillGeneration().getDate() == 5) {
-                            System.out.print(each.getCreditCardHolder() + " " + each.getCreditCardLimit()+" ");
+                            System.out.print(each.getCreditCardHolder() + "  " + each.getCreditCardLimit()+"  ");
                             each.setCreditCardLimit((int)(each.getCreditCardLimit()+(each.getCreditCardLimit()*0.5)));
                             System.out.println(each.getCreditCardLimit());
                         }
@@ -71,7 +72,10 @@ public class CreditCardAnalysis {
                      System.exit(0);
             }
 
+
         }
+
+
     }
     public void filterLimit(CreditCard[] customer,int startLimit,int endLimit){
         System.out.println("Customers having the CreditLimit between "+startLimit+" and "+endLimit );
@@ -86,8 +90,8 @@ public class CreditCardAnalysis {
         System.out.println("Customers those who made the bill payments between "+start+" and "+end);
 
         for (CreditCard each : customers) {
-            if (each.getDateOfBillGeneration().getDate() >= start && each.getDateOfBillGeneration().getDate() <= end) {
-                System.out.println(each.getCreditCardHolder() + " " + each.getDateOfBillGeneration().getDate());
+            if (each.getDateOfBillPayment().getDate() >= start && each.getDateOfBillPayment().getDate() <= end) {
+                System.out.println(each.getCreditCardHolder() + " " + each.getDateOfBillPayment().getDate());
             }
         }
     }

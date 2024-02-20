@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe64bef0-78e3-4f4e-9156-712df362b970" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/TransactionAnalysis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/Transaction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/CarLoanDataValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/CarLoanDataValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/IncomeSlab.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/IncomeSlab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/SipCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/SipCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/SuggestInsuranceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/SuggestInsuranceProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/regex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-002/src/main/java/basics/service/regex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/CreditCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/CreditCardAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/CreditCardAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/CustomerSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/basics/services/CustomerSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/CreditCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/CreditCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/CustomerSupport.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/CustomerSupport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/CreditCardAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/basics/services/CreditCardAnalysis.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
