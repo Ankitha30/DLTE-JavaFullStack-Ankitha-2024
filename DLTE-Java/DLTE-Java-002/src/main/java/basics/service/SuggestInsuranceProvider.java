@@ -32,7 +32,7 @@ public class SuggestInsuranceProvider {
 
         }
         System.out.println("Companies Suggeste dbased on given features:"+suggestedCompany);
-
+        s.close();
     }
 
 

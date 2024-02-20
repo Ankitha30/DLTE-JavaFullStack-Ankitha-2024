@@ -17,6 +17,6 @@ public class Transaction {
         }
 
         System.out.println("Total Debit Count: "+debitCount);
-
+        s.close();
     }
 }

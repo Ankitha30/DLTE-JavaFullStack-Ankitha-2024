@@ -66,5 +66,7 @@ public class CarLoanDataValidation {
         borrowerIncomeType=sc.nextLine();
 
         System.out.println(borrowerName+" Thanks for showing interest on taking loan in My Bank your application has been submitted and further details will be mailed to you "+borrowerEmail+" or sms to "+mobileNumber);
+
+   s.close();
     }
 }

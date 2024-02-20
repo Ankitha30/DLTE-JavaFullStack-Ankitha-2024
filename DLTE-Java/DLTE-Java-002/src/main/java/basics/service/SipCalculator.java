@@ -20,5 +20,6 @@ public class SipCalculator {
         Double multiplier = Math.pow(compoundinterest+1,numberofPayments);
         maturityAmount= principle *((multiplier-1)/compoundinterest)*(1+compoundinterest);
         System.out.println(maturityAmount+" Rs per year");
+        s.close();
     }
 }

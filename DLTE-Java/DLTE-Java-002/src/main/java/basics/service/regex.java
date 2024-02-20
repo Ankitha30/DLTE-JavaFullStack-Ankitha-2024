@@ -12,5 +12,6 @@ public class regex {
             System.out.println("valid");
         else
             System.out.println("Invalid");
+
     }
 }

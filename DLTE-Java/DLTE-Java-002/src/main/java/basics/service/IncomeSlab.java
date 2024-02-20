@@ -48,6 +48,7 @@ public class IncomeSlab {
             System.out.println("In old regime tax slab will be "+oldRegime);
             System.out.println("In new regime tax slab will be "+newRegime);
         }
+        s.close();;
 
     }
 
