@@ -5,12 +5,16 @@ import java.util.Arrays;
 Scopes overloading execution point
  */
 
-
-public class Blocks {
-    static{
-        System.out.println("funds,acc,loan,service");
-        Blocks.main(new  String[]{"main"});
+class newblock {
+    public static void main(String[] args) {
+        System.out.println("newblock");
     }
+}
+public class Blocks {
+//    static{
+//        System.out.println("funds,acc,loan,service");
+//        Blocks.main(new  String[]{"main"});
+//    }
     public static void main(Integer[] args) {
         System.out.println(args.length+" "+" CLI Banking111");
     }
