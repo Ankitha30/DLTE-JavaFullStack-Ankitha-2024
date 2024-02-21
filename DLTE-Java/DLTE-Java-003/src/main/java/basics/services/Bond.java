@@ -9,14 +9,25 @@ sort and view bonds with high rate of interest
 
 public class Bond {
     private Integer maturityAmount;
+    private String bondName;
 
-    public Bond(Integer maturityAmount, Double rateOfInterest, String taxStatus, String bondHolder, Integer tenure) {
+    public String getBondName() {
+        return bondName;
+    }
+
+    public void setBondName(String bondName) {
+        this.bondName = bondName;
+    }
+
+    public Bond(Integer maturityAmount, String bondName, Double rateOfInterest, String taxStatus, String bondHolder, Integer tenure) {
         this.maturityAmount = maturityAmount;
+        this.bondName = bondName;
         this.rateOfInterest = rateOfInterest;
         this.taxStatus = taxStatus;
         this.bondHolder = bondHolder;
         this.tenure = tenure;
     }
+
 
     private Double rateOfInterest;
     private String taxStatus;
