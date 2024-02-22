@@ -20,7 +20,7 @@ public class Main {
                     gPay.withdraw(withdrawAmount);
                     break;
                 case 2:
-                    System.out.println("Enter the biller namw");
+                    System.out.println("Enter the biller name");
                     String billerName = scanner1.nextLine();
                     System.out.println("Enter the  biller type");
                     String billType = scanner1.nextLine();
@@ -31,7 +31,9 @@ public class Main {
 
                     gPay.payBills(billerName, billAmount, billType);
                     break;
-                default:System.exit(0);
+                default:scanner.close();
+                        scanner1.close();
+                        System.exit(0);
             }
         }
 

@@ -6,12 +6,25 @@ import java.util.Date;
 public class Loan {
     private Integer loanNumber;
     private Double loanAmount;
-    private Date loanDate;
+
+    @Override
+    public String toString() {
+        return "Loan{" +
+                "loanNumber=" + loanNumber +
+                ", loanAmount=" + loanAmount +
+                ", loanDate='" + loanDate + '\'' +
+                ", loanStatus='" + loanStatus + '\'' +
+                ", borrowerName='" + borrowerName + '\'' +
+                ", phonenumber=" + phonenumber +
+                '}';
+    }
+
+    private String loanDate;
     private String loanStatus;
     private String borrowerName;
     private Long phonenumber;
 
-    public Loan(Integer loanNumber, Double loanAmount, Date loanDate, String loanStatus, String borrowerName, Long phonenumber) {
+    public Loan(Integer loanNumber, Double loanAmount, String loanDate, String loanStatus, String borrowerName, Long phonenumber) {
         this.loanNumber = loanNumber;
         this.loanAmount = loanAmount;
         this.loanDate = loanDate;
@@ -39,11 +52,11 @@ public class Loan {
         this.loanAmount = loanAmoun;
     }
 
-    public Date getLoanDate() {
+    public String getLoanDate() {
         return loanDate;
     }
 
-    public void setLoanDate(Date loanDate) {
+    public void setLoanDate(String loanDate) {
         this.loanDate = loanDate;
     }
 
