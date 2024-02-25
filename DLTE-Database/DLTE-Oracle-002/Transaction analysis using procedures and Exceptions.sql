@@ -17,7 +17,7 @@ trans_info:='Insertion Failed due to '|| SQLERRM;
 end; 
 /
 variable err_or_info varchar2;
-execute insert_new_transaction(1,'Ankitha','20-feb-2024',2000,'Education');
+execute insert_new_transaction(1,'Ankitha','20-feb-2024',2000,'Education',:err_or_info);
 print err_or_info;
 
 
