@@ -54,9 +54,9 @@
           <configuration>
             <archive>
               <manifest>
-                <mainclass>
-                  app.mybank
-                </mainclass>
+                <mainClass>
+                  app.mybank.App
+                </mainClass>
               </manifest>
             </archive>
           </configuration>

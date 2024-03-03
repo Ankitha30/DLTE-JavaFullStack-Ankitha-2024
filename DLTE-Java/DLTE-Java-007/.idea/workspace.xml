@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ae8cd088-3a6a-4977-adc7-6137928c276f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DLTE-Java-007.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dynamic/framework/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dynamic/framework/ArrayListIllustrationjava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dynamic/framework/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/DLTE-JAva-006/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/DLTE-JAva-006/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/DLTE-JAva-006/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/DLTE-JAva-006/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/DLTE-JAva-006/DLTE-JAva-006.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/DLTE-JAva-006/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/DLTE-JAva-006/src/main/java/generics/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/DLTE-JAva-006/src/test/java/generics/example/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/Practice/Practice.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/Practice/src/main/java/Try.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/Practice/src/main/java/org/example/ApplyInsurance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/Practice/src/main/java/org/example/Insurance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../untitled/Practice/src/main/java/org/example/Try.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\DLTE-JavaFullStack-Ankitha-2024\DLTE-Java\DLTE-Java-007\DLTE-Java-007\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="2ctUIvhXwVUGD3XD3szFTvgNxzC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae8cd088-3a6a-4977-adc7-6137928c276f" name="Default Changelist" comment="" />
+      <created>1708930291755</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708930291755</updated>
+      <workItem from="1708930296087" duration="2113000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="611" height="158" key="GridCell.Tab.0.bottom" timestamp="1708932055575">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="611" height="158" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1708932055575" />
+    <state width="611" height="158" key="GridCell.Tab.0.center" timestamp="1708932055575">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="611" height="158" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1708932055575" />
+    <state width="611" height="158" key="GridCell.Tab.0.left" timestamp="1708932055575">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="611" height="158" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1708932055575" />
+    <state width="611" height="158" key="GridCell.Tab.0.right" timestamp="1708932055575">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="611" height="158" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1708932055575" />
+  </component>
+</project>

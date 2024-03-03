@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="app.mybank.AppTest" time="0.032" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="app.mybank.AppTest" time="0.033" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.292-2\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\xxbhatka\AppData\Local\Temp\surefire7273445919968084000\surefirebooter2296802150417083982.jar C:\Users\xxbhatka\AppData\Local\Temp\surefire7273445919968084000 2024-02-28T09-30-36_560-jvmRun1 surefire3858981837096947929tmp surefire_02371282720811122606tmp"/>
+    <property name="sun.java.command" value="C:\Users\xxbhatka\AppData\Local\Temp\surefire161661413512473104\surefirebooter182009901086598698.jar C:\Users\xxbhatka\AppData\Local\Temp\surefire161661413512473104 2024-02-28T09-32-06_991-jvmRun1 surefire4311203962319055400tmp surefire_03220180437190035779tmp"/>
     <property name="surefire.test.class.path" value="C:\DLTE-JavaFullStack-Ankitha-2024\DLTE-Java\DLTE-Consle-App_MyBankCreditCard\target\test-classes;C:\DLTE-JavaFullStack-Ankitha-2024\DLTE-Java\DLTE-Consle-App_MyBankCreditCard\target\classes;C:\Users\xxbhatka\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\xxbhatka\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\xxbhatka"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\xxbhatka\AppData\Local\Temp\surefire7273445919968084000\surefirebooter2296802150417083982.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\xxbhatka\AppData\Local\Temp\surefire161661413512473104\surefirebooter182009901086598698.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.292-2\jre\lib\resources.jar;C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.292-2\jre\lib\rt.jar;C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.292-2\jre\lib\sunrsasign.jar;C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.292-2\jre\lib\jsse.jar;C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.292-2\jre\lib\jce.jar;C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.292-2\jre\lib\charsets.jar;C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.292-2\jre\lib\jfr.jar;C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.292-2\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,5 +61,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="app.mybank.AppTest" time="0"/>
+  <testcase name="shouldAnswerWithTrue" classname="app.mybank.AppTest" time="0.006"/>
 </testsuite>

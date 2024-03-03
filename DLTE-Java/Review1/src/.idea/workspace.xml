@@ -37,6 +37,11 @@
       <change afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Review1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/main/java/org/example/App.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/main/java/org/example/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/java/org/example/AppTest.java" afterDir="false" />
@@ -98,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709102350264</updated>
-      <workItem from="1709102351426" duration="240000" />
+      <workItem from="1709102351426" duration="782000" />
     </task>
     <servers />
   </component>
