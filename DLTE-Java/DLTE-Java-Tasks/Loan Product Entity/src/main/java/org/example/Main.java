@@ -51,7 +51,7 @@ public class Main
                     myBankMethods.checkClosedLoans();
                     break;
                 default:
-//                    scanner.close();
+                    scanner.close();
                     System.exit(0);
 
 
