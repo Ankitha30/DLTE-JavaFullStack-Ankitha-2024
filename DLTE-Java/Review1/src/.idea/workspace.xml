@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0dab3717-b310-4f7e-994d-d4eb02d7cb71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/DLTE-Consle-App_MyBankCreditCard.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/target/DLTE-Consle-App_MyBankCreditCard-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/target/classes/app/mybank/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/target/surefire-reports/TEST-app.mybank.AppTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/target/surefire-reports/app.mybank.AppTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Consle-App_MyBankCreditCard/target/test-classes/app/mybank/AppTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java-008/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java-008/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java-008/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java-008/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java-008/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java-008/DLTE-Java-008.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java-008/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java-008/src/main/java/org/feature/storage/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java-008/src/main/java/org/feature/storage/CardRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java-008/src/main/java/org/feature/storage/DebitCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Java-008/src/test/java/org/feature/storage/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../target/classes/org/example/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../target/classes/org/example/EmployeeDetails.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../target/test-classes/org/example/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Database/DLTE-Oracle-001/User Privileges.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java-002/src/main/java/basics/service/CarLoanDataValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-Java-002/src/main/java/basics/service/CarLoanDataValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java-007/DLTE-Java-007/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java-007/Practice/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java-007/Practice/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java-007/Practice/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java-007/Practice/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java-007/Practice/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java-007/Practice/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java-007/Practice/Practice.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java-007/Practice/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-Java-007/Practice/src/test/org/example/App.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2cz733Y1mNmS7XfS2MwfMiitLoQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0dab3717-b310-4f7e-994d-d4eb02d7cb71" name="Default Changelist" comment="" />
+      <created>1709102350264</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709102350264</updated>
+      <workItem from="1709102351426" duration="240000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
