@@ -15,7 +15,6 @@ public class Main
             scanner.nextLine();
             switch (choice){
                 case 1:
-//                    Scanner scanner1 = new Scanner(System.in);
                     System.out.println("Enter the LoanNumber");
                     int loanNumber = scanner.nextInt();
                     scanner.nextLine();
@@ -41,7 +40,7 @@ public class Main
                     } catch (IOException  | ClassNotFoundException e) {
                         System.out.println("Couldn't add loan "+e.getMessage());
                     }
-//                    scanner1.close();
+                   scanner1.close();
                     break;
                 case 2:
                     System.out.println("Opened Loans");
