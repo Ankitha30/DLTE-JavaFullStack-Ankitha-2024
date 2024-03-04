@@ -40,11 +40,6 @@ public class Main
                     } catch (IOException  | ClassNotFoundException e) {
                         System.out.println("Couldn't add loan "+e.getMessage());
                     }
-<<<<<<< HEAD
-
-=======
-                   
->>>>>>> 7b416cbd6528adc476f3537a9aadbe2224819a64
                     break;
                 case 2:
                     System.out.println("Opened Loans");
