@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c281a98-3d31-4932-9bf3-a5dbae8204f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../../../Generic CreditCard, Transaction with Files/src/main/java/org/example/Activity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../Generic CreditCard, Transaction with Files/src/main/java/org/example/CreditCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../Generic CreditCard, Transaction with Files/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../Generic CreditCard, Transaction with Files/src/main/java/org/example/MyBankDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../../../Concurrency Analysis/src/main/java/org/example/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../Concurrency Analysis/src/main/java/org/example/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Implementation of Generics/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../Implementation of Generics/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../Loan Product Entity/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../Loan Product Entity/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
