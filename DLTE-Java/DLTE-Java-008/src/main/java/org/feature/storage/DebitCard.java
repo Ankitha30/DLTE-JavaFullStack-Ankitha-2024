@@ -1,8 +1,9 @@
 package org.feature.storage;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class DebitCard {
+public class DebitCard  implements Serializable {
     private Long debitCardNumber;
     private Integer debitCardCvv;
     private Integer debitCardPin;

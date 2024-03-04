@@ -4,21 +4,29 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.feature.storage</groupId>
-  <artifactId>DLTE-Java-008</artifactId>
+  <groupId>basics.services</groupId>
+  <artifactId>DLTE-Java-003</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>DLTE-Java-008</name>
+  <name>DLTE-Java-003</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.22</version>
+      <scope>provided</scope>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -54,9 +62,9 @@
           <configuration>
             <archive>
               <manifest>
-                <mainclass>
-                  org.feature.storage.App
-                </mainclass>
+                <mainClass>
+                  basics.services.App
+                </mainClass>
               </manifest>
             </archive>
           </configuration>
