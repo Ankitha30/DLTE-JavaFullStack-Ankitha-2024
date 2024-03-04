@@ -80,8 +80,6 @@ public class TransactionAnalysis {
                     if(order.equalsIgnoreCase("descending"))
                         comparator=comparator.reversed();
                     transaction.stream().sorted(comparator).forEach(transaction1 -> System.out.println(transaction1.getDateOfTransaction()+" "+transaction1.getAmountInTransaction()+" "+transaction1.getBeneficiary()+" "+transaction1.getRemarks()));
-
-//                    analysis.totalTransaction(myTransaction,name);/
                     break;
 
 
@@ -94,22 +92,4 @@ public class TransactionAnalysis {
 
     }
 
-
-
-
-
-
-
-
-
-
-//    public void filterDate(Transaction[] myTransaction, int start, int end) {
-//        System.out.println("Transaction between the given dates "+start+" and "+end);
-//
-//        for (Transaction each: myTransaction) {
-//            if (each.getDateOfTransaction().getDate() >= start && each.getDateOfTransaction().getDate() <= end) {
-//                System.out.println(each.getBeneficiary() + " " +each.getAmountInTransaction()+" "+ each.getDateOfTransaction().getDate());
-//            }
-//        }
-//    }
 }

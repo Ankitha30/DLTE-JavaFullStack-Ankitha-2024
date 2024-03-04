@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 //   Transaction: dateOfTransaction, amountInTransaction, to, remarks(Family, Education, Emergency, Bills, Friend)
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
+
 public class Transaction {
     private Date dateOfTransaction;
 
