@@ -27,7 +27,7 @@ public class CreditCard  implements Serializable {
                 ", creditCardHolder='" + creditCardHolder + '\'' +
                 ", creditCardExpiry=" + creditCardExpiry +
                 ", creditCardCvv=" + creditCardCvv +
-                ", creditCardLimit=" + creditCardLimit +
+                ", creditCardLimit=" + creditCardLimit +"\n"+
                 '}';
     }
 
