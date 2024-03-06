@@ -1,4 +1,4 @@
-package console.operation;
+package example.lamda;
 
 /**
  * Hello world!

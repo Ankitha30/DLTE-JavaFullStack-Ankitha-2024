@@ -1,4 +1,4 @@
-package console.operation;
+package example.lamda;
 
 import static org.junit.Assert.assertTrue;
 
