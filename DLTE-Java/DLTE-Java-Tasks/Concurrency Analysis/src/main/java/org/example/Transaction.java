@@ -26,23 +26,24 @@ MAIN:
 Create ScheduledExecutorService with period of 5 and schedule for 30 seconds
  */
 public class Transaction {
+    private Date dateOfTransaction;
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "dateOfTransaction=" + dateOfTransaction +
+                ", amountInTransaction=" + amountInTransaction +
+                ", beneficiary='" + beneficiary + '\'' +
+                ", remarks='" + remarks + '\'' +
+                '}';
+    }
+
     public Date getDateOfTransaction() {
         return dateOfTransaction;
     }
 
-    public Transaction() {
-    }
-
     public void setDateOfTransaction(Date dateOfTransaction) {
         this.dateOfTransaction = dateOfTransaction;
-    }
-
-    public String getRemarks() {
-        return remarks;
-    }
-
-    public void setRemarks(String remarks) {
-        this.remarks = remarks;
     }
 
     public Integer getAmountInTransaction() {
@@ -61,26 +62,25 @@ public class Transaction {
         this.beneficiary = beneficiary;
     }
 
-    @Override
-    public String toString() {
-        return "Transaction{" +
-                "dateOfTransaction=" + dateOfTransaction +
-                ", remarks='" + remarks + '\'' +
-                ", amountInTransaction=" + amountInTransaction +
-                ", beneficiary='" + beneficiary + '\'' +
-                '}';
+    public String getRemarks() {
+        return remarks;
     }
 
-    private Date dateOfTransaction;
-    private String remarks;
+    public Transaction() {
+    }
 
-    public Transaction(Date dateOfTransaction, String remarks, Integer amountInTransaction, String beneficiary) {
-        this.dateOfTransaction = dateOfTransaction;
+    public void setRemarks(String remarks) {
         this.remarks = remarks;
+    }
+
+    public Transaction(Date dateOfTransaction, Integer amountInTransaction, String beneficiary, String remarks) {
+        this.dateOfTransaction = dateOfTransaction;
         this.amountInTransaction = amountInTransaction;
         this.beneficiary = beneficiary;
+        this.remarks = remarks;
     }
 
     private Integer amountInTransaction;
     private String beneficiary;
+    private String remarks;
 }
