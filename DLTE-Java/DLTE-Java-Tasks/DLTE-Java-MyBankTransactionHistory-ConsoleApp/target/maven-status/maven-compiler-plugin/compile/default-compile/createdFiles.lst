@@ -1,6 +1,0 @@
-app\mybank\exceptions\TransactionHistoryException.class
-app\mybank\services\TransactionService.class
-app\mybank\App.class
-app\mybank\remotes\TransactionRepository.class
-app\mybank\entity\Account.class
-app\mybank\middleware\TransactionFileRepository.class
