@@ -12,13 +12,10 @@ public class TransactionService {
     TransactionRepository transactionRepository;
     private ResourceBundle resourceBundle=ResourceBundle.getBundle("database");
 
-//    //    public List<Account> callFindAllByAccount(String userName,String password){
-////        return transactionRepository.findAllByAccount(userName, password);
-////    }
     public TransactionService(StorageTarget storageTarget){
         transactionRepository=storageTarget.getTransactionRepository();
     }
-    public boolean verifyAccount(String userName, String password) {
+    public boolean callverifyAccount(String userName, String password) {
         try {
             return transactionRepository.verifyAccount(userName, password);
         } catch (Exception e) {
@@ -34,11 +31,15 @@ public class TransactionService {
 //        }
 //    }
 
-    public List<Transaction> callViewTransaction(String userName) {
-        return transactionRepository.viewTransaction(userName);
+    public void callViewTransaction(String userName) {
+        try{
+            transactionRepository.viewTransaction(userName);
+        }catch (Exception e){
+
+        }
     }
 
-    public List<Transaction> callFindByDate(String startDate, String endDate){
+    public List<Transaction> callFindByDate(String startDate, String endDate, String userName){
         return transactionRepository.findByDate(startDate,endDate);
     }
     public List<Transaction> callFindByAmount(Double amount){
@@ -47,6 +48,8 @@ public class TransactionService {
     public List<Transaction> callFindByType(String type){
         return transactionRepository.findByType(type);
     }
-    public List<Transaction> callViewAllTransaction(){return transactionRepository.viewAllTransaction();}
 
 }
+
+
+ 
