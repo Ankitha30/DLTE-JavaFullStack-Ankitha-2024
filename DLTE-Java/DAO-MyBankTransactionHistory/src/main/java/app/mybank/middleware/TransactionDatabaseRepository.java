@@ -18,12 +18,9 @@ import java.util.logging.SimpleFormatter;
 public class TransactionDatabaseRepository implements TransactionRepository {
     private Connection connection;
     private List<Transaction> accountList=new ArrayList<>();
-//    private Account account=new Account();
     private Transaction transaction= new Transaction();
-
     private ResourceBundle resourceBundle=ResourceBundle.getBundle("database");
     private Logger logger=Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-
     private PreparedStatement preparedStatement;
     private ResultSet resultSet;
     private String user;
@@ -45,8 +42,6 @@ public class TransactionDatabaseRepository implements TransactionRepository {
 
     @Override
     public boolean verifyAccount(String userName, String password) {
-//        username VARCHAR(255) PRIMARY KEY,
-//        --    password VARCHAR(255),
         try {
             String query = "SELECT count(*) FROM Account WHERE username = ? AND password = ?";
             preparedStatement = connection.prepareStatement(query);
@@ -72,7 +67,7 @@ public class TransactionDatabaseRepository implements TransactionRepository {
 //    }
 
     @Override
-    public List<Transaction> viewTransaction(String userName) {
+    public void viewTransaction(String userName) {
         try{
             accountList.clear();
             String query="select * from TransactionHistory where nameuser=?";
@@ -93,7 +88,7 @@ public class TransactionDatabaseRepository implements TransactionRepository {
         catch (SQLException sqlException){
             System.out.println(sqlException);
         }
-        return accountList;
+       
 
     }
 
@@ -182,27 +177,5 @@ public class TransactionDatabaseRepository implements TransactionRepository {
         return accountList;
     }
 
-    @Override
-    public List<Transaction> viewAllTransaction() {
-        try{
-            accountList.clear();
-            String query="select * from TransactionHistory ";
-            preparedStatement=connection.prepareStatement(query);
-            resultSet = preparedStatement.executeQuery();
-            System.out.println(resultSet);
-            while(resultSet.next()){
-                transaction=new Transaction();
-                transaction.setUserName(resultSet.getString(1));
-                transaction.setTransactionType(resultSet.getString(2));
-                transaction.setTransactionAmount(resultSet.getDouble(3));
-                transaction.setTransactionDate(resultSet.getDate(4));
-                accountList.add(transaction);
-            }
-            System.out.println(accountList);
-        }
-        catch (SQLException sqlException){
-            System.out.println(sqlException);
-        }
-        return accountList;
-    }
+    
 }
