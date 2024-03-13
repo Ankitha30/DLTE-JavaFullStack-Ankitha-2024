@@ -4,23 +4,23 @@ import java.util.Scanner;
 
 public class NetBanking {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        String Name="",panNum="",Email="",accountNumber="",password="",email="";
+        Scanner scanner = new Scanner(System.in);
+        String name="",panNum="",Email="",accountNumber="",password="",email="";
         Long aadhaar=0L;
         System.out.println("---------Welcome to Net Banking---------");
         System.out.println("Enter  your User name");
-        Name=s.nextLine();
+        name=scanner.nextLine();
         System.out.println("Enter you password");
-        password=s.next();
+        password=scanner.next();
         System.out.println("Enter the email");
-        email=s.next();
+        email=scanner.next();
         System.out.println("Enter your account number");
-        accountNumber=s.next();
+        accountNumber=scanner.next();
         System.out.println("fill your aadhaar number");
-        aadhaar=s.nextLong();
+        aadhaar=scanner.nextLong();
         System.out.println("enter the PaN number");
-        panNum=s.next();
-        System.out.println(Name+" Thanks for showing interest on Net Banking");
+        panNum=scanner.next();
+        System.out.println(name+" Thanks for showing interest on Net Banking");
     }
 }
 
