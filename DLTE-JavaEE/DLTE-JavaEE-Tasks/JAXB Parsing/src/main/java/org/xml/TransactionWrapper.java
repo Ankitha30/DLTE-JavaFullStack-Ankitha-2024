@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @XmlRootElement
-public class Wrapper {
+public class TransactionWrapper {
     private List<Transaction> transactionList = new ArrayList<>();
 
-    public Wrapper() {
+    public TransactionWrapper() {
     }
     @XmlElement(name = "Transaction")
     public List<Transaction> getTransactionList() {
