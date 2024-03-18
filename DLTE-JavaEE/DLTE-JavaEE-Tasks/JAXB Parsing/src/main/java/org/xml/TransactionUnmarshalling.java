@@ -10,9 +10,9 @@ public class TransactionUnmarshalling {
     public static void main(String[] args) throws JAXBException {
         File file=new File("scheme.xml");
         Scanner scanner=new Scanner(System.in);
-        JAXBContext context= JAXBContext.newInstance(TransactionWrapper.class);
+        JAXBContext context= JAXBContext.newInstance(MyTransaction.class);
         Unmarshaller unmarshaller= context.createUnmarshaller();
-        TransactionWrapper transactions = (TransactionWrapper) unmarshaller.unmarshal(file);
+        MyTransaction transactions = (MyTransaction) unmarshaller.unmarshal(file);
         System.out.println("Enter the username");
         String name=scanner.next();
         for (Transaction transaction:transactions.getTransactionList()){
@@ -21,6 +21,7 @@ public class TransactionUnmarshalling {
 
             }
         }
+        scanner.close();
 
     }
 }

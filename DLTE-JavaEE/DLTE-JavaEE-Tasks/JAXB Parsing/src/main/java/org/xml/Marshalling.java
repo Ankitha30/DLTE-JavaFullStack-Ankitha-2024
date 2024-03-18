@@ -17,12 +17,12 @@ public class Marshalling {
         transactionList.add(new Transaction(new Date("06/08/2023"), 6000.0, "anu"));
         transactionList.add(new Transaction(new Date("09/07/2023"), 7000.0, "raju"));
         transactionList.add(new Transaction(new Date("09/05/2023"), 9300.0, "latha"));
-        TransactionWrapper transactionWrapper=new TransactionWrapper();
-        transactionWrapper.setTransactionList(transactionList);
-        JAXBContext context = JAXBContext.newInstance(TransactionWrapper.class);
+        MyTransaction myTransaction =new MyTransaction();
+        myTransaction.setTransactionList(transactionList);
+        JAXBContext context = JAXBContext.newInstance(MyTransaction.class);
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        marshaller.marshal(transactionWrapper, new FileOutputStream("scheme.xml"));
+        marshaller.marshal(myTransaction, new FileOutputStream("scheme.xml"));
     }
 
 }
