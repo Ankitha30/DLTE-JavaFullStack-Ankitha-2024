@@ -17,9 +17,9 @@ import java.util.List;
 
 @WebServlet("/findAll/dateNuser/*")
 public class FindAllByDateAndUsername extends HttpServlet {
-    private TransactionService transactionService;
+    public TransactionService transactionService;
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        String reqDate = req.getParameter("date");
 
        String reqUser=req.getParameter("user");

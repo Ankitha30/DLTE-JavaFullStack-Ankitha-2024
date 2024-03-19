@@ -16,10 +16,10 @@ import java.util.List;
 
 @WebServlet("/findAll/username/")
 public class FindAllByUserName extends HttpServlet {
-    TransactionService transactionService;
+    public TransactionService transactionService;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        try {
            resp.setContentType("application/json");
            String userName = req.getParameter("username");

@@ -18,10 +18,10 @@ import java.util.List;
 
     @WebServlet("/find/all/")
     public class FindAll extends HttpServlet {
-        TransactionService transactionService;
+        public TransactionService transactionService;
 
         @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doGet(req, resp);
             resp.setContentType("application/json");
             List<Transaction> transactions = transactionService.callViewTransaction();
