@@ -1,0 +1,6 @@
+spring\rest\jpa\ormjparest\controllers\TransactionRestApi.class
+spring\rest\jpa\ormjparest\remotes\TransactionRepository.class
+spring\rest\jpa\ormjparest\services\TransactionService.class
+spring\rest\jpa\ormjparest\model\Transaction.class
+spring\rest\jpa\ormjparest\ServletInitializer.class
+spring\rest\jpa\ormjparest\SpringWithJpaApplication.class
