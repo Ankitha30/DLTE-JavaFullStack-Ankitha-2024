@@ -1,6 +1,4 @@
-spring\rest\jpa\ormjparest\controllers\TransactionRestApi.class
-spring\rest\jpa\ormjparest\remotes\TransactionRepository.class
-spring\rest\jpa\ormjparest\services\TransactionService.class
-spring\rest\jpa\ormjparest\model\Transaction.class
-spring\rest\jpa\ormjparest\ServletInitializer.class
-spring\rest\jpa\ormjparest\SpringWithJpaApplication.class
+spring\rest\jpa\ormjparest\controllers\AccountRestApi.class
+spring\rest\jpa\ormjparest\remotes\AccountRepository.class
+spring\rest\jpa\ormjparest\model\Account.class
+spring\rest\jpa\ormjparest\services\AccountService.class
