@@ -36,27 +36,27 @@ public class TransactionService {
 
 
     public Transaction apiSave(Transaction transaction){
-//        int ack=jdbcTemplate.update("INSERT INTO mybank_transactions (transactionid, transactionby, transactiondate, transactionto, transactionamount, remarks) VALUES (?,?,?,?,?,?)",
-//                transaction.getTransactionId(),
-//                transaction.getTransactionBy(),
-//                transaction.getTransactionDate(),
-//                transaction.getTransactionTo(),
-//                transaction.getTransactionAmount(),
-//                transaction.getRemarks());
-//
-//        if(ack != 0)
-//            return transaction;
-//        else
-//            throw new TransactionException("Insertion failed");
+       int ack=jdbcTemplate.update("INSERT INTO mybank_transactions (transactionid, transactionby, transactiondate, transactionto, transactionamount, remarks) VALUES (?,?,?,?,?,?)",
+               transaction.getTransactionId(),
+               transaction.getTransactionBy(),
+               transaction.getTransactionDate(),
+               transaction.getTransactionTo(),
+               transaction.getTransactionAmount(),
+               transaction.getRemarks());
 
-        jdbcTemplate.update("INSERT INTO mybank_transactions (transactionid, transactionby, transactiondate, transactionto, transactionamount, remarks) VALUES (?,?,?,?,?,?)",
-                transaction.getTransactionId(),
-                transaction.getTransactionBy(),
-                transaction.getTransactionDate(),
-                transaction.getTransactionTo(),
-                transaction.getTransactionAmount(),
-                transaction.getRemarks());
-        return transaction;
+       if(ack != 0)
+           return transaction;
+       else
+           throw new TransactionException("Insertion failed");
+
+        // jdbcTemplate.update("INSERT INTO mybank_transactions (transactionid, transactionby, transactiondate, transactionto, transactionamount, remarks) VALUES (?,?,?,?,?,?)",
+        //         transaction.getTransactionId(),
+        //         transaction.getTransactionBy(),
+        //         transaction.getTransactionDate(),
+        //         transaction.getTransactionTo(),
+        //         transaction.getTransactionAmount(),
+        //         transaction.getRemarks());
+        // return transaction;
     }
 
 
