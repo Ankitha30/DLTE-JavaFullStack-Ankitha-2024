@@ -36,7 +36,7 @@ public class TransactionController {
     }
     @GetMapping("/sender/{transactionBy}")
     public List<Transaction> gettingSender(@PathVariable("transactionBy") String transactionBy){
-        return transactionService.apiFindByReceiver(transactionBy);
+        return transactionService.apiFindBySender(transactionBy);
     }
 
     @GetMapping("/amount/{amount}")
