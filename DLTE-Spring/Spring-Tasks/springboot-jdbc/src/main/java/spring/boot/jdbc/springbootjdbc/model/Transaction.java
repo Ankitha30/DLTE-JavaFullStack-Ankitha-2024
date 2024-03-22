@@ -2,43 +2,25 @@ package spring.boot.jdbc.springbootjdbc.model;
 
 import java.util.Date;
 
-/*
-Entity: Transaction Id,
-transaction date,
-transaction by(sender),
- transaction to(receiver),
- transaction amount,
- transaction for(remarks)
- */
 public class Transaction {
     private int transactionId;
-    private Date date;
-    private String transactionBy,transactionTo;
-    private Double transactionAmount;
+    private Date transactionDate;
+    private String transactionBy;
+    private String transactionTo;
+    private double transactionAmount;
     private String remarks;
-
-    public Transaction(int transactionId, Date date, String transactionBy, String transactionTo, Double transactionAmount, String remarks) {
-        this.transactionId = transactionId;
-        this.date = date;
-        this.transactionBy = transactionBy;
-        this.transactionTo = transactionTo;
-        this.transactionAmount = transactionAmount;
-        this.remarks = remarks;
-    }
+    
 
     public Transaction() {
     }
 
-    @Override
-    public String toString() {
-        return "Transaction{" +
-                "transactionId=" + transactionId +
-                ", date=" + date +
-                ", transactionBy='" + transactionBy + '\'' +
-                ", transactionTo='" + transactionTo + '\'' +
-                ", transactionAmount=" + transactionAmount +
-                ", remarks='" + remarks + '\'' +
-                '}';
+    public Transaction(int transactionId, Date transactionDate, String transactionBy, String transactionTo, double transactionAmount, String remarks) {
+        this.transactionId = transactionId;
+        this.transactionDate = transactionDate;
+        this.transactionBy = transactionBy;
+        this.transactionTo = transactionTo;
+        this.transactionAmount = transactionAmount;
+        this.remarks = remarks;
     }
 
     public int getTransactionId() {
@@ -49,12 +31,12 @@ public class Transaction {
         this.transactionId = transactionId;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getTransactionDate() {
+        return transactionDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setTransactionDate(Date transactionDate) {
+        this.transactionDate = transactionDate;
     }
 
     public String getTransactionBy() {
@@ -73,11 +55,11 @@ public class Transaction {
         this.transactionTo = transactionTo;
     }
 
-    public Double getTransactionAmount() {
+    public double getTransactionAmount() {
         return transactionAmount;
     }
 
-    public void setTransactionAmount(Double transactionAmount) {
+    public void setTransactionAmount(double transactionAmount) {
         this.transactionAmount = transactionAmount;
     }
 
