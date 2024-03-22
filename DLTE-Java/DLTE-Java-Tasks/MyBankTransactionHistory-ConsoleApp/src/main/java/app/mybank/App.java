@@ -1,7 +1,7 @@
 package app.mybank;
 
 import app.mybank.exceptions.TransactionHistoryException;
-import app.mybank.middleware.FileStorageTarget;
+import app.mybank.middleware.DatabaseTarget;
 import app.mybank.remotes.StorageTarget;
 import app.mybank.services.TransactionService;
 import org.slf4j.Logger;
@@ -23,8 +23,8 @@ public class App {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        storageTarget=new FileStorageTarget();
-//        storageTarget=new DatabaseTarget();
+//        storageTarget=new FileStorageTarget();
+        storageTarget=new DatabaseTarget();
         transactionService=new TransactionService(storageTarget);
         //transactionService.addAccount();
         int option;
