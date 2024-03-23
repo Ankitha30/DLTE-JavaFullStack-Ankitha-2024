@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="13e39d84-9f22-45e3-b34b-ff8e4afb9598" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/spring/boot/jdbc/springbootjdbc/SpringBootJdbcMigrationApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spring/boot/jdbc/springbootjdbc/SpringBootJdbcMigrationApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2e0NuQkV84REmgT4Vb0khwZFrNh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+  </component>
+  <component name="RunManager" selected="JUnit.SpringBootJdbcMigrationApplicationTests.testFindByAmount">
+    <configuration name="SpringBootJdbcMigrationApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spring.boot.jdbc.springbootjdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spring.boot.jdbc.springbootjdbc" />
+      <option name="MAIN_CLASS_NAME" value="spring.boot.jdbc.springbootjdbc.SpringBootJdbcMigrationApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootJdbcMigrationApplicationTests.testFindByAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spring.boot.jdbc.springbootjdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spring.boot.jdbc.springbootjdbc" />
+      <option name="MAIN_CLASS_NAME" value="spring.boot.jdbc.springbootjdbc.SpringBootJdbcMigrationApplicationTests" />
+      <option name="METHOD_NAME" value="testFindByAmount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootJdbcMigrationApplicationTests.testFindByReceiver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spring.boot.jdbc.springbootjdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spring.boot.jdbc.springbootjdbc" />
+      <option name="MAIN_CLASS_NAME" value="spring.boot.jdbc.springbootjdbc.SpringBootJdbcMigrationApplicationTests" />
+      <option name="METHOD_NAME" value="testFindByReceiver" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootJdbcMigrationApplicationTests.testFindBySender" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spring.boot.jdbc.springbootjdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spring.boot.jdbc.springbootjdbc" />
+      <option name="MAIN_CLASS_NAME" value="spring.boot.jdbc.springbootjdbc.SpringBootJdbcMigrationApplicationTests" />
+      <option name="METHOD_NAME" value="testFindBySender" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootJdbcMigrationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-jdbc" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="spring.boot.jdbc.springbootjdbc.SpringBootJdbcMigrationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SpringBootJdbcMigrationApplicationTests.testFindByAmount" />
+        <item itemvalue="JUnit.SpringBootJdbcMigrationApplicationTests.testFindByReceiver" />
+        <item itemvalue="JUnit.SpringBootJdbcMigrationApplicationTests.testFindBySender" />
+        <item itemvalue="JUnit.SpringBootJdbcMigrationApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13e39d84-9f22-45e3-b34b-ff8e4afb9598" name="Default Changelist" comment="" />
+      <created>1711037757882</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711037757882</updated>
+      <workItem from="1711037773066" duration="4933000" />
+      <workItem from="1711077698288" duration="4068000" />
+      <workItem from="1711082278254" duration="2185000" />
+      <workItem from="1711089735431" duration="11666000" />
+      <workItem from="1711114624023" duration="651000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="93" y="93" width="1095" height="487" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1711103816940">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="93" y="93" width="1095" height="487" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.672@0.0.1280.672" timestamp="1711103816940" />
+    <state x="125" y="43" key="#com.intellij.ide.util.MemberChooser" timestamp="1711039963906">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="125" y="43" key="#com.intellij.ide.util.MemberChooser/0.0.1280.672@0.0.1280.672" timestamp="1711039963906" />
+    <state x="134" y="263" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1711078657624">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="134" y="263" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.672@0.0.1280.672" timestamp="1711078657624" />
+    <state x="279" y="197" width="473" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1711099740736">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="279" y="197" width="473" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.672@0.0.1280.672" timestamp="1711099740736" />
+    <state x="371" y="85" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1711079230978">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="371" y="85" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.672@0.0.1280.672" timestamp="1711079230978" />
+    <state x="101" y="95" key="FileChooserDialogImpl" timestamp="1711089688499">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="101" y="95" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1711089688499" />
+    <state width="1237" height="201" key="GridCell.Tab.0.bottom" timestamp="1711107892796">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="201" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1711107892796" />
+    <state width="1237" height="201" key="GridCell.Tab.0.center" timestamp="1711107892796">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="201" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1711107892796" />
+    <state width="1237" height="201" key="GridCell.Tab.0.left" timestamp="1711107892796">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="201" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1711107892796" />
+    <state width="1237" height="201" key="GridCell.Tab.0.right" timestamp="1711107892796">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="201" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1711107892796" />
+    <state width="1237" height="201" key="GridCell.Tab.1.bottom" timestamp="1711107892796">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="201" key="GridCell.Tab.1.bottom/0.0.1280.672@0.0.1280.672" timestamp="1711107892796" />
+    <state width="1237" height="201" key="GridCell.Tab.1.center" timestamp="1711107892796">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="201" key="GridCell.Tab.1.center/0.0.1280.672@0.0.1280.672" timestamp="1711107892796" />
+    <state width="1237" height="201" key="GridCell.Tab.1.left" timestamp="1711107892796">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="201" key="GridCell.Tab.1.left/0.0.1280.672@0.0.1280.672" timestamp="1711107892796" />
+    <state width="1237" height="201" key="GridCell.Tab.1.right" timestamp="1711107892796">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="201" key="GridCell.Tab.1.right/0.0.1280.672@0.0.1280.672" timestamp="1711107892796" />
+    <state x="337" y="162" key="com.intellij.ide.util.TipDialog" timestamp="1711114646904">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="337" y="162" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1711114646904" />
+    <state x="27" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1711081594536">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="27" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.672@0.0.1280.672" timestamp="1711081594536" />
+  </component>
+</project>
