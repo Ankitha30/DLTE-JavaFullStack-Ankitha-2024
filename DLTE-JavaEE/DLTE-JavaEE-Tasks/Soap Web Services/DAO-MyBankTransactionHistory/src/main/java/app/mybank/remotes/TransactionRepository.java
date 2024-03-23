@@ -15,6 +15,7 @@ public interface TransactionRepository {
     List<Transaction> findByType(String user, String type);
     List<Transaction> viewAllTransaction();
 
+    void saveTransaction(Transaction transaction);
 }
 
 

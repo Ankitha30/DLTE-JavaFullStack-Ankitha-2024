@@ -39,6 +39,10 @@ public class TransactionService {
 //        }
 //    }
 
+    public void callSaveTransaction(Transaction transaction){
+        transactionRepository.saveTransaction(transaction);
+    }
+
     public List<Transaction> callViewTransaction(String userName) {
         return transactionRepository.viewTransaction(userName);
     }

@@ -60,6 +60,25 @@ public class TransactionDatabaseRepository implements TransactionRepository {
             System.out.println(resourceBundle.getString("account.not.ok"));
         }
     }
+    @Override
+    public void saveTransaction(Transaction transaction) {
+        try {
+            String query = "insert into TransactionHistory values(?,?,?,?)";
+            preparedStatement=connection.prepareStatement(query);
+            java.sql.Date sqlDate = new java.sql.Date(transaction.getTransactionDate().getTime());
+
+            preparedStatement.setString(1,transaction.getUserName());
+            preparedStatement.setString(2, transaction.getTransactionType());
+            preparedStatement.setDouble(3,transaction.getTransactionAmount());
+            preparedStatement.setDate(4, sqlDate);
+            preparedStatement.executeUpdate();
+
+
+        } catch (SQLException sqlException) {
+            System.out.println(resourceBundle.getString("account.not.ok"));
+        }
+    }
+
 
     @Override
     public boolean verifyAccount(String userName, String password) {

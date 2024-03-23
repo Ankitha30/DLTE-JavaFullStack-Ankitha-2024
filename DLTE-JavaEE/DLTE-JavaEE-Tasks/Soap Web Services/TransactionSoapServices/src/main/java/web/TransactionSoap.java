@@ -28,7 +28,7 @@ import java.util.List;
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public class TransactionSoap {
-    private TransactionService service;
+    public TransactionService service;
     public TransactionSoap() {
         StorageTarget storageTarget=new DatabaseTarget();
         service = new TransactionService(storageTarget);
@@ -79,6 +79,8 @@ public class TransactionSoap {
         return groupOfServices;
     }
 
-
+    public void createTransaction(@WebParam(name="Transaction") Transaction transaction){
+        service.callSaveTransaction(transaction);
+    }
 
 }
