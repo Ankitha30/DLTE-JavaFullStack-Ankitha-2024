@@ -15,26 +15,30 @@ import org.springframework.xml.xsd.XsdSchema;
 
 @EnableWs
 @Configuration
-public class SapServiceConfiguration {
+public class SoapServiceConfiguration {
 
     @Bean
     public ServletRegistrationBean servletRegistrationBean(ApplicationContext applicationContext){
-        MessageDispatcherServlet servlet = new MessageDispatcherServlet();
+        MessageDispatcherServlet servlet=new MessageDispatcherServlet();
         servlet.setTransformWsdlLocations(true);
         servlet.setApplicationContext(applicationContext);
-        return new ServletRegistrationBean(servlet,"/loansrepo/*");
+        return new ServletRegistrationBean(servlet,"/transactionrepo/*");
     }
 
-    @Bean(name="transactions")
+    // wsdl properties
+    @Bean(name = "transaction")
     public DefaultWsdl11Definition convertToWsdl(XsdSchema xsdSchema){
-        DefaultWsdl11Definition defaultWsdl11Definition = new DefaultWsdl11Definition();
+        DefaultWsdl11Definition defaultWsdl11Definition=new DefaultWsdl11Definition();
         defaultWsdl11Definition.setPortTypeName("TransactionPort");
         defaultWsdl11Definition.setTargetNamespace("http://services.transaction");
+        defaultWsdl11Definition.setLocationUri("/transactionrepo");
         defaultWsdl11Definition.setSchema(xsdSchema);
         return defaultWsdl11Definition;
     }
 
+    // identify the xsd
+    @Bean
     public XsdSchema transactionSchema(){
-        return  new SimpleXsdSchema(new ClassPathResource("transactions.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("transactions.xsd"));
     }
 }

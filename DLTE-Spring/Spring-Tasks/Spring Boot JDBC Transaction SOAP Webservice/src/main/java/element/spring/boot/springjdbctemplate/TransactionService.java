@@ -1,4 +1,4 @@
-package element.spring.boot.springjdbctemplate.service;
+package element.spring.boot.springjdbctemplate;
 
 
 import element.spring.boot.springjdbctemplate.exception.TransactionException;
