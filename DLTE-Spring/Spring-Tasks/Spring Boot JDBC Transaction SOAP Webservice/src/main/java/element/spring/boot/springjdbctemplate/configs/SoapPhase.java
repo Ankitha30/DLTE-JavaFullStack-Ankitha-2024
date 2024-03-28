@@ -10,11 +10,13 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import transaction.services.*;
 
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-//@Endpoint
+@Endpoint
 public class SoapPhase {
     private final String url="http://services.transaction";
     @Autowired
@@ -27,7 +29,9 @@ public class SoapPhase {
         ServiceStatus serviceStatus=new ServiceStatus();
 
         transaction.services.Transactions actualTransaction=newTransactionRequest.getTransaction();
+        Date date = newTransactionRequest.getTransaction().getTransactionDate().toGregorianCalendar().getTime();
         Transaction daoTransaction=new Transaction();
+        daoTransaction.setTransactionDate(date);
         BeanUtils.copyProperties(actualTransaction,daoTransaction);
 
         daoTransaction=transactionServices.apiSave(daoTransaction);
@@ -112,7 +116,7 @@ public class SoapPhase {
         return filterByAmountResponse;
     }
 
-    @PayloadRoot(namespace = url,localPart = "updateByRemarksRequest")
+    @PayloadRoot(namespace = url,localPart = "updateRemarksRequest")
     @ResponsePayload
     public UpdateRemarksResponse updateByRemarks(@RequestPayload UpdateRemarksRequest updateByRemarksRequest){
         UpdateRemarksResponse updateByRemarksResponse=new UpdateRemarksResponse();
@@ -138,12 +142,15 @@ public class SoapPhase {
         return updateByRemarksResponse;
     }
 
-    @PayloadRoot(namespace = url,localPart = "deleteByRangeOfDatesRequest")
+    @PayloadRoot(namespace = url,localPart = "deleteByRangeOfTransactionRequest")
     @ResponsePayload
     public DeleteByRangeOfTransactionResponse deleteBasedOnDates(@RequestPayload DeleteByRangeOfTransactionRequest deleteByRangeOfDatesRequest){
         DeleteByRangeOfTransactionResponse deleteByRangeOfDatesResponse=new DeleteByRangeOfTransactionResponse();
         ServiceStatus serviceStatus=new ServiceStatus();
-        String deleteTransaction=transactionServices.apiDeleteTransaction(deleteByRangeOfDatesRequest.getStartDate(),deleteByRangeOfDatesRequest.getEndDate());
+        Date startDate=deleteByRangeOfDatesRequest.getStartDate().toGregorianCalendar().getTime();
+        Date endDate=deleteByRangeOfDatesRequest.getEndDate().toGregorianCalendar().getTime();
+        String deleteTransaction=transactionServices.apiDeleteTransaction(startDate,endDate);
+
         if(deleteTransaction.contains("deleted")){
             serviceStatus.setStatus("FAILURE");
         }else

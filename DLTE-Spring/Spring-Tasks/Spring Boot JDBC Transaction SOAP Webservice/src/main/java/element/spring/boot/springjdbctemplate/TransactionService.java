@@ -15,6 +15,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLSyntaxErrorException;
+import java.util.Date;
 import java.util.List;
 
 
@@ -80,7 +81,7 @@ public class TransactionService {
         else  return null;
     }
 
-    public String apiDeleteTransaction(XMLGregorianCalendar startDate, XMLGregorianCalendar endDate){
+    public String apiDeleteTransaction(Date startDate, Date endDate){
         int acknowledge= jdbcTemplate.update("delete from mybank_transactions where transactiondate between ? and ?",
                 new Object[]{startDate,endDate}
         );
