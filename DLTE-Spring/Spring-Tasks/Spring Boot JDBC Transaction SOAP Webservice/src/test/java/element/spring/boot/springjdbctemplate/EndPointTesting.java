@@ -7,30 +7,29 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import transaction.services.UpdateRemarksRequest;
 import transaction.services.*;
-
 import javax.xml.datatype.DatatypeConfigurationException;
-import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import javax.xml.datatype.XMLGregorianCalendar;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
+
 import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
+@AutoConfigureMockMvc
 @SpringBootTest
-@ExtendWith({MockitoExtension.class})
-class SpringJdbcTemplateApplicationTests {
+public class EndPointTesting {
     @MockBean
     private TransactionService transactionService;
 
@@ -122,21 +121,21 @@ class SpringJdbcTemplateApplicationTests {
 
     }
     @Test
- public void testDelete(){
-     Date startDate = Date.from(Instant.parse("2024-01-01T00:00:00Z"));
-     Date endDate = Date.from(Instant.parse("2024-01-15T23:59:59Z"));
-     when(transactionService.apiDeleteTransaction(startDate, endDate)).thenReturn("deleted");
-     DeleteByRangeOfTransactionRequest request = new DeleteByRangeOfTransactionRequest();
-     XMLGregorianCalendar startCal = XMLGregorianCalendarImpl.createDateTime(2024, 1, 1, 0, 0, 0, 0, 0);
-     XMLGregorianCalendar endCal = XMLGregorianCalendarImpl.createDateTime(2024, 1, 15, 23, 59, 59, 0, 0);
-     request.setStartDate(startCal);
-     request.setEndDate(endCal);
+    public void testDelete(){
+        Date startDate = Date.from(Instant.parse("2024-01-01T00:00:00Z"));
+        Date endDate = Date.from(Instant.parse("2024-01-15T23:59:59Z"));
+        when(transactionService.apiDeleteTransaction(startDate, endDate)).thenReturn("deleted");
+        DeleteByRangeOfTransactionRequest request = new DeleteByRangeOfTransactionRequest();
+        XMLGregorianCalendar startCal = XMLGregorianCalendarImpl.createDateTime(2024, 1, 1, 0, 0, 0, 0, 0);
+        XMLGregorianCalendar endCal = XMLGregorianCalendarImpl.createDateTime(2024, 1, 15, 23, 59, 59, 0, 0);
+        request.setStartDate(startCal);
+        request.setEndDate(endCal);
 
-     DeleteByRangeOfTransactionResponse response = soapPhase.deleteBasedOnDates(request);
+        DeleteByRangeOfTransactionResponse response = soapPhase.deleteBasedOnDates(request);
 
 //     assertEquals("SUCCESS", response.getServiceStatus().getStatus());
 //     assertEquals("FAILURE", response.getServiceStatus().getStatus());
-     assertEquals("deleted", response.getServiceStatus().getMessage());
- }
+        assertEquals("deleted", response.getServiceStatus().getMessage());
+    }
 
 }

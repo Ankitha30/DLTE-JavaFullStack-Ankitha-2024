@@ -4,6 +4,7 @@ import element.spring.boot.springjdbctemplate.TransactionService;
 import element.spring.boot.springjdbctemplate.model.Transaction;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -22,6 +23,7 @@ public class SoapPhase {
     @Autowired
     private TransactionService transactionServices;
 
+    @PreAuthorize("hasAnyAuthority('admin')")
     @PayloadRoot(namespace = url,localPart = "newTransactionRequest")//local part specifies what is it handling
     @ResponsePayload
     public NewTransactionResponse addNewTransaction(@RequestPayload NewTransactionRequest newTransactionRequest){
@@ -49,6 +51,8 @@ public class SoapPhase {
 
         return newTransactionResponse;
     }
+
+    @PreAuthorize("hasAnyAuthority('customer')")
     @PayloadRoot(namespace = url,localPart = "filterBySenderRequest")
     @ResponsePayload
     public FilterBySenderResponse filterBySender(@RequestPayload FilterBySenderRequest filterBySenderRequest){
@@ -72,6 +76,7 @@ public class SoapPhase {
 
     }
 
+    @PreAuthorize("hasAnyAuthority('customer')")
     @PayloadRoot(namespace = url,localPart = "filterByReceiverRequest")
     @ResponsePayload
     public FilterByReceiverResponse filterByReceiver(@RequestPayload FilterByReceiverRequest filterByReceiverRequest){
@@ -94,6 +99,7 @@ public class SoapPhase {
         return filterByReceiverResponse;
 
     }
+    @PreAuthorize("hasAnyAuthority('customer')")
     @PayloadRoot(namespace = url,localPart = "filterByAmountRequest")
     @ResponsePayload
     public FilterByAmountResponse filterByAmount(@RequestPayload FilterByAmountRequest filterByAmountRequest){
@@ -116,6 +122,7 @@ public class SoapPhase {
         return filterByAmountResponse;
     }
 
+    @PreAuthorize("hasAnyAuthority('admin','manager')")
     @PayloadRoot(namespace = url,localPart = "updateRemarksRequest")
     @ResponsePayload
     public UpdateRemarksResponse updateByRemarks(@RequestPayload UpdateRemarksRequest updateByRemarksRequest){
@@ -142,6 +149,7 @@ public class SoapPhase {
         return updateByRemarksResponse;
     }
 
+    @PreAuthorize("hasAnyAuthority('admin','manager')")
     @PayloadRoot(namespace = url,localPart = "deleteByRangeOfTransactionRequest")
     @ResponsePayload
     public DeleteByRangeOfTransactionResponse deleteBasedOnDates(@RequestPayload DeleteByRangeOfTransactionRequest deleteByRangeOfDatesRequest){
