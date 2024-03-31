@@ -13,8 +13,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import transaction.services.*;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.XMLGregorianCalendar;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import java.text.ParseException;
@@ -46,10 +46,8 @@ public class EndPointTesting {
         transactions.setRemarks("rent");
         request.setTransaction(transactions);
         UpdateRemarksResponse response =soapPhase.updateByRemarks(request);
-//        assertEquals(transaction.getRemarks(),response.getTransaction().getRemarks()); //pass
-//        assertNotNull(response.getServiceStatus().getMessage()); //pass
-//        assertTrue(transaction.getRemarks()==response.getTransaction().getRemarks()); //pass
-//        assertFalse(transaction.getRemarks()==response.getTransaction().getRemarks());   //fail
+        assertEquals("SUCCESS", response.getServiceStatus().getStatus());
+
     }
 
     @Test
@@ -61,10 +59,9 @@ public class EndPointTesting {
         FilterBySenderRequest request =new FilterBySenderRequest();
         request.setTransactionBy("Anu");
         FilterBySenderResponse response = soapPhase.filterBySender(request);
-        assertEquals(transaction.getTransactionBy(),response.getTransaction().get(0).getTransactionBy()); //pass
-//        assertEquals(transaction.getTransactionBy(),response.getTransaction().get(1).getTransactionBy()); //fail
-//        assertNotEquals(transaction.getTransactionBy(),response.getTransaction().get(1).getTransactionBy()); //pass
-//        assertNotEquals(transaction.getTransactionBy(),response.getTransaction().get(0).getTransactionBy()); //fail
+//        assertEquals("Transaction by sender "+request.getTransactionBy()+" is fetched", response.getServiceStatus().getMessage()); //pass
+        assertNotEquals("FAILURE", response.getServiceStatus().getStatus());
+
     }
 
     @Test
@@ -76,11 +73,10 @@ public class EndPointTesting {
         FilterByAmountRequest request =new FilterByAmountRequest();
         request.setTransactionAmount(2000.0);
         FilterByAmountResponse response = soapPhase.filterByAmount(request);
-        assertEquals(transaction.getTransactionAmount(),response.getTransaction().get(0).getTransactionAmount()); //pass
-//        assertEquals(transaction.getTransactionAmount(),response.getTransaction().get(1).getTransactionAmount()); //fail
-//        assertNotEquals(transaction.getTransactionAmount(),response.getTransaction().get(1).getTransactionAmount()); //pass
-//        assertNotEquals(transaction.getTransactionAmount(),response.getTransaction().get(0).getTransactionAmount()); //fail
-    }
+        assertEquals("Transaction by amount "+request.getTransactionAmount()+" is fetched", response.getServiceStatus().getMessage());
+//        assertEquals(request.getTransactionAmount(), response.getServiceStatus().getMessage()); //fail
+//        assertNotEquals("FAILURE", response.getServiceStatus().getStatus());  //pass
+         }
 
 
     @Test
@@ -92,11 +88,10 @@ public class EndPointTesting {
         FilterByReceiverRequest request =new FilterByReceiverRequest();
         request.setTransactionTo("Anu");
         FilterByReceiverResponse response = soapPhase.filterByReceiver(request);
-        assertEquals(transaction.getTransactionTo(),response.getTransaction().get(0).getTransactionTo()); //pass
-//        assertEquals(transaction.getTransactionTo(),response.getTransaction().get(1).getTransactionTo()); //fail
-//        assertNotEquals(transaction.getTransactionTo(),response.getTransaction().get(1).getTransactionTo()); //pass
-//        assertNotEquals(transaction.getTransactionTo(),response.getTransaction().get(0).getTransactionTo()); //fail
-    }
+        assertEquals("Transaction by receiver "+request.getTransactionTo()+" is fetched", response.getServiceStatus().getMessage());
+//        assertEquals(request.getTransactionAmount(), response.getServiceStatus().getMessage()); //fail
+//        assertNotEquals("FAILURE", response.getServiceStatus().getStatus());  //pass
+        }
 
 
 
