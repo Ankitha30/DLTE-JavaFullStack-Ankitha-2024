@@ -4,6 +4,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class MyBankUsers implements UserDetails {
@@ -15,7 +16,27 @@ public class MyBankUsers implements UserDetails {
     private Long contact;
     private Long aadhaar;
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    private  String role;
+
     public MyBankUsers() {
+    }
+
+    public MyBankUsers(String name, String username, String password, String email, Long contact, Long aadhaar, String role) {
+        this.name = name;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.contact = contact;
+        this.aadhaar = aadhaar;
+        this.role = role;
     }
 
     public MyBankUsers(String name, String username, String password, String email, Long contact, Long aadhaar) {
@@ -65,7 +86,9 @@ public class MyBankUsers implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        Collection<SimpleGrantedAuthority> authorities=new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority(role));
+        return authorities;
     }
 
     public String getPassword() {
