@@ -1,3 +1,25 @@
+CREATE SEQUENCE mybank_app_customer_seq START WITH 123670 INCREMENT BY 1;
+ 
+CREATE TABLE mybank_app_customer (
+    customer_id NUMBER primary key,
+    customer_name VARCHAR(255),
+    customer_address VARCHAR(255),
+    customer_status VARCHAR(50),
+    customer_contact NUMBER(10,0),
+    username VARCHAR(50) UNIQUE not null,
+    password VARCHAR(50)
+);
+ 
+CREATE OR REPLACE TRIGGER mybank_app_customer_trigger
+BEFORE INSERT ON mybank_app_customer
+FOR EACH ROW
+BEGIN
+SELECT mybank_app_customer_seq.NEXTVAL INTO :NEW.customer_id FROM dual;
+END;
+/
+
+
+
 create sequence mybank_app_account_seq start with 100001 increment by 1;
  
 CREATE TABLE mybank_app_account (
