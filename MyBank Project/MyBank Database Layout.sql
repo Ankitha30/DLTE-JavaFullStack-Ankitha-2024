@@ -1,26 +1,3 @@
-CREATE SEQUENCE mybank_app_customer_seq START WITH 123670 INCREMENT BY 1;
- 
-CREATE TABLE mybank_app_customer (
-    customer_id NUMBER primary key,
-    customer_name VARCHAR(255),
-    customer_address VARCHAR(255),
-    customer_status VARCHAR(50),
-    customer_contact NUMBER(10,0),
-    username VARCHAR(50) UNIQUE not null,
-    password VARCHAR(50)
-);
- 
-CREATE OR REPLACE TRIGGER mybank_app_customer_trigger
-BEFORE INSERT ON mybank_app_customer
-FOR EACH ROW
-BEGIN
-SELECT mybank_app_customer_seq.NEXTVAL INTO :NEW.customer_id FROM dual;
-END;
-/
-
-
-
- 
 create sequence mybank_app_account_seq start with 100001 increment by 1;
  
 CREATE TABLE mybank_app_account (
@@ -39,9 +16,8 @@ BEGIN
 SELECT mybank_app_account_seq.NEXTVAL INTO :NEW.account_id FROM dual;
 END;
 /
-
-
-
+ 
+--3).KYC
  
 create sequence mybank_app_kyc_seq start with 200001 increment by 1;
  
@@ -58,39 +34,35 @@ CREATE TABLE mybank_app_kyc (
 CREATE OR REPLACE TRIGGER mybank_app_kyc_trigger
 BEFORE INSERT ON mybank_app_kyc
 FOR EACH ROW
+BEGIN
 SELECT mybank_app_kyc_seq.NEXTVAL INTO :NEW.kyc_number FROM dual; 
 END;
 /
  
-
-
-
+--4).Transaction
  
 create sequence mybank_app_transaction_seq start with 300001 increment by 1;
- 
-CREATE TABLE mybank_app_transaction (
+
+ CREATE TABLE mybank_app_transaction (
     transaction_id NUMBER PRIMARY KEY,
-    account_id NUMBER,
     transaction_type VARCHAR(50),
-    transaction_from VARCHAR(255),
-    transaction_to VARCHAR(255),
+    transaction_from NUMBER,
+    transaction_to NUMBER,
     transaction_date DATE,
-    transaction_amount DECIMAL(15,2),
+    transaction_amount DECIMAL(20,2),
     transaction_status VARCHAR(50),
-    foreign key (account_id) REFERENCES  mybank_app_account(account_id) on delete cascade
+    foreign key (transaction_from) REFERENCES  mybank_app_account(account_number) on delete cascade,
+    foreign key (transaction_to) REFERENCES  mybank_app_account(account_number) on delete cascade
 );
  
 CREATE OR REPLACE TRIGGER mybank_app_transaction_trigger
 BEFORE INSERT ON mybank_app_transaction
 FOR EACH ROW
-DECLARE
-  account_id_count NUMBER;
 BEGIN   
     SELECT mybank_app_transaction_seq.NEXTVAL INTO :NEW.transaction_id FROM dual; 
 END;
 /
-
-
+--5).Payee
  
  
 create sequence mybank_app_payee_seq start with 400001 increment by 1;
@@ -98,26 +70,22 @@ create sequence mybank_app_payee_seq start with 400001 increment by 1;
 CREATE TABLE MYBANK_APP_Payee (
     payee_id NUMBER PRIMARY KEY,
     customer_id NUMBER,
-    account_id NUMBER,
+    account_number NUMBER,
     payee_name VARCHAR(255),
-    foreign key (customer_id) REFERENCES  mybank_app_customer(customer_id) on delete cascade
-    foreign key (account_id) REFERENCES  mybank_app_account(account_id) on delete cascade
+    foreign key (customer_id) REFERENCES  mybank_app_customer(customer_id) on delete cascade,
+    foreign key (account_number) REFERENCES  mybank_app_account(account_number) on delete cascade
  
 );
  
 CREATE OR REPLACE TRIGGER mybank_app_payee_trigger
 BEFORE INSERT ON mybank_app_payee
 FOR EACH ROW
-DECLARE
-  account_id_count NUMBER;
 BEGIN   
     SELECT mybank_app_transaction_seq.NEXTVAL INTO :NEW.payee_id FROM dual;
 END;
 /
  
-
-
-
+6).Deposits Available
  
 create sequence mybank_app_depositsavail_seq start with 500001 increment by 1;
  
@@ -139,8 +107,7 @@ END;
 
  
  
-
-
+7).Deposits Availed
 create sequence mybank_app_depositsavailed_seq start with 600001 increment by 1;
 CREATE TABLE mybank_app_depositsavailed (
     deposit_avail_id NUMBER PRIMARY KEY,
@@ -162,8 +129,7 @@ END;
 /
  
  
-
-
+8).Insurance Available
  
 create sequence mybank_app_insuranceavail_seq start with 700001 increment by 1;
 CREATE TABLE mybank_app_insuranceavailable (
@@ -183,8 +149,7 @@ END;
 /
 
  
-
-
+9).Insurance Availed
  
 create sequence mybank_app_insuranceavd_seq start with 800001 increment by 1;
  
@@ -210,16 +175,14 @@ END;
 /
  
  
-
-
-
+10).Debit card Available
  
 create sequence mybank_app_debitcard_seq start with 900001 increment by 1;
  
 
 CREATE TABLE mybank_app_debitcard (
     debitcard_number NUMBER PRIMARY KEY,
-    account_id NUMBER,
+    account_number NUMBER,
     customer_id NUMBER,
     debitcard_cvv NUMBER(3),
     debitcard_pin NUMBER,
@@ -227,8 +190,8 @@ CREATE TABLE mybank_app_debitcard (
     debitcard_status VARCHAR(50),
     debitcard_domestic_limit DECIMAL(20,2),
     debitcard_international_limit DECIMAL(20,2),
-    foreign key (customer_id) REFERENCES  mybank_app_customer(customer_id) on delete cascade
-    foreign key (account_id) REFERENCES  mybank_app_account(account_id) on delete cascade
+    foreign key (customer_id) REFERENCES  mybank_app_customer(customer_id) on delete cascade,
+    foreign key (account_number) REFERENCES  mybank_app_account(account_number) on delete cascade
  
 );
  
@@ -236,13 +199,12 @@ CREATE OR REPLACE TRIGGER mybank_app_debitcard_trigger
 BEFORE INSERT ON mybank_app_debitcard
 FOR EACH ROW
 BEGIN
-SELECT my_bank_app_seq_debitcard.NEXTVAL INTO :NEW.debitcard_number FROM dual;
+SELECT mybank_app_debitcard_seq.NEXTVAL INTO :NEW.debitcard_number FROM dual;
 END;
 /
  
 
-
-
+11).Loans Available
  
  
 create sequence mybank_app_loanavailable_seq start with 1230001 increment by 1;
@@ -263,9 +225,7 @@ SELECT mybank_app_loanavailable_seq.NEXTVAL INTO :NEW.loan_id FROM dual;
 END;
 /
  
-
-
-
+12).Loans Availed
  
 create sequence mybank_app_loanavailed_seq start with 1270001 increment by 1;
 CREATE TABLE mybank_app_loanavailed (
@@ -284,3 +244,4 @@ BEGIN
 SELECT mybank_app_loanavailed_seq.NEXTVAL INTO :NEW.loan_app_id FROM dual;
 END;
 /
+ 
