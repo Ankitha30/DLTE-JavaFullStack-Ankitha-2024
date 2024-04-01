@@ -11,7 +11,7 @@ CREATE TABLE mybank_app_customer (
 );
  
 CREATE OR REPLACE TRIGGER mybank_app_customer_trigger
-BEFORE INSERT ON mybank_app_customer_seq
+BEFORE INSERT ON mybank_app_customer
 FOR EACH ROW
 BEGIN
 SELECT mybank_app_customer_seq.NEXTVAL INTO :NEW.customer_id FROM dual;
