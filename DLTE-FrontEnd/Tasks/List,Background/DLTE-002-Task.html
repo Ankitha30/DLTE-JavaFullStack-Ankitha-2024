@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Product </title>
+    <style>
+         body{
+            background: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('/images/logo1.png');
+            background-color: seashell;
+           
+            z-index:1;
+        }
+        header h1{
+            display: flex;
+            font-size: 10vh;
+            width: 100%;
+            justify-content: space-around;
+            color: rgb(247, 128, 9);
+            font-family: Georgia;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px wheat;
+        }
+        .content {
+            padding: 20px;
+            display: grid;
+            align-items: center;
+            justify-content:  center;
+            
+        }
+        h2{
+            font-size: 7vh;
+            color: rgb(241, 125, 9);
+        }
+        .feature-list {
+            font-family: Georgia;
+            font-size: 5vh;
+            border-style: dotted;
+            padding: 30px;
+            
+            background-color: rgba(232, 242, 251,0.5);
+        }
+        
+         .container{
+            margin-top: 80px;
+            display:grid;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .product:hover{
+            background-color: rgb(118, 245, 245);
+           
+        }
+        img:hover{
+            width: 400px;
+        }
+        .product{
+            margin: 10px;
+            align-items: center;
+            text-align: center;
+            align-items: center;
+            background-color: slategray; 
+            border-radius: 20px;
+            box-shadow: 0px 0px 30px rgb(249, 241, 255); 
+            padding: 5px;
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            opacity: 8;
+        }
+        img{
+            width: 370px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Bank Products</h1>
+    </header>
+    <div class="content">
+       <div class="feature-list">
+        <h2>Deposit Features</h2>
+        <ul >
+            <li>High Interest Rates</li>
+            <li>Flexible Deposit Terms</li>
+            <li>Online Account Management</li>
+        </ul>
+    </div>
+        <!-- <br/> -->
+        <div class="feature-list" style="margin-top: 45px;">
+        <h2>Available Loans</h2>
+        <ol >
+            <li>Personal Loans</li>
+            <li>Mortgage Loans</li>
+            <li>Business Loans</li>
+        </ol>
+    </div>
+    </div>
+    <div class="container" >
+        <div class="product">
+            <img src="/images/Deposite.png"/>
+        </div>
+        <div class="product">
+            <img src="/images/CreditCard.png"  />
+        </div>
+        <div class="product">
+            <video controls muted autoplay style="width: 200px;">
+                <source src="/images/video.mp4" type="video/mp4">
+            </video>
+        </div> 
+        <div class="product">
+            <img src="/images/Currency Exchange.png" />
+        </div>
+        <div class="product">
+            <img src="/images/Safe Online Banking.png" />
+        </div>
+    </div>
+</body>
+</html>
