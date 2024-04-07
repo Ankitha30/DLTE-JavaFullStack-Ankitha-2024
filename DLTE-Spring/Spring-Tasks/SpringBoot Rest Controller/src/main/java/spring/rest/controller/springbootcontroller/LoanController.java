@@ -21,6 +21,7 @@ PostMapping: new loan into the List
 public class LoanController {
      List<Loan> loanList = new ArrayList<>();
 
+
     public LoanController() {
         loanList.add(new Loan(2340009L, 50000,"open","Anu"));
         loanList.add(new Loan(4528009L,100000,"closed","Suni"));
@@ -32,6 +33,9 @@ public class LoanController {
     public  Loan getLoan(@PathVariable("index") int index){
         return loanList.get(index);
     }
+
+    @GetMapping("/view")
+    public List<Loan> getLoanList(){return loanList.subList(0,loanList.size());}
 
     @PostMapping("/")
     public String addLoan(@RequestBody Loan loan){

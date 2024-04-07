@@ -41,3 +41,22 @@ conflict when there are multiple beans of the same type.
 
 
  */
+
+
+
+/*
+@Component
+public class MyBank {
+    private  LoanImplementation loanImplementation;
+
+    @Autowired
+    @Qualifier("homeLoan")
+    public void setHomeLoanDependency( LoanImplementation loanImplementation) {
+        this.loanImplementation= loanImplementation;
+    }
+
+    public List<Loan> callFindAll() {
+       return loanImplementation.findALL();
+    }
+}
+ */

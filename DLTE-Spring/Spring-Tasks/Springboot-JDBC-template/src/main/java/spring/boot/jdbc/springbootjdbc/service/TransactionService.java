@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLSyntaxErrorException;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import spring.boot.jdbc.springbootjdbc.exception.TransactionException;
@@ -49,19 +50,12 @@ public class TransactionService {
        else
            throw new TransactionException("Insertion failed");
 
-        // jdbcTemplate.update("INSERT INTO mybank_transactions (transactionid, transactionby, transactiondate, transactionto, transactionamount, remarks) VALUES (?,?,?,?,?,?)",
-        //         transaction.getTransactionId(),
-        //         transaction.getTransactionBy(),
-        //         transaction.getTransactionDate(),
-        //         transaction.getTransactionTo(),
-        //         transaction.getTransactionAmount(),
-        //         transaction.getRemarks());
-        // return transaction;
+      
     }
 
 
     public List<Transaction> apiFindByReceiver(String transactionTo){
-        return jdbcTemplate.query("select * from mybank_transactions where transactionTo=?",
+        return jdbcTemplate.query("select TRANSACTIONDATE from mybank_transactions where transactionTo=?",
                 new Object[]{transactionTo},
                 new TransactionMapper());
 
@@ -84,7 +78,7 @@ public class TransactionService {
         public Transaction mapRow(ResultSet rs, int rowNum) throws SQLException {
             Transaction transaction=new Transaction();
             transaction.setTransactionId(rs.getInt(1));
-            transaction.setTransactionDate(rs.getDate(2));
+            transaction.setTransactionDate(rs.getDate(1));
             transaction.setTransactionBy(rs.getString(3));
             transaction.setTransactionTo(rs.getString(4));
             transaction.setTransactionAmount(rs.getDouble(5));
@@ -92,6 +86,15 @@ public class TransactionService {
 
             return transaction;
         }
+    }
+    public String apiRemoveTransactionByDates(Date startDate, Date endDate) {
+//        System.out.println("inside transaction");
+        int result =jdbcTemplate.update("DELETE FROM mybank_transactions WHERE transaction_date BETWEEN ? AND ?",
+                startDate, endDate);
+        if(result!=0)
+            return "success";
+        else
+            return "fail";
     }
 
 }

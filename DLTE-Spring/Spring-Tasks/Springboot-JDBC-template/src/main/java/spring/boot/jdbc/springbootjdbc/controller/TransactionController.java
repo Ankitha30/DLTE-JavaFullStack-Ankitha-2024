@@ -3,11 +3,15 @@ package spring.boot.jdbc.springbootjdbc.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import spring.boot.jdbc.springbootjdbc.exception.TransactionException;
 import spring.boot.jdbc.springbootjdbc.model.Transaction;
 import spring.boot.jdbc.springbootjdbc.service.TransactionService;
+
+import java.util.Date;
 import java.util.List;
 
 
@@ -46,6 +50,18 @@ public class TransactionController {
     @GetMapping("/amount/{amount}")
     public List<Transaction> gettingAmount(@PathVariable("amount") Double amount){
         return transactionService.apiFindByAmount(amount);
+    }
+
+
+    @PreAuthorize("hasAuthority('admin')")
+    @DeleteMapping("/delete/dates/{start}/{end}")
+    public String removeTransactionBetweenDates(@PathVariable ("start") Date start, @PathVariable("end") Date end){
+        try {
+            return transactionService.apiRemoveTransactionByDates(start,end);
+        }catch (Exception exception){
+            logger.error("Error occurred : " + exception.getMessage());
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, exception.getMessage(), exception);
+        }
     }
 
 
