@@ -89,12 +89,21 @@ public class TransactionService {
     }
     public String apiRemoveTransactionByDates(Date startDate, Date endDate) {
 //        System.out.println("inside transaction");
-        int result =jdbcTemplate.update("DELETE FROM mybank_transactions WHERE transaction_date BETWEEN ? AND ?",
+        int result =jdbcTemplate.update("DELETE FROM mybank_transactions WHERE transactiondate BETWEEN ? AND ?",
                 startDate, endDate);
         if(result!=0)
             return "success";
         else
             return "fail";
     }
+    public String apiUpdateRemarks(String remarks,long transactionId){
+        int result=jdbcTemplate.update("UPDATE mybank_transactions SET remarks = ? WHERE transactionid = ?",
+                remarks, transactionId);
+        if(result!=0)
+            return "success";
+        else
+            return "fail";
+    }
+
 
 }

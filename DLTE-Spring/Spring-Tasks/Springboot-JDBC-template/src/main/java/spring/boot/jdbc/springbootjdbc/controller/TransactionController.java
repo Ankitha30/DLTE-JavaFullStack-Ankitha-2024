@@ -64,5 +64,16 @@ public class TransactionController {
         }
     }
 
+    @PreAuthorize("hasAnyAuthority('admin','manager')")
+    @PutMapping("/update/{transactionId}/{remark}")
+    public String updateRemarks(@PathVariable ("transactionId") long transactionId,@PathVariable("remark") String remark){
+        try{
+            return transactionService.apiUpdateRemarks(remark,transactionId);
+        }catch (Exception err){
+            logger.error("Error occurred : " + err.getMessage());
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, err.getMessage(), err);
+        }
+
+    }
 
 }
