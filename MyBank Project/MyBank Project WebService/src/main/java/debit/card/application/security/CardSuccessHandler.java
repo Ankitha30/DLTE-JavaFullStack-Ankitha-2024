@@ -17,8 +17,7 @@ import java.util.ResourceBundle;
 
 @Component
 public class CardSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
-//    @Autowired
-//    CardSecurityService cardSecurityServices;
+
 
     @Autowired
     debits.cards.dao.services.CardSecurityService cardSecurityServices;

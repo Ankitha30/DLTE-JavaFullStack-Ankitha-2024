@@ -1,4 +1,4 @@
-package debit.card.application.rest.configuratuin;
+package debit.card.application.rest.configuration;
 
 
 import org.springframework.context.MessageSource;

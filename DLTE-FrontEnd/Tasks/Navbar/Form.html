@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheque Application</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="container text-center">
+            <h1 class="display-3 text-bg-dark">MyBank</h1>
+        </div>
+
+        <h2 class="text-center">Application for Cheque Book</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form name="application" action="#" class="p-3 border rounded">
+                    <div class="form-group">
+                        <label for="accountNumber">Account Number:</label>
+                        <input type="text" class="form-control" id="accountNumber" placeholder="Account Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="accountHolderName">Account Holder Name:</label>
+                        <input type="text" class="form-control" id="accountHolderName"
+                            placeholder="Account Holder Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="applicantContact">Applicant Contact:</label>
+                        <input type="tel" class="form-control" id="applicantContact" placeholder="Applicant's Contact">
+                    </div>
+                    <div class="form-group">
+                        <label for="applicantEmail">Applicant Email:</label>
+                        <input type="email" class="form-control" id="applicantEmail" placeholder="Applicant's Email">
+                    </div>
+                    <div class="form-group">
+                        <label>Account Type:</label>
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="accountType" id="savings"
+                                    value="savings">
+                                <label class="form-check-label" for="savings">Savings</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="accountType" id="current"
+                                    value="current">
+                                <label class="form-check-label" for="current">Current</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="chequebookType">ChequeBook Type:</label>
+                        <select class="form-control" id="chequebookType">
+                            <option>Open Cheque</option>
+                            <option>Crossed Cheque</option>
+                            <option>Self Cheque</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="applyDate">Date of Apply:</label>
+                        <input type="date" class="form-control" id="applyDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea class="form-control" id="address" rows="3"></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="termsAndConditions">
+                        <label class="form-check-label" for="termsAndConditions">I agree to the Terms and
+                            Conditions</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="signature">Signature:</label>
+                        <input type="file" class="form-control-file" id="signature">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary mr-3">Apply</button>
+                        <button type="reset" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

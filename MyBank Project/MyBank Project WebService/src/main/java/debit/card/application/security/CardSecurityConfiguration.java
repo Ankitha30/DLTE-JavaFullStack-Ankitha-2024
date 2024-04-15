@@ -13,6 +13,11 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class CardSecurityConfiguration {
+    @Bean
+    PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
     @Autowired
     CardSecurityService cardSecurityServices;
 
@@ -24,11 +29,6 @@ public class CardSecurityConfiguration {
     CardSuccessHandler cardSuccessHandler;
 
     @Bean
-    PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
         httpSecurity.httpBasic();
         httpSecurity.formLogin()
@@ -38,6 +38,7 @@ public class CardSecurityConfiguration {
         httpSecurity.csrf().disable();
         httpSecurity.authorizeRequests().antMatchers("/bank/register").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/debitcardrepo/debitcard.wsdl").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/update/status").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 

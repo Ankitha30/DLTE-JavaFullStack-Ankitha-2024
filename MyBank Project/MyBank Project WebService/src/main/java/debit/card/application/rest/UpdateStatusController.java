@@ -51,7 +51,6 @@ public class  UpdateStatusController {
             logger.error(resourceBundle.getString("account.not.found"));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(accountException.getMessage());
         }
-
         catch (DebitCardException debitCardException) {
             logger.error(resourceBundle.getString("status.update.failed"));
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(debitCardException.getMessage());

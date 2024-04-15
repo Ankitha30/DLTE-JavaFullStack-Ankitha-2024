@@ -14,10 +14,7 @@ import org.springframework.jdbc.core.*;
 import org.springframework.stereotype.Service;
 
 import java.sql.*;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 @Service
 public class DebitCardService implements DebitCardRepository {
@@ -45,6 +42,20 @@ public class DebitCardService implements DebitCardRepository {
 
     @Override
     public String updateDebitCardStatus(DebitCard debitCard)  {
+        try{
+            DebitCard fetchedDebitCard = jdbcTemplate.queryForObject(
+                    "SELECT * FROM mybank_app_debitcard WHERE account_number = ?",
+                    new Object[]{debitCard.getAccountNumber()},
+                    new DebitCardMapper());
+            // Check if any attributes are incorrect
+            if (!Objects.equals(debitCard.getDebitCardNumber(), fetchedDebitCard.getDebitCardNumber())) {
+                throw new DebitCardException("Debit card not found");
+            }
+
+        }catch(DataAccessException exception){
+            logger.error(resourceBundle.getString("no.data"));
+            throw new DebitCardException(resourceBundle.getString("no.data"));
+        }
         try {
             CallableStatementCreator creator = con -> {
                 CallableStatement statement = con.prepareCall("{call UPDATE_DEBITCARD_STATUS(?, ?,?)}");
