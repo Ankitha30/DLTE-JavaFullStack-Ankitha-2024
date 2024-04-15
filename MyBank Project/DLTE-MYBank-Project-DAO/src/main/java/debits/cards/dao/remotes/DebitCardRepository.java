@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface DebitCardRepository {
     List<DebitCard> listAllCards() throws SQLSyntaxErrorException;
+    String updateDebitCardStatus(DebitCard debitCard);
 }

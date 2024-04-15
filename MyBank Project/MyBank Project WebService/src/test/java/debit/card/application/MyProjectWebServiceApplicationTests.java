@@ -1,6 +1,8 @@
 package debit.card.application;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import debit.card.application.configs.DebitCardPhase;
+import debit.card.application.rest.UpdateStatusController;
 import debits.cards.dao.entities.DebitCard;
 import debits.cards.dao.exceptions.DebitCardException;
 import debits.cards.dao.services.DebitCardService;
@@ -13,7 +15,13 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
@@ -29,17 +37,24 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.when;
+import static org.springframework.mock.http.server.reactive.MockServerHttpRequest.put;
+import static org.springframework.test.web.client.match.MockRestRequestMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 class MyProjectWebServiceApplicationTests {
-//    ResourceBundle resourceBundle=ResourceBundle.getBundle("application");
-//
-//    @MockBean
-//    private DebitCardService debitCardRepository;
-//
-//    @InjectMocks
-//    private DebitCardPhase debitCardPhase;
+    ResourceBundle resourceBundle=ResourceBundle.getBundle("application");
+    private MockMvc mockMvc;
+
+    @MockBean
+    private DebitCardService debitCardRepository;
+
+    @InjectMocks
+    private DebitCardPhase debitCardPhase;
+
+    @InjectMocks
+    private UpdateStatusController updateStatus;
 //    @Test
 //    void testAllDebitCards_success() throws SQLException, DebitCardException {
 //        // Mocking the response from the database
@@ -100,6 +115,4 @@ class MyProjectWebServiceApplicationTests {
 //    }
 
 
-
-    
 }

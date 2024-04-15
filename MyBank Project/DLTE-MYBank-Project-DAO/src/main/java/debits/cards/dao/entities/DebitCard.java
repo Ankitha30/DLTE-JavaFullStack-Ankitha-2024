@@ -1,27 +1,47 @@
 package debits.cards.dao.entities;
 
+import org.hibernate.validator.constraints.Range;
+
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
 import java.util.Date;
 
 public class DebitCard {
     @NotNull(message= "{card.number.null}")
+    @Range(min = 3692468135796670L,max = 9999999999999999L,message = "{card.debit.valid}")
+    @Digits(integer=16,fraction = 0,message = "{card.debit.valid}")
     private Long debitCardNumber;
+
     @NotNull(message= "{account.name.null}")
+    @Range(min = 10000000000000L,max = 99999999999999L,message = "{card.acc.valid}")
+    @Digits(integer=14,fraction = 0,message = "{card.acc.valid}")
     private Long accountNumber;
+
     @NotNull(message= "{customer.id.null}")
+    @Digits(integer =6,fraction = 0,message = "{card.customer.valid}")
     private Integer customerId;
+
+    @Digits(integer = 3, fraction = 0, message = "{card.cvv.valid}")
+    @Positive(message = "{positive.number}")
     @NotNull(message= "{card.cvv.null}")
     private Integer debitCardCvv;
+
+    @Digits(integer = 4,fraction = 0,message = "{card.pin.invalid}")
     @NotNull(message= "{card.pin.null}")
     private Integer debitCardPin;
-    @Digits(integer = 4, fraction = 0, message = "{card.num.valid}")
+
     @NotNull(message= "{card.expiry.null}")
     private Date debitCardExpiry;
+
+    @Pattern(regexp = "^(block)$", message = "{card.status.valid}")
     @NotNull(message= "{card.status.null}")
     private String debitCardStatus;
+
     @NotNull(message= "{domestic.limit.null}")
     private double domesticLimit;
+
     @NotNull(message= "{international.limit.null}")
     private double internationalLimit;
 
