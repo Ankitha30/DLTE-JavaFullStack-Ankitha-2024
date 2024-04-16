@@ -23,33 +23,42 @@
 
 
     <style>
-        .card {
-            cursor: pointer;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            /* Full viewport height */
             background-color: #f8f9fa;
-            /* Light gray background */
             color: #343a40;
-            /* Dark text color */
-        }
-       
-
-        .form-group {
-            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Hide body overflow to prevent double scrollbars */
         }
 
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
 
+        .container-main {
+            padding-top: 80px; /* Space for the fixed navbar */
+            overflow-y: auto; /* Enable vertical scrolling for container content */
+           
+            max-height: calc(100vh - 80px); /* Limit container height to viewport height minus navbar height */
+        }
+
+        .card {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border: 1px solid #dee2e6;
+            border-radius: 15px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
 
         .modal-content {
             border-radius: 10px;
@@ -59,56 +68,62 @@
         .modal-title {
             font-size: 24px;
             font-weight: bold;
+            color: #007bff;
         }
 
         .modal-body {
             color: #343a40;
         }
+    
     </style>
 </head>
 
 <body>
-    <div class="container" >
-        <nav class="navbar navbar-light bg-warning fixed-top  l">
+    <div class="container">
+        <nav class="navbar navbar-light bg-warning fixed-top">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h-100 ">Welcome to MyBank!!</span>
+                <span class="navbar-brand mb-0 h1">Welcome to MyBank!!</span>
             </div>
         </nav>
 
-        <div class="container-xxl container-main ">
-            <div class="row overflow-hidden">
-                <h2 class="mb-5 text-center  ">Debit Card Search</h2>
-                <div class="form-group text-center">
-                    <label for="accountNumber" class="text-center">Enter Account Number:</label>
-                    <input type="text" class="form-control-sm text-center" id="accountNumber" required>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <button class="btn btn-primary btn-lg col-md-2 rounded-5 mb-5 "
-                        onclick="searchCards()">Search</button>
-                </div>
-
-
-                <div id="cardList" class="row" target="_parent"></div>
-                <div id="cardDetailsModal" class="modal fade" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content ">
-                            <div class="modal-header">
-                                <h5 class="modal-title text-primary" id="title"></h5>
-
-                                <button type="button" class="btn-close" aria-label="Close"
-                                    data-bs-dismiss="modal"></button>
-                            </div>
-                            <div class="modal-body" id="details">
-                            </div>
-                        </div>
+        <div class="container container-main">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4 text-center">Debit Card</h2>
+                    <div class="form-group text-center">
+                        <label for="accountNumber">Enter Account Number:</label>
+                        <input type="text" class="form-control text-center" id="accountNumber" style="background-color: lightgoldenrodyellow;"  required>
                     </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-lg mt-3" onclick="searchCards()">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4" id="cardList"></div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="cardDetailsModal" tabindex="-1" aria-labelledby="cardDetailsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="details"></div>
                 </div>
             </div>
         </div>
 
-    </div>
+       </div>
 
     <script src="/Tasks/JavaScript/restService.js"></script>
 </body>
 
 </html>
+
+
+
+
