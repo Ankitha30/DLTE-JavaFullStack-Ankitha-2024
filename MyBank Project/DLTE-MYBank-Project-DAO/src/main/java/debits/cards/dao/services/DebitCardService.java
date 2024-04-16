@@ -1,5 +1,6 @@
 package debits.cards.dao.services;
 
+import debits.cards.dao.entities.CardSecurity;
 import debits.cards.dao.entities.DebitCard;
 import debits.cards.dao.exceptions.AccountNotFoundException;
 import debits.cards.dao.exceptions.CustomerNotFoundException;
@@ -11,6 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.*;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.sql.*;
@@ -20,11 +23,18 @@ import java.util.*;
 public class DebitCardService implements DebitCardRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
+    @Autowired
+     CardSecurityService service;
+
+
    Logger logger = LoggerFactory.getLogger(DebitCardService.class);
    ResourceBundle resourceBundle = ResourceBundle.getBundle("application") ;
 
     @Override
     public List<DebitCard> listAllCards() throws SQLSyntaxErrorException {
+
+
+//        if(customer.getCustomerName().equals())
         List<DebitCard> debitCardList=null;
         try {
              debitCardList = jdbcTemplate.query("SELECT * FROM mybank_app_debitcard where debitCard_status='inactive' or debitCard_status='active' ", new DebitCardMapper());
@@ -40,17 +50,31 @@ public class DebitCardService implements DebitCardRepository {
 
     }
 
+
+
+
     @Override
     public String updateDebitCardStatus(DebitCard debitCard)  {
+
         try{
+
+
+
+//
+//
             DebitCard fetchedDebitCard = jdbcTemplate.queryForObject(
                     "SELECT * FROM mybank_app_debitcard WHERE account_number = ?",
                     new Object[]{debitCard.getAccountNumber()},
                     new DebitCardMapper());
-            // Check if any attributes are incorrect
-            if (!Objects.equals(debitCard.getDebitCardNumber(), fetchedDebitCard.getDebitCardNumber())) {
-                throw new DebitCardException("Debit card not found");
-            }
+
+
+
+//            if (!Objects.equals(debitCard.getDebitCardNumber(), fetchedDebitCard.getDebitCardNumber())) {
+//                throw new DebitCardException(resourceBundle.getString("debit card not found"));
+//            }
+//            if (!Objects.equals(debitCard.getCustomerId(), fetchedDebitCard.getCustomerId())) {
+//                throw new DebitCardException(resourceBundle.getString("customer.not.matched"));
+//            }
 
         }catch(DataAccessException exception){
             logger.error(resourceBundle.getString("no.data"));
@@ -102,6 +126,8 @@ public class DebitCardService implements DebitCardRepository {
         }
     }
 
+
+    // mapping objects
     public class DebitCardMapper implements RowMapper<DebitCard>{
 
         @Override
@@ -116,7 +142,6 @@ public class DebitCardService implements DebitCardRepository {
             debitCard.setDebitCardStatus(rs.getString(7));
             debitCard.setDomesticLimit(rs.getDouble(8));
             debitCard.setInternationalLimit(rs.getDouble(9));
-//            System.out.println(debitCard.toString());
             return debitCard;
         }
     }

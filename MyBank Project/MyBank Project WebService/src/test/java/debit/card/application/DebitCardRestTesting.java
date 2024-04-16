@@ -7,7 +7,10 @@ import debits.cards.dao.services.DebitCardService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -27,7 +30,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-
+import org.springframework.security.test.context.support.WithMockUser;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -41,6 +47,9 @@ import static org.mockito.Mockito.when;
 import static org.springframework.mock.http.server.reactive.MockServerHttpRequest.put;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+
+
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -52,7 +61,8 @@ public class DebitCardRestTesting {
     @MockBean
     private DebitCardService debitCardRepository;
 
-
+    @Autowired
+    private MockMvc mockMvc;
 
     @InjectMocks
     private UpdateStatusController updateStatus;
@@ -92,6 +102,34 @@ public class DebitCardRestTesting {
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
         assertEquals(resourceBundle.getString("status.update.failed"), responseEntity.getBody());
     }
+
+    @Test
+    @WithMockUser(username = "aru", password = "abc")
+    void testUpdateSuccess2() throws Exception {
+        String request = "{\n" +
+                "  \"debitCardNumber\": 369246813579667,\n" +
+                "  \"accountNumber\": 17896570987961,\n" +
+                "  \"customerId\": 123671,\n" +
+                "  \"debitCardCvv\": 234,\n" +
+                "  \"debitCardPin\": 1000,\n" +
+                "  \"debitCardExpiry\": \"2029-02-09\",\n" +
+                "  \"debitCardStatus\": \"block\",\n" +
+                "  \"domesticLimit\": 50000.0,\n" +
+                "  \"internationalLimit\": 150000.0\n" +
+                "}\n";
+
+        // Mock repository response
+        when(debitCardRepository.updateDebitCardStatus(any()))
+                .thenReturn("Debit card status updated successfully");
+
+        // Perform PUT request with request body
+        mockMvc.perform(MockMvcRequestBuilders
+                .put("/update/status")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(request))
+                .andExpect(status().isBadRequest());
+
+    }
 //@Test
 //    void testUpdateStatus_Failure() {
 //        // Mock successful response from DebitCardRepository
@@ -110,5 +148,34 @@ public class DebitCardRestTesting {
 //        assertEquals(resourceBundle.getString("status.update.success"), responseEntity.getBody());
 //    }
 
+
+//    @Test
+//    @WithMockUser(username = "aru", password = "abc")
+//    void testUpdateFailure() throws Exception {
+//        String request = "{\n" +
+//                "  \"debitCardNumber\": 369246813579667,\n" +
+//                "  \"accountNumber\": 17896570987961,\n" +
+//                "  \"customerId\": 123671,\n" +
+//                "  \"debitCardCvv\": 234,\n" +
+//                "  \"debitCardPin\": 1000,\n" +
+//                "  \"debitCardExpiry\": \"2029-02-09\",\n" +
+//                "  \"debitCardStatus\": \"block\",\n" +
+//                "  \"domesticLimit\": 50000.0,\n" +
+//                "  \"internationalLimit\": 150000.0\n" +
+//                "}\n";
+//
+//        // Mock repository response
+//        when(debitCardRepository.updateDebitCardStatus(any()))
+//                .thenReturn("Debit card status updated successfully");
+//
+//        // Perform PUT request with request body
+//        mockMvc.perform(MockMvcRequestBuilders
+//                .put("/update/status")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content(request))
+//                .andExpect(status().isOk();
+//
+//
+//    }
 
 }

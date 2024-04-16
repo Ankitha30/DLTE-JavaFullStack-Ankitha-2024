@@ -1,10 +1,14 @@
 package debit.card.application.rest;
 
 
+import debits.cards.dao.entities.CardSecurity;
+import debits.cards.dao.entities.Customer;
 import debits.cards.dao.entities.DebitCard;
 import debits.cards.dao.exceptions.*;
 import debits.cards.dao.remotes.DebitCardRepository;
 
+import debits.cards.dao.services.CardSecurityService;
+import debits.cards.dao.services.DebitCardService;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.slf4j.Logger;
@@ -12,6 +16,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
@@ -27,9 +33,15 @@ public class  UpdateStatusController {
     @Autowired
     private DebitCardRepository debitCardRepository;
 
+    @Autowired
+    CardSecurityService service;
+
     private static final Logger logger = LoggerFactory.getLogger(UpdateStatusController.class);
     private static final ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
-
+//    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//    String username = auth.getName();
+    // for api docs
+//    CardSecurity customer = service.findByUserName()
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "DebitCard blocked successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to block"),
@@ -38,9 +50,19 @@ public class  UpdateStatusController {
             @ApiResponse(responseCode = "500", description = "Internal server error")
     })
 
+
+
+    //  calls the method to update the card status.
     @PutMapping("/status")
     public ResponseEntity<String> updateStatus(@Valid @RequestBody DebitCard debitCard) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
         try {
+            String name = service.getCustomerName(debitCard.getCustomerId());
+            if(!name.equals(username)){
+                throw  new DebitCardException(" Unauthorized, unable to block");
+
+            }
             String response = debitCardRepository.updateDebitCardStatus(debitCard);
             logger.info(resourceBundle.getString("status.update.success"));
             return ResponseEntity.ok(response);
@@ -60,7 +82,7 @@ public class  UpdateStatusController {
         }
     }
 
-    //For Handling Bean Validation Exception
+// rest controller to handle the exception due to ean validation
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Map<String, String> handleValidationException(MethodArgumentNotValidException exception) {

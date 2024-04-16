@@ -38,6 +38,21 @@ public class CardSecurityService implements UserDetailsService {
         logger.info("Status Changed");
     }
 
+    public String getCustomerName(int customerId) {
+        String sql = "SELECT c.customer_name " +
+                "FROM MYBANK_APP_CUSTOMER c " +
+                "JOIN MYBANK_APP_ACCOUNT a ON c.CUSTOMER_ID = a.CUSTOMER_ID " +
+                "WHERE c.CUSTOMER_ID = ?";
+        try {
+            return jdbcTemplate.queryForObject(sql, new Object[]{customerId}, String.class);
+        } catch (Exception e) {
+            // Handle exceptions
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         CardSecurity cardSecurity = findByUserName(username);

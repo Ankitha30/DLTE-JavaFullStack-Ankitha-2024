@@ -38,9 +38,7 @@ public class RestTesting {
         String result = debitCardRepository.updateDebitCardStatus(debitCardToUpdate);
         assertEquals("Debit card Blocked Successfully", result);
 
-
     }
-
 
     @Test
     void testUpdateDebitCardStatus_CustomerNotFound() {
