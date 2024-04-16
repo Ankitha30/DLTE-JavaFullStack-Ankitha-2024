@@ -69,43 +69,28 @@ public class DebitCardRestTesting {
 
 
 
-        @Test
-    void testUpdateStatus_Success() {
-        // Mock successful response from DebitCardRepository
-        when(debitCardRepository.updateDebitCardStatus(any(DebitCard.class)))
-                .thenReturn(resourceBundle.getString("status.update.success"));
 
-        // Create a sample DebitCard object
-        DebitCard debitCard = new DebitCard();
-        debitCard.setDebitCardStatus("block");
-
-        // Call updateStatus endpoint and verify response
-        ResponseEntity<String> responseEntity = updateStatus.updateStatus(debitCard);
-
-        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertEquals(resourceBundle.getString("status.update.success"), responseEntity.getBody());
-    }
- @Test
-    void testUpdateStatus_Success1() {
-        // Mock successful response from DebitCardRepository
-        when(debitCardRepository.updateDebitCardStatus(any(DebitCard.class)))
-                .thenReturn(resourceBundle.getString("status.update.success"));
-
-        // Create a sample DebitCard object
-        DebitCard debitCard = new DebitCard();
-        debitCard.setAccountNumber(1234567890L);
-        debitCard.setDebitCardStatus("block");
-
-        // Call updateStatus endpoint and verify response
-        ResponseEntity<String> responseEntity = updateStatus.updateStatus(debitCard);
-
-        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertEquals(resourceBundle.getString("status.update.failed"), responseEntity.getBody());
-    }
+// @Test
+//    void testUpdateStatus_Success1() {
+//        // Mock successful response from DebitCardRepository
+//        when(debitCardRepository.updateDebitCardStatus(any(DebitCard.class)))
+//                .thenReturn(resourceBundle.getString("status.update.success"));
+//
+//        // Create a sample DebitCard object
+//        DebitCard debitCard = new DebitCard();
+//        debitCard.setAccountNumber(1234567890L);
+//        debitCard.setDebitCardStatus("block");
+//
+//        // Call updateStatus endpoint and verify response
+//        ResponseEntity<String> responseEntity = updateStatus.updateStatus(debitCard);
+//
+//        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+//        assertEquals(resourceBundle.getString("status.update.failed"), responseEntity.getBody());
+//    }
 
     @Test
     @WithMockUser(username = "aru", password = "abc")
-    void testUpdateSuccess2() throws Exception {
+    void testUpdateSuccess() throws Exception {
         String request = "{\n" +
                 "  \"debitCardNumber\": 369246813579667,\n" +
                 "  \"accountNumber\": 17896570987961,\n" +
@@ -130,52 +115,36 @@ public class DebitCardRestTesting {
                 .andExpect(status().isBadRequest());
 
     }
-//@Test
-//    void testUpdateStatus_Failure() {
-//        // Mock successful response from DebitCardRepository
-//        when(debitCardRepository.updateDebitCardStatus(any(DebitCard.class)))
-//                .thenReturn(resourceBundle.getString("status.update.success"));
-//
-//        // Create a sample DebitCard object
-//        DebitCard debitCard = new DebitCard();
-//        debitCard.setAccountNumber(1234567890L);
-//        debitCard.setDebitCardStatus("block");
-//
-//        // Call updateStatus endpoint and verify response
-//        ResponseEntity<String> responseEntity = updateStatus.updateStatus(debitCard);
-//
-//        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-//        assertEquals(resourceBundle.getString("status.update.success"), responseEntity.getBody());
-//    }
 
 
-//    @Test
-//    @WithMockUser(username = "aru", password = "abc")
-//    void testUpdateFailure() throws Exception {
-//        String request = "{\n" +
-//                "  \"debitCardNumber\": 369246813579667,\n" +
-//                "  \"accountNumber\": 17896570987961,\n" +
-//                "  \"customerId\": 123671,\n" +
-//                "  \"debitCardCvv\": 234,\n" +
-//                "  \"debitCardPin\": 1000,\n" +
-//                "  \"debitCardExpiry\": \"2029-02-09\",\n" +
-//                "  \"debitCardStatus\": \"block\",\n" +
-//                "  \"domesticLimit\": 50000.0,\n" +
-//                "  \"internationalLimit\": 150000.0\n" +
-//                "}\n";
-//
-//        // Mock repository response
-//        when(debitCardRepository.updateDebitCardStatus(any()))
-//                .thenReturn("Debit card status updated successfully");
-//
-//        // Perform PUT request with request body
-//        mockMvc.perform(MockMvcRequestBuilders
-//                .put("/update/status")
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .content(request))
-//                .andExpect(status().isOk();
-//
-//
-//    }
+
+    @Test
+    @WithMockUser(username = "aru", password = "abc")
+    void testUpdateFailure() throws Exception {
+        String request = "{\n" +
+                "  \"debitCardNumber\": 369246813579667,\n" +
+                "  \"accountNumber\": 17896570987961,\n" +
+                "  \"customerId\": 123671,\n" +
+                "  \"debitCardCvv\": 234,\n" +
+                "  \"debitCardPin\": 1000,\n" +
+                "  \"debitCardExpiry\": \"2029-02-09\",\n" +
+                "  \"debitCardStatus\": \"block\",\n" +
+                "  \"domesticLimit\": 50000.0,\n" +
+                "  \"internationalLimit\": 150000.0\n" +
+                "}\n";
+
+        // Mock repository response
+        when(debitCardRepository.updateDebitCardStatus(any()))
+                .thenReturn("Debit card status updated successfully");
+
+        // Perform PUT request with request body
+        mockMvc.perform(MockMvcRequestBuilders
+                .put("/update/status")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(request))
+                .andExpect(status().isOk());
+
+
+    }
 
 }

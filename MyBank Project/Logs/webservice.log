@@ -313,3 +313,774 @@ Caused by: java.lang.NullPointerException: null
 2024-04-16 09:39:23 [http-nio-8082-exec-1] ERROR d.c.a.rest.UpdateStatusController - Failed to block the card
 2024-04-16 10:07:21 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m38s245ms675µs100ns).
 2024-04-16 13:35:05 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h27m13s632ms191µs200ns).
+2024-04-16 14:17:14 [main] INFO  d.c.application.DebitCardRestTesting - Starting DebitCardRestTesting using Java 1.8.0_292 on WPG02VB9F with PID 10032 (started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 14:17:14 [main] INFO  d.c.application.DebitCardRestTesting - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 14:17:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 14:17:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 JDBC repository interfaces.
+2024-04-16 14:17:16 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$8a5f8608] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 14:17:16 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 14:17:18 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2d7637e6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@515b9d4a, org.springframework.security.web.context.SecurityContextPersistenceFilter@6048e26a, org.springframework.security.web.header.HeaderWriterFilter@53aa38be, org.springframework.security.web.authentication.logout.LogoutFilter@1b3ab4f9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@31e739bf, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@75d366c2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@39b626e5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@23c767e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44286963, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b736fee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32a4ecbe, org.springframework.security.web.session.SessionManagementFilter@422ad5e2, org.springframework.security.web.access.ExceptionTranslationFilter@42ea7565, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@31723307]
+2024-04-16 14:17:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 14:17:22 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 14:17:22 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 14:17:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 14:17:25 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-04-16 14:17:25 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-04-16 14:17:25 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 18 ms
+2024-04-16 14:17:26 [main] INFO  d.c.application.DebitCardRestTesting - Started DebitCardRestTesting in 12.236 seconds (JVM running for 13.994)
+2024-04-16 14:17:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 14:17:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-16 15:36:12 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m11s297ms865µs600ns).
+2024-04-16 15:54:51 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 1160 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 15:54:51 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 15:54:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 15:54:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2024-04-16 15:54:52 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$bf8673e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 15:54:52 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 15:54:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-16 15:54:53 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 15:54:53 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-16 15:54:53 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 15:54:53 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1508 ms
+2024-04-16 15:54:53 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78cd163b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f0b3cfe, org.springframework.security.web.context.SecurityContextPersistenceFilter@51841ac6, org.springframework.security.web.header.HeaderWriterFilter@5cbe2654, org.springframework.security.web.authentication.logout.LogoutFilter@704641e3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3bddc676, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@a2ddf26, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@14ef2482, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2e179f3e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@435e60ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66f0548d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65a48602, org.springframework.security.web.session.SessionManagementFilter@496a31da, org.springframework.security.web.access.ExceptionTranslationFilter@3c69362a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@42373389]
+2024-04-16 15:54:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 15:54:54 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 15:54:54 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 15:54:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 15:54:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-16 15:54:54 [main] INFO  d.c.a.MyProjectWebServiceApplication - Started MyProjectWebServiceApplication in 3.461 seconds (JVM running for 4.306)
+2024-04-16 15:55:05 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-16 15:55:05 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-16 15:55:05 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-04-16 15:55:05 [http-nio-8082-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DuplicateKeyException: PreparedStatementCallback; SQL [insert into mybank_app_customer (CUSTOMER_NAME, CUSTOMER_ADDRESS, CUSTOMER_STATUS, CUSTOMER_CONTACT, USERNAME, PASSWORD) values(?,?,?,?,?,?)]; ORA-00001: unique constraint (SYSTEM.SYS_C007471) violated
+; nested exception is java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (SYSTEM.SYS_C007471) violated
+] with root cause
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (SYSTEM.SYS_C007471) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:447)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:951)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:513)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:208)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1046)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1336)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3613)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3694)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:965)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1015)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1025)
+	at debits.cards.dao.services.CardSecurityService.signingUp(CardSecurityService.java:22)
+	at debit.card.application.security.CardSecurityApi.save(CardSecurityApi.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:166)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2024-04-16 15:57:15 [http-nio-8082-exec-4] INFO  d.c.dao.services.CardSecurityService - New customer registered: latha
+2024-04-16 15:58:27 [http-nio-8082-exec-6] INFO  d.c.dao.services.CardSecurityService - New customer registered: suvi
+2024-04-16 16:05:32 [main] INFO  d.c.application.DebitCardRestTesting - Starting DebitCardRestTesting using Java 1.8.0_292 on WPG02VB9F with PID 23668 (started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:05:32 [main] INFO  d.c.application.DebitCardRestTesting - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:05:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:05:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:05:34 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$8a5f8608] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:05:34 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:05:35 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2d7637e6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@515b9d4a, org.springframework.security.web.context.SecurityContextPersistenceFilter@6048e26a, org.springframework.security.web.header.HeaderWriterFilter@53aa38be, org.springframework.security.web.authentication.logout.LogoutFilter@1b3ab4f9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@31e739bf, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@75d366c2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@39b626e5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@23c767e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44286963, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b736fee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32a4ecbe, org.springframework.security.web.session.SessionManagementFilter@422ad5e2, org.springframework.security.web.access.ExceptionTranslationFilter@42ea7565, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@31723307]
+2024-04-16 16:05:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:05:37 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:05:38 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:05:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:05:38 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-04-16 16:05:38 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-04-16 16:05:38 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2024-04-16 16:05:38 [main] INFO  d.c.application.DebitCardRestTesting - Started DebitCardRestTesting in 6.359 seconds (JVM running for 7.964)
+2024-04-16 16:05:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 16:05:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-16 16:06:30 [main] INFO  d.c.application.DebitCardRestTesting - Starting DebitCardRestTesting using Java 1.8.0_292 on WPG02VB9F with PID 25464 (started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:06:30 [main] INFO  d.c.application.DebitCardRestTesting - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:06:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:06:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:06:32 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$dbd4e3ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:06:32 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:06:33 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4bf80c29, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d7637e6, org.springframework.security.web.context.SecurityContextPersistenceFilter@62a54948, org.springframework.security.web.header.HeaderWriterFilter@2c719bd4, org.springframework.security.web.authentication.logout.LogoutFilter@4a9a878, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@19e21f89, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@456f7d9e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@515b9d4a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@40ed1802, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50b93353, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c8f97a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39b626e5, org.springframework.security.web.session.SessionManagementFilter@37a0ec3c, org.springframework.security.web.access.ExceptionTranslationFilter@6f25bf88, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6af5b246]
+2024-04-16 16:06:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:06:35 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:06:35 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:06:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:06:35 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-04-16 16:06:35 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-04-16 16:06:35 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2024-04-16 16:06:35 [main] INFO  d.c.application.DebitCardRestTesting - Started DebitCardRestTesting in 5.348 seconds (JVM running for 6.726)
+2024-04-16 16:06:36 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 16:06:36 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-16 16:06:45 [main] INFO  d.c.application.DebitCardRestTesting - Starting DebitCardRestTesting using Java 1.8.0_292 on WPG02VB9F with PID 13800 (started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:06:45 [main] INFO  d.c.application.DebitCardRestTesting - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:06:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:06:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:06:46 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f72f00b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:06:46 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:06:47 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32a4ecbe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e71240b, org.springframework.security.web.context.SecurityContextPersistenceFilter@c8f97a7, org.springframework.security.web.header.HeaderWriterFilter@62a54948, org.springframework.security.web.authentication.logout.LogoutFilter@552cede7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@776015fc, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6c8fe7a4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@23cd5d42, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@31e739bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3249e278, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@456f7d9e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b44d6d0, org.springframework.security.web.session.SessionManagementFilter@50b93353, org.springframework.security.web.access.ExceptionTranslationFilter@202898d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a4f8009]
+2024-04-16 16:06:49 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:06:49 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:06:49 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:06:49 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:06:49 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-04-16 16:06:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-04-16 16:06:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2024-04-16 16:06:50 [main] INFO  d.c.application.DebitCardRestTesting - Started DebitCardRestTesting in 5.454 seconds (JVM running for 6.655)
+2024-04-16 16:06:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 16:06:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-16 16:06:58 [main] INFO  d.c.application.DebitCardRestTesting - Starting DebitCardRestTesting using Java 1.8.0_292 on WPG02VB9F with PID 22652 (started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:06:58 [main] INFO  d.c.application.DebitCardRestTesting - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:06:59 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:06:59 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:06:59 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f72f00b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:06:59 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:07:00 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32a4ecbe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e71240b, org.springframework.security.web.context.SecurityContextPersistenceFilter@c8f97a7, org.springframework.security.web.header.HeaderWriterFilter@62a54948, org.springframework.security.web.authentication.logout.LogoutFilter@552cede7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@776015fc, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6c8fe7a4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@23cd5d42, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@31e739bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3249e278, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@456f7d9e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b44d6d0, org.springframework.security.web.session.SessionManagementFilter@50b93353, org.springframework.security.web.access.ExceptionTranslationFilter@202898d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a4f8009]
+2024-04-16 16:07:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:07:02 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:07:02 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:07:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:07:03 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-04-16 16:07:03 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-04-16 16:07:03 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2024-04-16 16:07:03 [main] INFO  d.c.application.DebitCardRestTesting - Started DebitCardRestTesting in 5.388 seconds (JVM running for 6.62)
+2024-04-16 16:07:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 16:07:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-16 16:07:24 [main] INFO  d.c.application.DebitCardRestTesting - Starting DebitCardRestTesting using Java 1.8.0_292 on WPG02VB9F with PID 20092 (started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:07:24 [main] INFO  d.c.application.DebitCardRestTesting - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:07:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:07:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:07:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$7ba2af30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:07:27 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:07:29 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48268eec, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69a024a0, org.springframework.security.web.context.SecurityContextPersistenceFilter@37a0ec3c, org.springframework.security.web.header.HeaderWriterFilter@202898d7, org.springframework.security.web.authentication.logout.LogoutFilter@235c997d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@23c767e6, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3249e278, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4bf80c29, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@151732fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62a54948, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50b93353, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d7637e6, org.springframework.security.web.session.SessionManagementFilter@2c719bd4, org.springframework.security.web.access.ExceptionTranslationFilter@2213639b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ea7a4c3]
+2024-04-16 16:07:32 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:07:32 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:07:32 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:07:32 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:07:33 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-04-16 16:07:33 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-04-16 16:07:33 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2024-04-16 16:07:34 [main] INFO  d.c.application.DebitCardRestTesting - Started DebitCardRestTesting in 10.129 seconds (JVM running for 11.621)
+2024-04-16 16:07:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 16:07:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-16 16:08:16 [main] INFO  d.c.application.DebitCardRestTesting - Starting DebitCardRestTesting using Java 1.8.0_292 on WPG02VB9F with PID 22096 (started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:08:16 [main] INFO  d.c.application.DebitCardRestTesting - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:08:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:08:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:08:18 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f72f00b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:08:18 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:08:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32a4ecbe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e71240b, org.springframework.security.web.context.SecurityContextPersistenceFilter@c8f97a7, org.springframework.security.web.header.HeaderWriterFilter@62a54948, org.springframework.security.web.authentication.logout.LogoutFilter@552cede7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@776015fc, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6c8fe7a4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@23cd5d42, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@31e739bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3249e278, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@456f7d9e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b44d6d0, org.springframework.security.web.session.SessionManagementFilter@50b93353, org.springframework.security.web.access.ExceptionTranslationFilter@202898d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a4f8009]
+2024-04-16 16:08:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:08:22 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:08:23 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:08:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:08:24 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-04-16 16:08:24 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-04-16 16:08:24 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2024-04-16 16:08:24 [main] INFO  d.c.application.DebitCardRestTesting - Started DebitCardRestTesting in 7.797 seconds (JVM running for 9.007)
+2024-04-16 16:08:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 16:08:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-16 16:09:06 [main] INFO  d.c.application.DebitCardRestTesting - Starting DebitCardRestTesting using Java 1.8.0_292 on WPG02VB9F with PID 22024 (started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:09:06 [main] INFO  d.c.application.DebitCardRestTesting - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:09:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:09:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:09:07 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f72f00b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:09:07 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:09:09 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32a4ecbe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e71240b, org.springframework.security.web.context.SecurityContextPersistenceFilter@c8f97a7, org.springframework.security.web.header.HeaderWriterFilter@62a54948, org.springframework.security.web.authentication.logout.LogoutFilter@552cede7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@776015fc, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6c8fe7a4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@23cd5d42, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@31e739bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3249e278, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@456f7d9e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b44d6d0, org.springframework.security.web.session.SessionManagementFilter@50b93353, org.springframework.security.web.access.ExceptionTranslationFilter@202898d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a4f8009]
+2024-04-16 16:09:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:09:10 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:09:11 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:09:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:09:11 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-04-16 16:09:11 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-04-16 16:09:11 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2024-04-16 16:09:11 [main] INFO  d.c.application.DebitCardRestTesting - Started DebitCardRestTesting in 6.018 seconds (JVM running for 7.255)
+2024-04-16 16:09:12 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 16:09:12 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-16 16:09:20 [main] INFO  d.c.application.DebitCardRestTesting - Starting DebitCardRestTesting using Java 1.8.0_292 on WPG02VB9F with PID 23060 (started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:09:20 [main] INFO  d.c.application.DebitCardRestTesting - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:09:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:09:22 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:09:23 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f72f00b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:09:23 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:09:25 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32a4ecbe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e71240b, org.springframework.security.web.context.SecurityContextPersistenceFilter@c8f97a7, org.springframework.security.web.header.HeaderWriterFilter@62a54948, org.springframework.security.web.authentication.logout.LogoutFilter@552cede7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@776015fc, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6c8fe7a4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@23cd5d42, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@31e739bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3249e278, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@456f7d9e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b44d6d0, org.springframework.security.web.session.SessionManagementFilter@50b93353, org.springframework.security.web.access.ExceptionTranslationFilter@202898d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a4f8009]
+2024-04-16 16:09:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:09:28 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:09:28 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:09:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:09:29 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-04-16 16:09:29 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-04-16 16:09:29 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+2024-04-16 16:09:30 [main] INFO  d.c.application.DebitCardRestTesting - Started DebitCardRestTesting in 10.009 seconds (JVM running for 11.266)
+2024-04-16 16:09:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 16:09:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-16 16:12:16 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 19184 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:12:16 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:12:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:12:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:12:17 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$bf8673e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:12:17 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:12:18 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 11480 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:12:18 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:12:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:12:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:12:19 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$838e4129] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:12:19 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:12:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-16 16:12:20 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 16:12:20 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-16 16:12:20 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 16:12:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1338 ms
+2024-04-16 16:12:20 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1a865273, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@288ca5f0, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a8406c2, org.springframework.security.web.header.HeaderWriterFilter@4715ae33, org.springframework.security.web.authentication.logout.LogoutFilter@22e5f96e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@59ed3e6c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@c6c82aa, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4068102e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3b4d50b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6850b758, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@704641e3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44bd4b0a, org.springframework.security.web.session.SessionManagementFilter@1fac1d5c, org.springframework.security.web.access.ExceptionTranslationFilter@a2ddf26, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@858d8b4]
+2024-04-16 16:12:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:12:21 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:12:21 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:12:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:12:21 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8082 is already in use
+2024-04-16 16:12:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 16:12:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-16 16:12:21 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-16 16:12:21 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-04-16 16:12:21 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2024-04-16 16:12:39 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 26216 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:12:39 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:12:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:12:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:12:40 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$bf1aff57] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:12:40 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:12:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-16 16:12:41 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 16:12:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-16 16:12:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 16:12:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1415 ms
+2024-04-16 16:12:41 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30e9ca13, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46185a1b, org.springframework.security.web.context.SecurityContextPersistenceFilter@534c6767, org.springframework.security.web.header.HeaderWriterFilter@75961f16, org.springframework.security.web.authentication.logout.LogoutFilter@18da4dd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@339a3670, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6a638c79, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@51288417, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7d04529c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29a1505c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@320a8ebf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60cf62ad, org.springframework.security.web.session.SessionManagementFilter@2e179f3e, org.springframework.security.web.access.ExceptionTranslationFilter@2f00f851, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c008c24]
+2024-04-16 16:12:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:12:42 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:12:42 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:12:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:12:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-16 16:12:42 [main] INFO  d.c.a.MyProjectWebServiceApplication - Started MyProjectWebServiceApplication in 3.059 seconds (JVM running for 3.807)
+2024-04-16 16:12:47 [http-nio-8082-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-16 16:12:47 [http-nio-8082-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-16 16:12:47 [http-nio-8082-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2024-04-16 16:12:47 [http-nio-8082-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key access.denied ] with root cause
+java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key access.denied 
+	at java.util.ResourceBundle.getObject(ResourceBundle.java:450)
+	at java.util.ResourceBundle.getString(ResourceBundle.java:407)
+	at debit.card.application.rest.UpdateStatusController.updateStatus(UpdateStatusController.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:198)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2024-04-16 16:14:09 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 18840 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:14:09 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:14:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:14:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:14:10 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$bf8673e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:14:10 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:14:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-16 16:14:10 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 16:14:10 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-16 16:14:10 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 16:14:10 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1411 ms
+2024-04-16 16:14:11 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78cd163b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f0b3cfe, org.springframework.security.web.context.SecurityContextPersistenceFilter@51841ac6, org.springframework.security.web.header.HeaderWriterFilter@5cbe2654, org.springframework.security.web.authentication.logout.LogoutFilter@704641e3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3bddc676, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@a2ddf26, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@14ef2482, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2e179f3e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@435e60ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66f0548d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65a48602, org.springframework.security.web.session.SessionManagementFilter@496a31da, org.springframework.security.web.access.ExceptionTranslationFilter@3c69362a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@42373389]
+2024-04-16 16:14:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:14:11 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:14:11 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:14:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:14:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-16 16:14:12 [main] INFO  d.c.a.MyProjectWebServiceApplication - Started MyProjectWebServiceApplication in 3.186 seconds (JVM running for 4.004)
+2024-04-16 16:14:22 [http-nio-8082-exec-4] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-16 16:14:22 [http-nio-8082-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-16 16:14:22 [http-nio-8082-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-16 16:14:22 [http-nio-8082-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key access.denied ] with root cause
+java.util.MissingResourceException: Can't find resource for bundle java.util.PropertyResourceBundle, key access.denied 
+	at java.util.ResourceBundle.getObject(ResourceBundle.java:450)
+	at java.util.ResourceBundle.getString(ResourceBundle.java:407)
+	at debit.card.application.rest.UpdateStatusController.updateStatus(UpdateStatusController.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:198)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2024-04-16 16:14:49 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 7888 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:14:49 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:14:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:14:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:14:50 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ee652f0e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:14:50 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:14:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-16 16:14:50 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 16:14:50 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-16 16:14:50 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 16:14:50 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1272 ms
+2024-04-16 16:14:51 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ec4ff02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f11f64e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e86a5a7, org.springframework.security.web.header.HeaderWriterFilter@435e60ff, org.springframework.security.web.authentication.logout.LogoutFilter@c6c82aa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ba5aa7a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1fac1d5c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b2f5fcf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@320a8ebf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@741f8dbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a2ddf26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@858d8b4, org.springframework.security.web.session.SessionManagementFilter@66f0548d, org.springframework.security.web.access.ExceptionTranslationFilter@496a31da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7903d448]
+2024-04-16 16:14:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:14:51 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:14:51 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:14:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:14:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-16 16:14:52 [main] INFO  d.c.a.MyProjectWebServiceApplication - Started MyProjectWebServiceApplication in 2.808 seconds (JVM running for 3.58)
+2024-04-16 16:14:56 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-16 16:14:56 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-16 16:14:56 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-04-16 16:14:56 [http-nio-8082-exec-1] ERROR d.c.a.rest.UpdateStatusController - Failed to block the card
+2024-04-16 16:16:34 [http-nio-8082-exec-3] ERROR d.c.a.rest.UpdateStatusController - Failed to block the card
+2024-04-16 16:17:10 [http-nio-8082-exec-6] ERROR d.c.a.rest.UpdateStatusController - Failed to block the card
+2024-04-16 16:17:36 [http-nio-8082-exec-8] ERROR d.c.a.rest.UpdateStatusController - Failed to block the card
+2024-04-16 16:18:09 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 2788 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:18:09 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:18:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:18:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:18:10 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ee652f0e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:18:10 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:18:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-16 16:18:10 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 16:18:10 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-16 16:18:10 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 16:18:10 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1544 ms
+2024-04-16 16:18:11 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ec4ff02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f11f64e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e86a5a7, org.springframework.security.web.header.HeaderWriterFilter@435e60ff, org.springframework.security.web.authentication.logout.LogoutFilter@c6c82aa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ba5aa7a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1fac1d5c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b2f5fcf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@320a8ebf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@741f8dbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a2ddf26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@858d8b4, org.springframework.security.web.session.SessionManagementFilter@66f0548d, org.springframework.security.web.access.ExceptionTranslationFilter@496a31da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7903d448]
+2024-04-16 16:18:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:18:12 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:18:12 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:18:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:18:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-16 16:18:12 [main] INFO  d.c.a.MyProjectWebServiceApplication - Started MyProjectWebServiceApplication in 3.362 seconds (JVM running for 4.168)
+2024-04-16 16:18:16 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-16 16:18:16 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-16 16:18:16 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2024-04-16 16:18:17 [http-nio-8082-exec-1] ERROR d.c.a.rest.UpdateStatusController - Failed to block the card
+2024-04-16 16:18:37 [http-nio-8082-exec-2] ERROR d.c.a.rest.UpdateStatusController - Failed to block the card
+2024-04-16 16:19:28 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 22672 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:19:28 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:19:29 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:19:29 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:19:29 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ee652f0e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:19:29 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:19:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-16 16:19:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 16:19:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-16 16:19:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 16:19:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1482 ms
+2024-04-16 16:19:30 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ec4ff02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f11f64e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e86a5a7, org.springframework.security.web.header.HeaderWriterFilter@435e60ff, org.springframework.security.web.authentication.logout.LogoutFilter@c6c82aa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ba5aa7a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1fac1d5c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b2f5fcf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@320a8ebf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@741f8dbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a2ddf26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@858d8b4, org.springframework.security.web.session.SessionManagementFilter@66f0548d, org.springframework.security.web.access.ExceptionTranslationFilter@496a31da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7903d448]
+2024-04-16 16:19:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:19:30 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:19:30 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:19:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:19:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-16 16:19:31 [main] INFO  d.c.a.MyProjectWebServiceApplication - Started MyProjectWebServiceApplication in 3.16 seconds (JVM running for 3.944)
+2024-04-16 16:19:38 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-16 16:19:38 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-16 16:19:38 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-04-16 16:19:39 [http-nio-8082-exec-1] ERROR d.c.dao.services.DebitCardService - Debit card Blocked Successfully
+2024-04-16 16:19:39 [http-nio-8082-exec-1] INFO  d.c.a.rest.UpdateStatusController - Debit card Blocked Successfully
+2024-04-16 16:21:10 [http-nio-8082-exec-2] ERROR d.c.dao.services.DebitCardService - Debit card Blocked Successfully
+2024-04-16 16:21:10 [http-nio-8082-exec-2] INFO  d.c.a.rest.UpdateStatusController - Debit card Blocked Successfully
+2024-04-16 16:21:24 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 1192 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:21:24 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:21:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:21:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:21:25 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ee652f0e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:21:25 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:21:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-16 16:21:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 16:21:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-16 16:21:25 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 16:21:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1400 ms
+2024-04-16 16:21:26 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ec4ff02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f11f64e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e86a5a7, org.springframework.security.web.header.HeaderWriterFilter@435e60ff, org.springframework.security.web.authentication.logout.LogoutFilter@c6c82aa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ba5aa7a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1fac1d5c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b2f5fcf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@320a8ebf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@741f8dbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a2ddf26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@858d8b4, org.springframework.security.web.session.SessionManagementFilter@66f0548d, org.springframework.security.web.access.ExceptionTranslationFilter@496a31da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7903d448]
+2024-04-16 16:21:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:21:26 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:21:26 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:21:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:21:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-16 16:21:26 [main] INFO  d.c.a.MyProjectWebServiceApplication - Started MyProjectWebServiceApplication in 3.107 seconds (JVM running for 3.901)
+2024-04-16 16:21:43 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 10228 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:21:43 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:21:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:21:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:21:44 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ee652f0e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:21:44 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:21:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-16 16:21:44 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 16:21:44 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-16 16:21:44 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 16:21:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1254 ms
+2024-04-16 16:21:45 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ec4ff02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f11f64e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e86a5a7, org.springframework.security.web.header.HeaderWriterFilter@435e60ff, org.springframework.security.web.authentication.logout.LogoutFilter@c6c82aa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ba5aa7a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1fac1d5c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b2f5fcf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@320a8ebf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@741f8dbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a2ddf26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@858d8b4, org.springframework.security.web.session.SessionManagementFilter@66f0548d, org.springframework.security.web.access.ExceptionTranslationFilter@496a31da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7903d448]
+2024-04-16 16:21:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:21:45 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:21:45 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:21:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:21:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-16 16:21:45 [main] INFO  d.c.a.MyProjectWebServiceApplication - Started MyProjectWebServiceApplication in 2.733 seconds (JVM running for 3.486)
+2024-04-16 16:21:53 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-16 16:21:53 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-16 16:21:53 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-04-16 16:21:54 [http-nio-8082-exec-1] ERROR d.c.a.rest.UpdateStatusController - Failed to block the card
+2024-04-16 16:22:14 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 16076 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:22:14 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:22:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:22:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:22:15 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ee652f0e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:22:15 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:22:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-16 16:22:16 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 16:22:16 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-16 16:22:16 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 16:22:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1308 ms
+2024-04-16 16:22:16 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ec4ff02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f11f64e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e86a5a7, org.springframework.security.web.header.HeaderWriterFilter@435e60ff, org.springframework.security.web.authentication.logout.LogoutFilter@c6c82aa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ba5aa7a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1fac1d5c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b2f5fcf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@320a8ebf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@741f8dbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a2ddf26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@858d8b4, org.springframework.security.web.session.SessionManagementFilter@66f0548d, org.springframework.security.web.access.ExceptionTranslationFilter@496a31da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7903d448]
+2024-04-16 16:22:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:22:17 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:22:17 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:22:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:22:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-16 16:22:17 [main] INFO  d.c.a.MyProjectWebServiceApplication - Started MyProjectWebServiceApplication in 2.919 seconds (JVM running for 3.658)
+2024-04-16 16:22:47 [main] INFO  d.c.a.MyProjectWebServiceApplication - Starting MyProjectWebServiceApplication using Java 1.8.0_292 on WPG02VB9F with PID 24580 (C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService\target\classes started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 16:22:47 [main] INFO  d.c.a.MyProjectWebServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 16:22:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 16:22:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+2024-04-16 16:22:48 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ee652f0e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 16:22:48 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 16:22:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2024-04-16 16:22:48 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 16:22:48 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-16 16:22:49 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 16:22:49 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1389 ms
+2024-04-16 16:22:49 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ec4ff02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f11f64e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e86a5a7, org.springframework.security.web.header.HeaderWriterFilter@435e60ff, org.springframework.security.web.authentication.logout.LogoutFilter@c6c82aa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ba5aa7a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1fac1d5c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b2f5fcf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@320a8ebf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@741f8dbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a2ddf26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@858d8b4, org.springframework.security.web.session.SessionManagementFilter@66f0548d, org.springframework.security.web.access.ExceptionTranslationFilter@496a31da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7903d448]
+2024-04-16 16:22:50 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 16:22:50 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 16:22:50 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 16:22:50 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 16:22:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2024-04-16 16:22:50 [main] INFO  d.c.a.MyProjectWebServiceApplication - Started MyProjectWebServiceApplication in 2.837 seconds (JVM running for 3.574)
+2024-04-16 16:23:07 [http-nio-8082-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-16 16:23:07 [http-nio-8082-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-16 16:23:07 [http-nio-8082-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-04-16 16:23:07 [http-nio-8082-exec-2] ERROR d.c.dao.services.DebitCardService - Debit card Blocked Successfully
+2024-04-16 16:23:07 [http-nio-8082-exec-2] INFO  d.c.a.rest.UpdateStatusController - Debit card Blocked Successfully
+2024-04-16 16:32:05 [ServerService Thread Pool -- 76] WARN  o.s.b.l.logback.LogbackLoggingSystem - Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+2024-04-16 16:38:24 [ServerService Thread Pool -- 77] WARN  o.s.b.l.logback.LogbackLoggingSystem - Ignoring 'logback.configurationFile' system property. Please use 'logging.config' instead.
+2024-04-16 17:02:46 [main] INFO  d.c.application.DebitCardRestTesting - Starting DebitCardRestTesting using Java 1.8.0_292 on WPG02VB9F with PID 2648 (started by xxbhatka in C:\DLTE-JavaFullStack-Ankitha-2024\MyBank Project\MyBank Project WebService)
+2024-04-16 17:02:46 [main] INFO  d.c.application.DebitCardRestTesting - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 17:02:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-16 17:02:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2024-04-16 17:02:48 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f4af98af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-16 17:02:48 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-16 17:02:50 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2e71240b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23cd5d42, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b736fee, org.springframework.security.web.header.HeaderWriterFilter@6048e26a, org.springframework.security.web.authentication.logout.LogoutFilter@1b7f06c7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7f42e06e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2047981, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b44d6d0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@29079032, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35adf623, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75d366c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e900e1a, org.springframework.security.web.session.SessionManagementFilter@44286963, org.springframework.security.web.access.ExceptionTranslationFilter@317890ea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a85644c]
+2024-04-16 17:02:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 17:02:56 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-16 17:02:56 [main] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-16 17:02:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 17:02:58 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-04-16 17:02:58 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-04-16 17:02:58 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2024-04-16 17:02:58 [main] INFO  d.c.application.DebitCardRestTesting - Started DebitCardRestTesting in 12.829 seconds (JVM running for 14.389)
+2024-04-16 17:02:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 17:03:00 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

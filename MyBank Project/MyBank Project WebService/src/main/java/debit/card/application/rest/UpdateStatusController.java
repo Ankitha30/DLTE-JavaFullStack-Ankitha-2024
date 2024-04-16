@@ -59,8 +59,10 @@ public class  UpdateStatusController {
         String username = auth.getName();
         try {
             String name = service.getCustomerName(debitCard.getCustomerId());
-            if(!name.equals(username)){
-                throw  new DebitCardException(" Unauthorized, unable to block");
+            System.out.println(username);
+            System.out.println(name);
+            if(!name.equalsIgnoreCase(username)){
+                throw  new DebitCardException(resourceBundle.getString("access.denied"));
 
             }
             String response = debitCardRepository.updateDebitCardStatus(debitCard);

@@ -21,14 +21,17 @@ public class DebitCard {
 
     @NotNull(message= "{customer.id.null}")
     @Digits(integer =6,fraction = 0,message = "{card.customer.valid}")
+    @Range(min = 100000L,max = 999999L,message = "{card.acc.valid}")
     private Integer customerId;
 
     @Digits(integer = 3, fraction = 0, message = "{card.cvv.valid}")
+    @Range(min = 100L,max = 999L,message = "{card.acc.valid}")
     @Positive(message = "{positive.number}")
     @NotNull(message= "{card.cvv.null}")
     private Integer debitCardCvv;
 
     @Digits(integer = 4,fraction = 0,message = "{card.pin.invalid}")
+    @Range(min = 1000L,max = 9999L,message = "{card.acc.valid}")
     @NotNull(message= "{card.pin.null}")
     private Integer debitCardPin;
 

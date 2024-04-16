@@ -69,12 +69,12 @@ public class DebitCardService implements DebitCardRepository {
 
 
 
-//            if (!Objects.equals(debitCard.getDebitCardNumber(), fetchedDebitCard.getDebitCardNumber())) {
-//                throw new DebitCardException(resourceBundle.getString("debit card not found"));
-//            }
-//            if (!Objects.equals(debitCard.getCustomerId(), fetchedDebitCard.getCustomerId())) {
-//                throw new DebitCardException(resourceBundle.getString("customer.not.matched"));
-//            }
+            if (!Objects.equals(debitCard.getDebitCardNumber(), fetchedDebitCard.getDebitCardNumber())) {
+                throw new DebitCardException(resourceBundle.getString("debit card not found"));
+            }
+            if (!Objects.equals(debitCard.getCustomerId(), fetchedDebitCard.getCustomerId())) {
+                throw new DebitCardException(resourceBundle.getString("customer.not.matched"));
+            }
 
         }catch(DataAccessException exception){
             logger.error(resourceBundle.getString("no.data"));

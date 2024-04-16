@@ -2,6 +2,7 @@ package debits.cards;
 
 
 import debits.cards.dao.entities.DebitCard;
+import debits.cards.dao.exceptions.AccountNotFoundException;
 import debits.cards.dao.exceptions.CustomerNotFoundException;
 import debits.cards.dao.exceptions.DebitCardException;
 import debits.cards.dao.services.DebitCardService;
@@ -50,6 +51,19 @@ public class RestTesting {
 
         // Verify that CustomerNotFoundException is thrown
         assertThrows(CustomerNotFoundException.class, () -> {
+            debitCardRepository.updateDebitCardStatus(debitCard);
+        });
+    }
+    @Test
+    void testUpdateDebitCardStatus_AccountNotFound() {
+        Map<String, Object> returnedExecution = new HashMap<>();
+        returnedExecution.put("p_status", "SQLCODE-002");
+        when(jdbcTemplate.call(any(CallableStatementCreator.class), any()))
+                .thenReturn(returnedExecution);
+        DebitCard debitCard = new DebitCard(3692468135796673L, 17896570934897L, 200005, 122, 2112, new Date(2027, 10, 10), "active", 200000.0, 5000000.0);
+
+        // Verify that CustomerNotFoundException is thrown
+        assertThrows(AccountNotFoundException.class, () -> {
             debitCardRepository.updateDebitCardStatus(debitCard);
         });
     }

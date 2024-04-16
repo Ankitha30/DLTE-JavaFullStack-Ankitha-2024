@@ -39,7 +39,7 @@ public class CardSecurityService implements UserDetailsService {
     }
 
     public String getCustomerName(int customerId) {
-        String sql = "SELECT c.customer_name " +
+        String sql = "SELECT c.username " +
                 "FROM MYBANK_APP_CUSTOMER c " +
                 "JOIN MYBANK_APP_ACCOUNT a ON c.CUSTOMER_ID = a.CUSTOMER_ID " +
                 "WHERE c.CUSTOMER_ID = ?";
