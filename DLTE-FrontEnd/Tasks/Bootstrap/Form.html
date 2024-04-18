@@ -88,6 +88,90 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.forms['application'];
+            form.addEventListener('submit', function(event) {
+                // Prevent form submission if validation fails
+                if (!validateForm()) {
+                    event.preventDefault();
+                }
+            });
+    
+            function validateForm() {
+                var accountNumber = form['accountNumber'].value.trim();
+                var accountHolderName = form['accountHolderName'].value.trim();
+                var applicantContact = form['applicantContact'].value.trim();
+                var applicantEmail = form['applicantEmail'].value.trim();
+                var accountType = form.querySelector('input[name="accountType"]:checked');
+                var chequebookType = form['chequebookType'].value.trim();
+                var applyDate = form['applyDate'].value.trim();
+                var address = form['address'].value.trim();
+                var termsAndConditions = form['termsAndConditions'].checked;
+                var signature = form['signature'].value.trim();
+    
+                // Perform validation checks
+                if (accountNumber === '' || isNaN(accountNumber)) {
+                    alert('Please enter a valid Account Number.');
+                    return false;
+                }
+    
+                if (accountHolderName === '') {
+                    alert('Please enter Account Holder Name.');
+                    return false;
+                }
+    
+                if (applicantContact === '' || isNaN(applicantContact)) {
+                    alert('Please enter a valid Applicant Contact Number.');
+                    return false;
+                }
+    
+                if (applicantEmail === '' || !isValidEmail(applicantEmail)) {
+                    alert('Please enter a valid Applicant Email.');
+                    return false;
+                }
+    
+                if (!accountType) {
+                    alert('Please select Account Type.');
+                    return false;
+                }
+    
+                if (chequebookType === '') {
+                    alert('Please select ChequeBook Type.');
+                    return false;
+                }
+    
+                if (applyDate === '') {
+                    alert('Please select Date of Apply.');
+                    return false;
+                }
+    
+                if (address === '') {
+                    alert('Please enter Address.');
+                    return false;
+                }
+    
+                if (!termsAndConditions) {
+                    alert('Please agree to the Terms and Conditions.');
+                    return false;
+                }
+    
+                if (signature === '') {
+                    alert('Please upload Signature.');
+                    return false;
+                }
+    
+                return true;
+            }
+    
+            function isValidEmail(email) {
+                // Simple email validation using regex
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+        });
+    </script>
+    
 </body>
 
 </html>
