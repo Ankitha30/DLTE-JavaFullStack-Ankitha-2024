@@ -1,60 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debit Card Application Form</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Cheque Application</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="/Tasks/JavaScript/Validation.js"></script>
+
 </head>
+
 <body>
+    <div class="container">
 
-<div class="container mt-5">
-    <h2>Debit Card Application Form</h2>
-    <form id="debitCardForm">
-        <div class="form-group">
-            <label for="applicantName">Applicant Name</label>
-            <input type="text" class="form-control" id="applicantName" name="applicantName" required>
+        <div class="container text-center">
+            <h1 class="display-3 text-bg-dark">MyBank</h1>
         </div>
-        <div class="form-group">
-            <label for="applicantDOB">Date of Birth</label>
-            <input type="date" class="form-control" id="applicantDOB" name="applicantDOB" required>
-        </div>
-        <div class="form-group">
-            <label for="expectedLimit">Expected Limit</label>
-            <input type="number" class="form-control" id="expectedLimit" name="expectedLimit" required>
-        </div>
-        <div class="form-group">
-            <label for="cardPurpose">Card Purpose (CVV)</label>
-            <input type="text" class="form-control" id="cardPurpose" name="cardPurpose" required>
-        </div>
-        <div class="form-group">
-            <label for="cardType">Card Type (PIN)</label>
-            <select class="form-control" id="cardType" name="cardType" required>
-                <option value="debit">Debit Card</option>
-                <option value="credit">Credit Card</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="applicantContact">Contact Number</label>
-            <input type="tel" class="form-control" id="applicantContact" name="applicantContact" required>
-        </div>
-        <div class="form-group">
-            <label for="applicantEmail">Email Address</label>
-            <input type="email" class="form-control" id="applicantEmail" name="applicantEmail" required>
-        </div>
-        <div class="form-group">
-            <label for="applicantPAN">PAN Number</label>
-            <input type="text" class="form-control" id="applicantPAN" name="applicantPAN" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
 
-<!-- Bootstrap JS and dependencies (jQuery, Popper.js) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <h2 class="text-center">Application for Cheque Book</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form name="application" onsubmit="return performValidation()" action="#" class="p-3 border rounded">
+                    <div class="form-group">
+                        <label for="accountNumber">Account Number:
+                            <span id="accErr"></span>
+                        </label>
+                        <input type="text" class="form-control" id="accountNumber" placeholder="Account Number" name="accountHolderName">
+                    </div>
 
+                    <div class="form-group">
+                        <label for="accountHolderName">Account Holder Name:
+                            <span id="nameErr"></span>
+                        </label>
+                        <input type="text" class="form-control" id="accountHolderName"  name="accountHolderName"
+                            placeholder="Account Holder Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="applicantContact">Applicant Contact:
+                            <span id="contactErr"></span>
+                        </label>
+                        <input type="tel" class="form-control" id="applicantContact" name="applicantContact" 
+                        placeholder="Applicant's Contact">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="applicantEmail">Applicant Email:
+                            <span id="emailErr"></span>
+                        </label>
+                        <input type="email" class="form-control" id="applicantEmail" name="applicantEmail"
+                         placeholder="Applicant's Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Account Type:
+                            <span id="typeErr"></span>
+                        </label>
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="accountType" id="savings" name="accType"
+                                    value="savings">
+                                <label class="form-check-label" for="savings">Savings</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="accountType" id="current" name="accType"
+                                    value="current">
+                                <label class="form-check-label" for="current">Current</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="chequebookType">ChequeBook Type:
+                            <span id="checqueErr"></span>
+                        </label>
+                        <select class="form-control" id="chequebookType" name="chequebookType"> 
+                            <option>Select</option>
+                            <option>Open Cheque</option>
+                            <option>Crossed Cheque</option>
+                            <option>Self Cheque</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="applyDate">Date of Apply:
+                            <span id="applyErr"></span>
+
+                        </label>
+                        <input type="date" class="form-control" id="applyDate"  name="applyDate" >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="address">Address:
+                            <span id="addressErr"></span>
+
+                        </label>
+                        <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                    </div>
+
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="termsAndConditions" name="termsAndConditions" required >
+                        <label class="form-check-label" for="termsAndConditions">I agree to the Terms and
+                            Conditions
+
+                        </label>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="signature">Signature:</label>
+                        <input type="file" class="form-control-file" id="signature"   name="signature" required>
+                    </div>
+
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary mr-3"  name="submit">Apply</button>
+                        <button type="reset" class="btn btn-secondary" name="reset">Cancel</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+   
+    
 </body>
+
 </html>

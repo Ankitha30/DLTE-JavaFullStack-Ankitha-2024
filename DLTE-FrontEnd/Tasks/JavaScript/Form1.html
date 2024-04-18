@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debit Card Application Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Debit Card Application Form</h2>
+    <form id="debitCardForm">
+        <div class="form-group">
+            <label for="applicantName">Applicant Name</label>
+            <input type="text" class="form-control" id="applicantName" name="applicantName" required>
+        </div>
+        <div class="form-group">
+            <label for="applicantDOB">Date of Birth</label>
+            <input type="date" class="form-control" id="applicantDOB" name="applicantDOB" required>
+        </div>
+        <div class="form-group">
+            <label for="expectedLimit">Expected Limit</label>
+            <input type="number" class="form-control" id="expectedLimit" name="expectedLimit" required>
+        </div>
+        <div class="form-group">
+            <label for="cardPurpose">Card Purpose (CVV)</label>
+            <input type="text" class="form-control" id="cardPurpose" name="cardPurpose" required>
+        </div>
+        <div class="form-group">
+            <label for="cardType">Card Type (PIN)</label>
+            <select class="form-control" id="cardType" name="cardType" required>
+                <option value="debit">Debit Card</option>
+                <option value="credit">Credit Card</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="applicantContact">Contact Number</label>
+            <input type="tel" class="form-control" id="applicantContact" name="applicantContact" required>
+        </div>
+        <div class="form-group">
+            <label for="applicantEmail">Email Address</label>
+            <input type="email" class="form-control" id="applicantEmail" name="applicantEmail" required>
+        </div>
+        <div class="form-group">
+            <label for="applicantPAN">PAN Number</label>
+            <input type="text" class="form-control" id="applicantPAN" name="applicantPAN" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and dependencies (jQuery, Popper.js) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
