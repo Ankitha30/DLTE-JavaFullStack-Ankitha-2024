@@ -23,22 +23,23 @@ public class CreateAccount extends HttpServlet {
     private TransactionService transactionService;
     private Logger logger = LoggerFactory.getLogger(CreateAccount.class);
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+
     @Override
     public void init() throws ServletException {
-        StorageTarget storageTarget=new DatabaseTarget();
-        transactionService=new TransactionService(storageTarget);
+        StorageTarget storageTarget = new DatabaseTarget();
+        transactionService = new TransactionService(storageTarget);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("application/json");
         try {
-            Gson gson=new Gson();
-            Account account=gson.fromJson(req.getReader(),Account.class);
+            Gson gson = new Gson();
+            Account account = gson.fromJson(req.getReader(), Account.class);
             transactionService.callSaveAccount(account);
             resp.setStatus(HttpServletResponse.SC_OK);
             resp.getWriter().println(resourceBundle.getString("account.created"));
-        }     catch(NumberFormatException numberFormatException){
+        } catch (NumberFormatException numberFormatException) {
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             logger.warn(numberFormatException.getMessage());
             resp.getWriter().println(numberFormatException);
