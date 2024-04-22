@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-<h2>Hello World!</h2>
+<h2 class="text-center">Login!</h2>
 <div class="container">
     <div class="row justify-content-center">
         <form method="post" action="authorize" class="col-lg-3 col-md-6 col-12 align-self-center p-5 rounded-5 shadow">

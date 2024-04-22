@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="REST webservice" />
         <module name="Task848" />
+        <module name="REST webservice" />
       </profile>
     </annotationProcessing>
   </component>
