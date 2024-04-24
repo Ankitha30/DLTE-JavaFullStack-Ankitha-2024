@@ -9,9 +9,8 @@
     <h:form>
             <h:outputLabel value="Loan Number"/>
             <h:inputText value="#{loan.loanNumber}"/>
-        <h:commandButton value="Delete Loan">
-            <f:actionListener binding="#{loanService.deleteLoan(loan.loanNumber)}"/>
-        </h:commandButton>
+        <h:commandButton value="Add Loan" action="#{loanService.deleteLoan(loan.loanNumber)}"/>
+
     </h:form>
 </h:body>
 

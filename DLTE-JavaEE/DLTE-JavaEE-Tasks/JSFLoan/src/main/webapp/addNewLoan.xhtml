@@ -10,20 +10,19 @@
     <f:view>
         <h:form>
                 <h:outputLabel value="Loan Number"/>
-                <h:inputText value="#{loan.loanNumber}"/>
+                <h:inputText value="#{loan.loanNumber}"/><br/>
                 <h:outputLabel value="Loan Amount"/>
-                <h:inputText value="#{loan.loanAmount}"/>
+                <h:inputText value="#{loan.loanAmount}"/><br/>
                 <h:outputLabel value="Loan Date"/>
-                <h:inputText value="#{loan.loanDate}" />
+                <h:inputText value="#{loan.loanDate}" /><br/>
                 <h:outputLabel value="Loan Status"/>
-                <h:inputText value="#{loan.loanStatus}"/>
+                <h:inputText value="#{loan.loanStatus}"/><br/>
                 <h:outputLabel value="Borrower Name"/>
-                <h:inputText value="#{loan.borrowerName}"/>
+                <h:inputText value="#{loan.borrowerName}"/><br/>
                 <h:outputLabel value="Borrower Contact"/>
-                <h:inputText value="#{loan.borrowerContact}"/>
-            <h:commandButton value="Add Loan">
-                <f:actionListener binding="#{loanService.addNewLoan(loan)}"/>
-            </h:commandButton>
+                <h:inputText value="#{loan.borrowerContact}"/><br/>
+            <h:commandButton value="Add Loan" action="#{loanService.addNewLoan(loan)}"/>
+
         </h:form>
     </f:view>
 </h:body>

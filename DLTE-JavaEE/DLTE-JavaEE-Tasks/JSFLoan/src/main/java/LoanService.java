@@ -22,9 +22,9 @@ public class LoanService {
 
 
     public LoanService() {
-        loanList.add(new Loan(78345690L, 2000, new Date("02/04/2023"), "closed", "Anu", 9034234564L));
-        loanList.add(new Loan(78367230L, 5000, new Date("03/03/2024"), "open", "Aru", 9034234564L));
-        loanList.add(new Loan(78342324L, 3000, new Date("04/02/2025"), "closed", "Anusha", 9034234564L));
+        loanList.add(new Loan(78345690L, 2000,"3/7/2024",  "closed", "Anu", 9034234564L));
+        loanList.add(new Loan(78367230L, 5000, "3/7/2024", "open", "Aru", 9034234564L));
+        loanList.add(new Loan(78342324L, 3000,"3/7/2024",  "closed", "Anusha", 9034234564L));
     }
     public List<Loan> addNewLoan(Loan loan){
         loanList.add(loan);
@@ -35,7 +35,10 @@ public class LoanService {
         return  filteredList;
     }
     public void deleteLoan(Long loanNum){
-        loanList.removeIf(loan -> loan.getLoanNumber()==loanNum);
+        System.out.println(loanNum);
+        loanList.remove(loanNum);
+        System.out.println("deleted "+ loanNum);
+        loanList.forEach(System.out::println);
 
     }
 
