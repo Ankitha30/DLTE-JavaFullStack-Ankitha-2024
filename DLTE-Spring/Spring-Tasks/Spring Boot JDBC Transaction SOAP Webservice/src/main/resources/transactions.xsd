@@ -2,12 +2,12 @@
             targetNamespace="http://services.transaction"
             xmlns:tns="http://services.transaction"
             elementFormDefault="qualified">
-<!--    private int transactionId;-->
-<!--    private Date transactionDate;-->
-<!--    private String transactionBy;-->
-<!--    private String transactionTo;-->
-<!--    private double transactionAmount;-->
-<!--    private String remarks;-->
+    <!--    private int transactionId;-->
+    <!--    private Date transactionDate;-->
+    <!--    private String transactionBy;-->
+    <!--    private String transactionTo;-->
+    <!--    private double transactionAmount;-->
+    <!--    private String remarks;-->
     <xsd:complexType name ="transactions">
         <xsd:sequence>
             <xsd:element name ="transactionId" type="xsd:int"/>
@@ -26,14 +26,14 @@
         </xsd:sequence>
     </xsd:complexType>
 
-    <xsd:element name="newTransactionRequest">
+    <xsd:element name="newTransactionrequest">
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="transaction" type="tns:transactions"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-    <xsd:element name="newTransactionResponse">
+    <xsd:element name="newTransactionresponse">
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="serviceStatus" type="tns:serviceStatus"/>
