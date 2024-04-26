@@ -35,3 +35,6 @@
 24/03/2024 00:24:48 [34m[0;39m[main]  [34mINFO [0;39m %PARSER_ERROR[logger] - [34mconsnection done[0;39m 
 24/03/2024 00:27:25 [34m[0;39m[main]  [34mINFO [0;39m %PARSER_ERROR[logger] - [34mconsnection done[0;39m 
 24/03/2024 00:29:56 [34m[0;39m[main]  [34mINFO [0;39m app.mybank.middleware.DatabaseTarget - [34mconsnection done[0;39m 
+19/04/2024 12:14:27 [34m[0;39m[main]  [34mINFO [0;39m app.mybank.middleware.DatabaseTarget - [34mconsnection done[0;39m 
+19/04/2024 12:14:41 [34m[0;39m[main]  [34mINFO [0;39m app.mybank.middleware.DatabaseTarget - [34mconsnection done[0;39m 
+19/04/2024 12:14:41 [34m[0;39m[main]  [34mINFO [0;39m web.SoapEndpoints - [34mWeb service Hosted[0;39m 

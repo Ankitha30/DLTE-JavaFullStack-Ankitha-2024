@@ -36,9 +36,8 @@ public class LoanService {
     }
     public void deleteLoan(Long loanNum){
         System.out.println(loanNum);
-        loanList.remove(loanNum);
-        System.out.println("deleted "+ loanNum);
-        loanList.forEach(System.out::println);
+        loanList.removeIf(loan -> loan.getLoanNumber()==loanNum);
+
 
     }
 

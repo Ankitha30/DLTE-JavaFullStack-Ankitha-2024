@@ -26,7 +26,7 @@ public class Transaction {
         this.userName = userName;
     }
 
-    public String getTransactionType(String string) {
+    public String getTransactionType() {
         return transactionType;
     }
 
