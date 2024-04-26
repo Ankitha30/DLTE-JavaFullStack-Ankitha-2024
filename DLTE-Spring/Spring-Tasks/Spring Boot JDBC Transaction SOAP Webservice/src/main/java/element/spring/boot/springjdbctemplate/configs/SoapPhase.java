@@ -26,8 +26,8 @@ public class SoapPhase {
     @PreAuthorize("hasAnyAuthority('admin')")
     @PayloadRoot(namespace = url,localPart = "newTransactionRequest")//local part specifies what is it handling
     @ResponsePayload
-    public NewTransactionResponse addNewTransaction(@RequestPayload NewTransactionRequest newTransactionRequest){
-        NewTransactionResponse newTransactionResponse=new NewTransactionResponse();
+    public NewTransactionresponse addNewTransaction(@RequestPayload NewTransactionrequest newTransactionRequest){
+        NewTransactionresponse newTransactionResponse=new NewTransactionresponse();
         ServiceStatus serviceStatus=new ServiceStatus();
 
         transaction.services.Transactions actualTransaction=newTransactionRequest.getTransaction();

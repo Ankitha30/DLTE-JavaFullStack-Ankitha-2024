@@ -28,6 +28,7 @@ public class TransactionSecurity {
         httpSecurity.httpBasic();
         httpSecurity.formLogin();
         httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/transactionrepo/transaction.wsdl").permitAll();
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
 
