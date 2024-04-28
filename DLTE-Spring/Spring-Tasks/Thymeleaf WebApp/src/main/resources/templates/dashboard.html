@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>My Awesome Web Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins';
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Light gray background */
+        }
+
+        nav {
+            background-color: #4CAF50;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-link:hover {
+            background-color: #45a020;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav class="mt-3" >
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">MyBank</a>
+            </li>
+            <li class="nav-item ml-auto">
+                <a class="nav-link" th:href="@{/new}">New Transactions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/search}">Search</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/delete}">Delete</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{'/logout'}">Logout</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
