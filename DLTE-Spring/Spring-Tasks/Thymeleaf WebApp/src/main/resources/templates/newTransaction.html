@@ -68,26 +68,7 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <nav class="mt-3" >
-        <ul class="nav">
-            <li class="nav-item">
-                <h2 class="nav-link" >MyBank</h2>
-            </li>
-            <li class="nav-item ml-auto">
-                <a class="nav-link" th:href="@{/new}">New Transactions</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/search}">Search</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/before}">Delete</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{'/logout'}">Logout</a>
-            </li>
-        </ul>
-    </nav>
+<div th:replace="dashboard :: collapse">
 </div>
 <div class="container mt-4">
     <form th:action="@{/new}" th:object="${transaction}" method="post">

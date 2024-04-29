@@ -28,7 +28,7 @@ public class TransactionSuccess  extends SimpleUrlAuthenticationSuccessHandler {
                 service.updateAttempts(myBankOfficials);
             }
 //            super.setDefaultTargetUrl("/credit/view");
-            super.setDefaultTargetUrl("/");
+            super.setDefaultTargetUrl("/dash");
         }
         else{
             logger.warn("Max attempts reached contact admin");

@@ -34,7 +34,10 @@ public class TransactionConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
         httpSecurity.httpBasic();
-        httpSecurity.formLogin()
+        httpSecurity.logout().permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/").permitAll();
+
+        httpSecurity.formLogin().loginPage("/")
                 .usernameParameter("username")
                 .failureHandler(transactionFailure).
                 successHandler(transactionSuccess);

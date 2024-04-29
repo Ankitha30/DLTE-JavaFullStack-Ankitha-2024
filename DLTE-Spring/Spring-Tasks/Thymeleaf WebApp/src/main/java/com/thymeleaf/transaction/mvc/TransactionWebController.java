@@ -23,18 +23,11 @@ public class TransactionWebController {
     @Autowired
     TransactionService transactionServices;
 
-
-
     @GetMapping("/ ")
     public String index(){
         return "index";
     }
-//
-//    @GetMapping("/display")
-//    public String display(Model model){
-//        model.addAttribute("transaction",new Transaction());
-//        return "index";
-//    }
+
 
     @GetMapping("/dash")
     public String homePage(){

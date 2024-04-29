@@ -11,6 +11,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -31,8 +33,12 @@ public class CustomerService implements UserDetailsService {
     }
 
     public Customer findByUsername(String username) {
-        Customer customer = jdbcTemplate.queryForObject("select * from customers where username=?",
-                new Object[]{username}, new BeanPropertyRowMapper<>(Customer.class));
+        List<Customer> customerlist = jdbcTemplate.query("select * from customers", new BeanPropertyRowMapper<>(Customer.class));
+        Customer customer = customerlist.stream().filter(each->each.getUsername().equals(username)).findFirst().orElse(null);
+
+        if(customer==null)
+            throw new UsernameNotFoundException(username);
+
         return customer;
     }
 
