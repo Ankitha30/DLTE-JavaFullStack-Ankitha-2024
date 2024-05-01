@@ -44,7 +44,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 class MyProjectWebServiceApplicationTests {
-    ResourceBundle resourceBundle=ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle=ResourceBundle.getBundle("cards");
     private MockMvc mockMvc;
 
     @MockBean

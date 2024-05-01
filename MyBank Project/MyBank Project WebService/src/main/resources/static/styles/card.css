@@ -1,0 +1,42 @@
+body {
+    /*background-image: url("@{'/images/background.png'}");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'Montserrat';
+}
+
+img {
+    height: auto;
+}
+
+#lefthead {
+    margin-top: 27vh;
+    margin-left: 4rem;
+}
+
+#leftpara {
+    margin-top: 5vh;
+    margin-left: 4rem;
+}
+
+button {
+    background-color: rgb(255, 76, 0);
+}
+
+#rightcard {
+    margin-top: 8rem;
+    margin-left: 0px;
+    margin-right: 40px;
+}
+
+.loginButton {
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: center;
+}
+
+#learn {
+    margin-left: 4rem;
+}

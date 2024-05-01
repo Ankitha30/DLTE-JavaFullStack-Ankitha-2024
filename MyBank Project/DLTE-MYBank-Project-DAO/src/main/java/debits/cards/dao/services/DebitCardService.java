@@ -1,5 +1,6 @@
 package debits.cards.dao.services;
 
+import debits.cards.dao.entities.Account;
 import debits.cards.dao.entities.CardSecurity;
 import debits.cards.dao.entities.DebitCard;
 import debits.cards.dao.exceptions.AccountNotFoundException;
@@ -24,26 +25,26 @@ public class DebitCardService implements DebitCardRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
     @Autowired
-     CardSecurityService service;
+    CardSecurityService service;
 
 
-   Logger logger = LoggerFactory.getLogger(DebitCardService.class);
-   ResourceBundle resourceBundle = ResourceBundle.getBundle("application") ;
+    Logger logger = LoggerFactory.getLogger(DebitCardService.class);
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
 
     @Override
-    public List<DebitCard> listAllCards() throws SQLSyntaxErrorException {
+    public List<DebitCard> listAllCards(String username) throws SQLSyntaxErrorException {
 
 
 //        if(customer.getCustomerName().equals())
-        List<DebitCard> debitCardList=null;
+        List<DebitCard> debitCardList = null;
         try {
-             debitCardList = jdbcTemplate.query("SELECT * FROM mybank_app_debitcard where debitCard_status='inactive' or debitCard_status='active' ", new DebitCardMapper());
-             logger.info(resourceBundle.getString("list.total.cards"),debitCardList.size());
-        }catch (DataAccessException e){
+            debitCardList = jdbcTemplate.query("SELECT * FROM mybank_app_debitcard d JOIN mybank_app_customer c on d.customer_id=c.customer_id JOIN mybank_app_account a on a.account_number=d.account_number  where debitCard_status='inactive' or debitCard_status='active' and a.account_status='active' and c.customer_status='active' and username=?", new Object[]{username}, new DebitCardMapper());
+            logger.info(resourceBundle.getString("list.total.cards"), debitCardList.size());
+        } catch (DataAccessException e) {
             logger.error(resourceBundle.getString("list.sql.error"));
             throw new SQLSyntaxErrorException(e);
         }
-        if(debitCardList.size()==0)
+        if (debitCardList.size() == 0)
             throw new DebitCardException(resourceBundle.getString("list.no.data"));
 
         return debitCardList;
@@ -51,41 +52,36 @@ public class DebitCardService implements DebitCardRepository {
     }
 
 
-
-
     @Override
-    public String updateDebitCardStatus(DebitCard debitCard)  {
+    public String updateDebitCardStatus(DebitCard debitCard) {
 
-        try{
-
-
-
-//
-//
-            DebitCard fetchedDebitCard = jdbcTemplate.queryForObject(
+        try {
+            DebitCard retrievedDebitCard = jdbcTemplate.queryForObject(
                     "SELECT * FROM mybank_app_debitcard WHERE account_number = ?",
                     new Object[]{debitCard.getAccountNumber()},
                     new DebitCardMapper());
 
-
-
-            if (!Objects.equals(debitCard.getDebitCardNumber(), fetchedDebitCard.getDebitCardNumber())) {
-                throw new DebitCardException(resourceBundle.getString("debit card not found"));
+            if (!Objects.equals(debitCard.getDebitCardNumber(), retrievedDebitCard.getDebitCardNumber())) {
+                throw new DebitCardException(resourceBundle.getString("debit.not.matched")+debitCard.getAccountNumber());
             }
-            if (!Objects.equals(debitCard.getCustomerId(), fetchedDebitCard.getCustomerId())) {
-                throw new DebitCardException(resourceBundle.getString("customer.not.matched"));
+            if (!Objects.equals(debitCard.getDebitCardPin(), retrievedDebitCard.getDebitCardPin())) {
+                throw new DebitCardException(resourceBundle.getString("pin.not.matched"));
             }
+            System.out.println(debitCard.getCustomerId());
+            System.out.println(retrievedDebitCard.getCustomerId());
 
-        }catch(DataAccessException exception){
+
+        } catch (DataAccessException exception) {
             logger.error(resourceBundle.getString("no.data"));
             throw new DebitCardException(resourceBundle.getString("no.data"));
         }
         try {
             CallableStatementCreator creator = con -> {
-                CallableStatement statement = con.prepareCall("{call UPDATE_DEBITCARD_STATUS(?, ?,?)}");
+                CallableStatement statement = con.prepareCall("{call UPDATE_DEBITCARD_STATUS(?, ?, ?, ?)}");
                 statement.setLong(1, debitCard.getAccountNumber());
                 statement.setString(2, debitCard.getDebitCardStatus());
-                statement.registerOutParameter(3, Types.VARCHAR);
+                statement.setInt(3,debitCard.getDebitCardPin());
+                statement.registerOutParameter(4, Types.VARCHAR);
                 return statement;
             };
 
@@ -93,12 +89,13 @@ public class DebitCardService implements DebitCardRepository {
                     new SqlParameter[]{
                             new SqlParameter(Types.NUMERIC),
                             new SqlParameter(Types.VARCHAR),
+                            new SqlParameter(Types.INTEGER),
                             new SqlOutParameter("p_status", Types.VARCHAR)
                     }
             ));
             String resultMessage = returnedExecution.get("p_status").toString();
             if (resultMessage.equals("SQLCODE-000")) {
-                logger.error(resourceBundle.getString("status.update.success"));
+                logger.info(resourceBundle.getString("status.update.success"));
             } else {
                 if (resultMessage.equals("SQLCODE-001")) {
                     logger.error(resourceBundle.getString("customer.not.found"));
@@ -128,7 +125,7 @@ public class DebitCardService implements DebitCardRepository {
 
 
     // mapping objects
-    public class DebitCardMapper implements RowMapper<DebitCard>{
+    public class DebitCardMapper implements RowMapper<DebitCard> {
 
         @Override
         public DebitCard mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -143,6 +140,38 @@ public class DebitCardService implements DebitCardRepository {
             debitCard.setDomesticLimit(rs.getDouble(8));
             debitCard.setInternationalLimit(rs.getDouble(9));
             return debitCard;
+        }
+    }
+
+
+    @Override
+    public List<Account> accountList(String username) throws SQLSyntaxErrorException {
+        List<Account> accountList = null;
+        try {
+            accountList = jdbcTemplate.query("SELECT * FROM mybank_app_account a JOIN mybank_app_customer c ON a.customer_id = c.customer_id  WHERE NOT a.account_status='Blocked' AND c.username = ?", new Object[]{username}, new AccountMapper());
+            logger.info(resourceBundle.getString("account.fetch.success"));
+        } catch (DataAccessException sqlException) {
+            logger.error(resourceBundle.getString("list.sql.error"));
+            sqlException.printStackTrace();
+            throw new SQLSyntaxErrorException(resourceBundle.getString("list.sql.error"));
+        }
+        if (accountList.size() == 0) {
+            logger.warn(resourceBundle.getString("account.list.null"));
+            throw new AccountNotFoundException(resourceBundle.getString("account.list.null"));
+        }
+        return accountList;
+    }
+    public class AccountMapper implements RowMapper<Account> {
+        @Override
+        public Account mapRow(ResultSet rs, int rowNum) throws SQLException {
+            Account account = new Account();
+            account.setAccountId(rs.getInt(1));
+            account.setCustomerId(rs.getInt(2));
+            account.setAccountType(rs.getString(3));
+            account.setAccountNumber(rs.getLong(4));
+            account.setAccountStatus(rs.getString(5));
+            account.setAccountBalance(rs.getDouble(6));
+            return account;
         }
     }
 

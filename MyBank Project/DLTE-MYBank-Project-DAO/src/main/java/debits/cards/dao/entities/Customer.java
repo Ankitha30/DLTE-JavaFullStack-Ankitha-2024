@@ -6,8 +6,8 @@ import javax.validation.constraints.Pattern;
 
 public class Customer {
     @Digits(integer = 10, fraction = 0, message = "{card.customer.valid}")
-    @NotNull(message = "{customer.id.null}")
-    private Integer customerId;
+//    @NotNull(message = "{customer.id.null}")
+    private int customerId;
 
     @Pattern(regexp = "^[a-zA-Z ]+$", message = "{customer.name.valid}")
     @NotNull(message= "{customer.name.null}")
@@ -21,7 +21,7 @@ public class Customer {
 
     @Digits(integer = 10, fraction = 0, message = "{contact.valid}")
     @NotNull(message= "{customer.contact.null}")
-    private Long customerContact;
+    private long customerContact;
 
     @NotNull(message= "{user.name.null}")
     private String username;
@@ -29,11 +29,11 @@ public class Customer {
     @NotNull(message= "{password.null}")
     private String password;
 
-    public Integer getCustomerId() {
+    public int getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(Integer customerId) {
+    public void setCustomerId(int customerId) {
         this.customerId = customerId;
     }
 
@@ -61,11 +61,11 @@ public class Customer {
         this.customerStatus = customerStatus;
     }
 
-    public Long getCustomerContact() {
+    public long getCustomerContact() {
         return customerContact;
     }
 
-    public void setCustomerContact(Long customerContact) {
+    public void setCustomerContact(long customerContact) {
         this.customerContact = customerContact;
     }
 

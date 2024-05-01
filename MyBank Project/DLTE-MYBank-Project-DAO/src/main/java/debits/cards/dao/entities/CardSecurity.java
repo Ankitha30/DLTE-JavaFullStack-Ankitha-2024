@@ -29,6 +29,18 @@ public class CardSecurity implements UserDetails {
     private final int maxAttempt = 3;
     private Integer attempts;
 
+    public Integer getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Integer customerId) {
+        this.customerId = customerId;
+    }
+
+    @Digits(integer = 10, fraction = 0, message = "{card.customer.valid}")
+
+    private Integer customerId;
+
     public String getCustomerName() {
         return customerName;
     }

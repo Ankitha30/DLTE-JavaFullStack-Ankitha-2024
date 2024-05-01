@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <style>
+        body {
+            color: #182052;
+            font-family: "Poppins";
+            height: 100vh;
+        }
+
+        #myBank {
+            color: #182052;
+            font-family: "Poppin";
+        }
+
+        .logo {
+            height: 7vh;
+
+        }
+
+        button {
+            background-color: #182052;
+            margin-top: 2vh;
+            margin-right: 35px;
+            height: 7vh;
+            border-radius: 5rem;
+        }
+
+        .loginButton {
+            font-family: "Montserrat";
+            display: flex;
+            justify-content: center;
+            color: #182052;
+        }
+
+
+        .navbar-custom {
+            background-color: #182052;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-custom .nav-item.active .nav-link {
+            color: #f8f9fa !important;
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-menu {
+            background-color: #24307F;
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        .navbar-brand {
+            font-size: 46px;
+            font-weight: 800;
+        }
+
+        .navbar {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .navbar-text {
+            margin-right: 0;
+        }
+
+        footer {
+            background-color: #182052;
+        }
+    </style>
+
+
+    <script>
+        // Define the confirmAndBlock function globally
+        function confirmAndBlock(accountNumber, debitCardNumber) {
+            const pin = prompt('Please enter your PIN to block this card:');
+            if (pin === null) {
+                return; // User canceled PIN prompt
+            }
+
+            const debitCard = {
+                accountNumber: accountNumber,
+                debitCardNumber: debitCardNumber,
+                debitCardPin: pin,
+                debitCardStatus: 'block'
+            };
+
+            $.ajax({
+                url: '/update/status',
+                type: 'PUT',
+                contentType: 'application/json',
+                data: JSON.stringify(debitCard),
+                success: function(response) {
+                    alert('Debit card blocked successfully!');
+                    // Remove the blocked card from UI
+                    $(`#card-${debitCardNumber}`).remove();
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    console.error('Error blocking debit card:', errorThrown);
+                    alert('Failed to block debit card: ' + xhr.responseText);
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            // Function to fetch and display debit card details
+            function fetchDebitCards() {
+                // SOAP request to fetch debit card details
+                $.ajax({
+                    url: 'http://localhost:8082/debitcardrepo/debitcard.wsdl',
+                    type: 'POST',
+                    dataType: 'xml',
+                    contentType: 'text/xml; charset=utf-8',
+                    data: `
+                        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:deb="http://debitcard.links">
+                            <soapenv:Header/>
+                            <soapenv:Body>
+                                <deb:viewDebitCardRequest/>
+                            </soapenv:Body>
+                        </soapenv:Envelope>`,
+                    success: function(response) {
+                        $(response).find('ns2\\:debitCard').each(function() {
+                            const debitCardNumber = $(this).find('ns2\\:debitCardNumber').text();
+                            const accountNumber = $(this).find('ns2\\:accountNumber').text();
+                            const debitCardStatus = $(this).find('ns2\\:debitCardStatus').text();
+                            const customerCVV = $(this).find('ns2\\:debitCardCvv').text();
+                            const domesticLimit = $(this).find('ns2\\:domesticLimit').text();
+                            const internationalLimit = $(this).find('ns2\\:internationalLimit').text();
+
+                            const cardHtml = `
+                                <div class="card" id="card-${debitCardNumber}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Debit Card: ${debitCardNumber}</h5>
+                                        <p class="card-text">Account Number: ${accountNumber}</p>
+                                        <p class="card-text">Status: ${debitCardStatus}</p>
+                                        <button class="btn btn-danger" onclick="confirmAndBlock('${accountNumber}', '${debitCardNumber}','${customerCVV}','${debitCardNumber}')">Block</button>
+                                    </div>
+                                </div>
+                            `;
+
+                            $('#cardContainer').append(cardHtml);
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error fetching debit cards:', error);
+                        alert('Failed to fetch debit cards.');
+                    }
+                });
+            }
+
+            // Load debit card details on page load
+            fetchDebitCards();
+        });
+    </script>
+
+
+
+
+<!--    <script>-->
+<!--        const getAllCards = () => {-->
+<!--            let soapRequest = `-->
+<!--            <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:deb="http://debitcard.links">-->
+<!--                <soapenv:Header/>-->
+<!--                <soapenv:Body>-->
+<!--                    <deb:viewDebitCardRequest/>-->
+<!--                </soapenv:Body>-->
+<!--        </soapenv:Envelope>`;-->
+
+<!--            $.ajax({-->
+<!--                url: "http://localhost:8082/debitcardrepo/debitcard.wsdl",-->
+<!--                type: "POST",-->
+<!--                dataType: "xml",-->
+<!--                contentType: "text/xml;charset=utf-8",-->
+<!--                data: soapRequest,-->
+<!--                success: function (response) {-->
+<!--                    $('#view').empty();-->
+<!--                    $(response).find('ns2\\:debitCard').each(function () {-->
+<!--                        // Extract card details-->
+<!--                        const debitCardNumber = $(this).find('ns2\\:debitCardNumber').text();-->
+<!--                        const accountNumber = $(this).find('ns2\\:accountNumber').text();-->
+<!--                        const customerId = $(this).find('ns2\\:customerId').text();-->
+<!--                        const customerCVV = $(this).find('ns2\\:debitCardCvv').text();-->
+<!--                        const debitCardPin = $(this).find('ns2\\:debitCardPin').text();-->
+<!--                        const debitCardStatus = $(this).find('ns2\\:debitCardStatus').text();-->
+<!--                        const domesticLimit = $(this).find('ns2\\:domesticLimit').text();-->
+<!--                        const internationalLimit = $(this).find('ns2\\:internationalLimit').text();-->
+
+
+<!--                        const cardHtml = `-->
+<!--                            <div class="card border-primary rounded-5 shadow-lg mt-4 ">-->
+<!--                                <div class="card-header bg-info-subtle rounded-5 m-2"><h5 class="card-title">${debitCardNumber}</h5></div>-->
+<!--                                <div class="card-body bg-info-subtle rounded-5 mb-2">-->
+<!--                                    <p class="card-text">Account Number: ${accountNumber}</p>-->
+<!--                                    <p class="card-text">Customer ID: ${customerId}</p>-->
+<!--                                    <p class="card-text">CVV: ${customerCVV}</p>-->
+<!--                                    <p class="card-text">PIN: ${debitCardPin}</p>-->
+<!--                                    <p class="card-text">Status: ${debitCardStatus}</p>-->
+<!--                                    <p class="card-text">Domestic Limit: ${domesticLimit}</p>-->
+<!--                                    <p class="card-text">International Limit: ${internationalLimit}</p>-->
+<!--                                    <button><a th:href="@{'/update/status'}" class="text- white">Block</a></button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        `;-->
+
+<!--                        $('#view').append(cardHtml);-->
+<!--                    });-->
+<!--                },-->
+<!--                error: function (xhr, status, error) {-->
+<!--                    console.error(xhr.responseText);-->
+<!--                }-->
+<!--            });-->
+<!--        };-->
+
+<!--        $(document).ready(function () {-->
+<!--            getAllCards();-->
+<!--        });-->
+<!--    </script>-->
+</head>
+
+<body>
+
+
+<div th:replace="dashboard :: collapse">
+</div>
+
+
+<div class="row justify-content-around" id="cardContainer">
+
+</div>
+
+<!--footer section-->
+<div th:replace="dashboard :: bottom">
+</div>
+
+
+</body>
+
+</html>
+
+
+

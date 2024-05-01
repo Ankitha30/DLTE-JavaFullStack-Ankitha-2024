@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <style>
+        body {
+            color: #182052;
+            font-family: "Poppins";
+        }
+
+        #myBank {
+            color: #182052;
+            font-family: "Poppin";
+        }
+
+        .logo {
+            height: 7vh;
+
+        }
+
+        button {
+            background-color: #182052;
+            margin-top: 2vh;
+            margin-right: 35px;
+            height: 7vh;
+            border-radius: 5rem;
+        }
+
+        .loginButton {
+            font-family: "Montserrat";
+            display: flex;
+            justify-content: center;
+            color: #182052;
+        }
+
+
+        .navbar-custom {
+            background-color: #182052;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-custom .nav-item.active .nav-link {
+            color: #f8f9fa !important;
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-menu {
+            background-color: #24307F;
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        .navbar-brand {
+            font-size: 46px;
+            font-weight: 800;
+        }
+
+        .navbar {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .navbar-text {
+            margin-right: 0;
+        }
+
+        footer {
+            background-color: #182052;
+        }
+    </style>
+    <script>
+        function viewCard() {
+            window.location.href = "/web/debit";
+        }
+        $(document).ready(() => {
+            var pageSize = 2;
+            var currentPage = 1;
+            var accountData;
+
+            function fetchUserAccounts() {
+                $.ajax({
+                    type: "GET",
+                    url: "/update/list",
+                    success: function(response) {
+                        accountData = response;
+                        renderUserAccounts(currentPage);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error in fetching");
+                    }
+                });
+            }
+
+            function renderUserAccounts(page) {
+                var startIndex = (page - 1) * pageSize;
+                var end = startIndex + pageSize;
+                var accountSection = $('#viewSection');
+                $('#viewSection').empty(); // Clear existing content
+                var accountDetail = accountData.slice(startIndex, end);
+
+                $.each(accountDetail, function(index, account) {
+                    var cardClass = account.accountStatus ? 'active' : 'inactive';
+
+                    var cardHtml = `
+                    <div class="card m-3 ${cardClass}">
+                        <div class="card-body">
+                            <p class="card-text"><strong>Account Number:</strong> ${account.accountNumber}</p>
+                            <p class="card-text"><strong>Account Balance:</strong> ${account.accountBalance}</p>
+                            <p class="card-text"><strong>Status:</strong> ${account.accountStatus}</p>
+                            ${account.accountStatus === 'active' ?
+                        `<button class="btn btn-primary" onclick="viewCard()">DebitCard Detail</button>` :
+                        `<button class="btn btn-secondary" disabled>Inactive Account</button>`
+                    }
+                        </div>
+                    </div>
+                `;
+
+                    $('#viewSection').append(cardHtml);
+                });
+
+                paginationControl();
+            }
+
+
+
+            function paginationControl() {
+                var totalAccount = accountData.length;
+                var totalPages = Math.ceil(totalAccount / pageSize);
+                var paginationHtml = `
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        ${Array.from({ length: totalPages }, (_, i) => i + 1).map(page => `
+                            <li class="page-item ${page === currentPage ? 'active' : ''}">
+                                <a class="page-link" href="#" onclick="changePage(${page})">${page}</a>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </nav>
+            `;
+
+                $('#paginationContainer').html(paginationHtml);
+            }
+
+            window.changePage = function(page) {
+                currentPage = page;
+                renderUserAccounts(currentPage);
+            };
+
+            fetchUserAccounts(); // Fetch user accounts when the page loads
+        });
+    </script>
+
+</head>
+
+<body>
+
+
+<div th:replace="dashboard :: collapse">
+</div>
+
+
+
+
+
+
+    <div class="row justify-content-around" id="viewSection">
+
+    </div>
+
+<div id="paginationContainer" class="d-flex justify-content-center mt-3"></div>
+
+
+
+
+
+<!--footer section-->
+<div th:replace="dashboard :: bottom">
+</div>
+
+
+</body>
+
+</html>
+
+
+
+<!--onclick="navigateToNextPage('${account.accountId}'-->
+
+<!--function navigateToNextPage(accountId) {-->
+<!--window.location.href = '/web/nextPage/' + accountId;-->
+<!--}-->

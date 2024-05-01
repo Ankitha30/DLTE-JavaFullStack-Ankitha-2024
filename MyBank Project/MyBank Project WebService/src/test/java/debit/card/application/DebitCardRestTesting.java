@@ -55,7 +55,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @AutoConfigureMockMvc
 @ExtendWith(MockitoExtension.class)
 public class DebitCardRestTesting {
-    ResourceBundle resourceBundle=ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle=ResourceBundle.getBundle("cards");
 
 
     @MockBean

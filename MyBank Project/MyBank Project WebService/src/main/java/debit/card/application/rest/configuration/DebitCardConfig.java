@@ -12,7 +12,7 @@ public class DebitCardConfig {
     @Bean
     public MessageSource messageSource() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-        messageSource.setBasename("application");
+        messageSource.setBasename("cards");
         messageSource.setDefaultEncoding("UTF-8");
         return messageSource;
     }

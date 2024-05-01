@@ -17,13 +17,13 @@ import java.util.ResourceBundle;
 @EnableWs
 @Configuration
 public class DebitCardServiceConfiguration {
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("cards");
     @Bean
     public ServletRegistrationBean servletRegistrationBean(ApplicationContext applicationContext){
-        MessageDispatcherServlet servlet=new MessageDispatcherServlet();
+        MessageDispatcherServlet servlet=new MessageDispatcherServlet(); //responsible for dispatching incoming SOAP messages to the appropriate endpoint.
         servlet.setTransformWsdlLocations(true);
         servlet.setApplicationContext(applicationContext);
-        return new ServletRegistrationBean(servlet,"/debitcardrepo/*");
+        return new ServletRegistrationBean(servlet,"/debitcardrepo/*"); //to register the servlet with specific URL mappings ("/debitcardrepo/
     }
 
     // wsdl properties

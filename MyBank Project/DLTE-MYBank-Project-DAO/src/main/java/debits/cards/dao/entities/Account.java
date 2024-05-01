@@ -8,33 +8,33 @@ public class Account {
 
 
     @NotNull(message = "{account.id.null}")
-    private Integer accountId;
+    private int accountId;
     @NotNull(message = "{customer.id.null}")
-    private Integer customerId;
+    private int customerId;
     @NotNull(message = "{account.type.null}")
     @Pattern(regexp = "^[a-zA-Z\\s]*$",message = "{account.type.valid}")
     private String accountType;
     @NotNull(message = "{account.num.null}")
     @Digits(integer = 14, fraction = 0, message = "{account.num.valid}")
-    private Long accountNumber;
+    private long accountNumber;
     @NotNull(message = "{account.status.null}")
     private String accountStatus;
     @NotNull(message = "{account.balance.null}")
-    private Double accountBalance;
+    private double accountBalance;
 
-    public Integer getAccountId() {
+    public int getAccountId() {
         return accountId;
     }
 
-    public void setAccountId(Integer accountId) {
+    public void setAccountId(int accountId) {
         this.accountId = accountId;
     }
 
-    public Integer getCustomerId() {
+    public int getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(Integer customerId) {
+    public void setCustomerId(int customerId) {
         this.customerId = customerId;
     }
 
@@ -46,11 +46,11 @@ public class Account {
         this.accountType = accountType;
     }
 
-    public Long getAccountNumber() {
+    public long getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(Long accountNumber) {
+    public void setAccountNumber(long accountNumber) {
         this.accountNumber = accountNumber;
     }
 
@@ -62,11 +62,11 @@ public class Account {
         this.accountStatus = accountStatus;
     }
 
-    public Double getAccountBalance() {
+    public double getAccountBalance() {
         return accountBalance;
     }
 
-    public void setAccountBalance(Double accountBalance) {
+    public void setAccountBalance(double accountBalance) {
         this.accountBalance = accountBalance;
     }
 }
