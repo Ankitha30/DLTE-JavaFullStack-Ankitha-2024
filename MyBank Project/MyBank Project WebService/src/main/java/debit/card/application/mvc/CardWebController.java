@@ -2,7 +2,6 @@ package debit.card.application.mvc;
 
 
 import debit.card.application.rest.UpdateStatusController;
-import debits.cards.dao.entities.CardSecurity;
 import debits.cards.dao.services.CardSecurityService;
 import debits.cards.dao.services.DebitCardService;
 import org.slf4j.Logger;
@@ -22,7 +21,6 @@ public class CardWebController {
 
     @Autowired
     CardSecurityService service;
-    Logger logger = LoggerFactory.getLogger(CardWebController.class);
 
     @RequestMapping(value="/dash", method = RequestMethod.GET)
     public String homePage(){
@@ -34,11 +32,6 @@ public class CardWebController {
         return "index";
     }
 
-    @RequestMapping(value="/view", method = RequestMethod.GET)
-    public String viewPage(){
-        return "view";
-    }
-
 
     @GetMapping("/debit")
     public String viewing(){
@@ -46,4 +39,9 @@ public class CardWebController {
     }
 
 
+
+    @GetMapping("/error")
+    public String error(){
+        return "error";
+    }
 }

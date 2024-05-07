@@ -1,42 +1,82 @@
 body {
-    /*background-image: url("@{'/images/background.png'}");*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    font-family: 'Montserrat';
+    color: #182052;
+    font-family: "Poppins";
 }
 
-img {
-    height: auto;
+#myBank {
+    color: #182052;
+    font-family: "Poppin";
 }
 
-#lefthead {
-    margin-top: 27vh;
-    margin-left: 4rem;
+.logo {
+    height: 2rem;
+
 }
 
-#leftpara {
-    margin-top: 5vh;
-    margin-left: 4rem;
+button  {
+    background-color: #182052;
+    margin-top: 1rem;
+    margin-right: 35px;
+    height: 2rem;
+    border-radius: 5rem;
+    margin-bottom: 2px;
+    display: flex;           /* Use flexbox layout for button content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
 }
 
-button {
-    background-color: rgb(255, 76, 0);
+
+
+
+.navbar-custom {
+    background-color: #182052;
 }
 
-#rightcard {
-    margin-top: 8rem;
-    margin-left: 0px;
-    margin-right: 40px;
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
 }
 
-.loginButton {
-    font-family: "Montserrat";
-    display: flex;
-    justify-content: center;
+.navbar-custom .nav-item.active .nav-link {
+    color: #f8f9fa !important;
 }
 
-#learn {
-    margin-left: 4rem;
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu {
+    background-color: #24307F;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 46px;
+    font-weight: 800;
+}
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-text {
+    margin-right: 0;
+}
+
+footer {
+    background-color: #182052;
+}
+
+
+#card{
+    background: #182052;
+    color: #f8f9fa;
+    border-radius: 25px;
+   display: flex;
+ justify-content: center;
+
 }

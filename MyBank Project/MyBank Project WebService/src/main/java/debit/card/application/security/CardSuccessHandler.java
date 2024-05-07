@@ -1,7 +1,7 @@
 package debit.card.application.security;
 
 
-import debits.cards.dao.entities.CardSecurity;
+import debits.cards.dao.entities.Customer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class CardSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-        CardSecurity cardSecurity= (CardSecurity) authentication.getPrincipal();
+       Customer cardSecurity= (Customer) authentication.getPrincipal();
         if(cardSecurity.getCustomerStatus().equals("active")){
             if (cardSecurity.getAttempts() > 1) {
                 cardSecurity.setAttempts(1);

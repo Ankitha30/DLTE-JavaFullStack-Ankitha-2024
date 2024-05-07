@@ -1,5 +1,5 @@
 body {
-    background-image:url('/images/login-image.jpg');
+    background-image:url('/images/loginBackground.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 label{
     font-family: Montserrat;
     color: white;
@@ -35,35 +36,7 @@ img{
     color: white;
 }
 
-.login-info {
-    color: white;
-    text-align: left;
-    padding-left: 20px;
-    padding-bottom: 40px;
-}
 
-/* Added styles for text */
-.login-info p {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-}
-
-.login-info p:nth-child(2) {
-    margin-bottom: 20px;
-}
-
-/* Added custom class for button */
-.narrow-btn {
-    width: 50%;
-    margin: 0 auto;
-    background-color: #f25c19;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 20px;
-    border: none;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
 
 
 #login:hover {
@@ -77,13 +50,50 @@ img{
 
 }
 
+.login-info {
+    color: white; /* Changed text color to black */
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 40px;
+}
 
+/* Added styles for text */
+.login-info p {
+    margin: 0;
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+/* Add margin-bottom for the second paragraph */
+.login-info p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+/* Added custom class for narrow button */
+.narrow-btn {
+    width: 50%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the button */
+    background-color: #f25c19; /* Orange color */
+    color: white; /* Text color */
+    font-family: Poppins; /* Poppins font */
+    /*font-weight: bold;*/
+    border-radius: 20px;
+    border: none; /* Remove default button border */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background color and box shadow change */
+}
+
+/* Button hover effect */
+.narrow-btn:hover,
+.narrow-btn:focus {
+    background-color: #f25c19; /* Orange color on hover */
+    color: white; /* Text color on hover */
+}
 .narrow-btn1 {
     width: 50%; /* Adjust the width as needed */
     margin: 0 auto; /* Center the button */
     background-color: grey; /* Orange color */
     color: white; /* Text color */
-    font-family: 'Poppins', sans-serif; /* Poppins font */
+    font-family: Poppins; /* Poppins font */
     /*font-weight: bold;*/
     border-radius: 20px;
     border: none; /* Remove default button border */
@@ -118,6 +128,21 @@ input.form-control {
     border-radius: 20px;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

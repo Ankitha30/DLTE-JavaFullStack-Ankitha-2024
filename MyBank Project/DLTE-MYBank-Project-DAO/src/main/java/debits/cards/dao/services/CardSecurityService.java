@@ -1,6 +1,6 @@
 package debits.cards.dao.services;
 
-import debits.cards.dao.entities.CardSecurity;
+import debits.cards.dao.entities.Customer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.ResourceBundle;
 
 @Service
@@ -23,15 +22,15 @@ public class CardSecurityService implements UserDetailsService {
 
     Logger logger = LoggerFactory.getLogger(CardSecurityService.class);
 
-    public CardSecurity signingUp(CardSecurity cardSecurity) {
-        jdbcTemplate.update("insert into mybank_app_customer (CUSTOMER_NAME, CUSTOMER_ADDRESS, CUSTOMER_STATUS, CUSTOMER_CONTACT, USERNAME, PASSWORD) values(?,?,?,?,?,?)", new Object[]{cardSecurity.getCustomerName(), cardSecurity.getCustomerAddress(), cardSecurity.getCustomerStatus(), cardSecurity.getCustomerContact(), cardSecurity.getUsername(), cardSecurity.getPassword()});
-        logger.info("New customer registered: {}", cardSecurity.getUsername());
-        return cardSecurity;
+    public Customer signingUp(Customer customer) {
+        jdbcTemplate.update("insert into mybank_app_customer (CUSTOMER_NAME, CUSTOMER_ADDRESS, CUSTOMER_STATUS, CUSTOMER_CONTACT, USERNAME, PASSWORD) values(?,?,?,?,?,?)", new Object[]{customer.getCustomerName(), customer.getCustomerAddress(), customer.getCustomerStatus(), customer.getCustomerContact(), customer.getUsername(), customer.getPassword()});
+        logger.info("New customer registered: {}", customer.getUsername());
+        return customer;
     }
 
-    public CardSecurity findByUserName(String username) {
-        List<CardSecurity> customerList = jdbcTemplate.query("select * from mybank_app_customer", new BeanPropertyRowMapper<>(CardSecurity.class));
-        CardSecurity customer = customerList.stream().filter(each->each.getUsername().equals(username)).findFirst().orElse(null);
+    public Customer findByUserName(String username) {
+        List<Customer> customerList = jdbcTemplate.query("select * from mybank_app_customer", new BeanPropertyRowMapper<>(Customer.class));
+        Customer customer = customerList.stream().filter(each->each.getUsername().equals(username)).findFirst().orElse(null);
         if(customer ==null)
             throw new UsernameNotFoundException(username);
 
@@ -40,13 +39,13 @@ public class CardSecurityService implements UserDetailsService {
 
     }
 
-    public void updateAttempts(CardSecurity cardSecurity) {
-        jdbcTemplate.update("update mybank_app_customer set attempts = ? where username = ?", new Object[]{cardSecurity.getAttempts(), cardSecurity.getUsername()});
+    public void updateAttempts(Customer customer) {
+        jdbcTemplate.update("update mybank_app_customer set attempts = ? where username = ?", new Object[]{customer.getAttempts(), customer.getUsername()});
         logger.info(resourceBundle.getString("attempts.updated"));
     }
 
-    public void updateStatus(CardSecurity cardSecurity) {
-        jdbcTemplate.update("update mybank_app_customer set customer_status = 'block' where username = ?", new Object[]{cardSecurity.getUsername()});
+    public void updateStatus(Customer customer) {
+        jdbcTemplate.update("update mybank_app_customer set customer_status = 'block' where username = ?", new Object[]{customer.getUsername()});
         logger.info(resourceBundle.getString("status.changed"));
     }
 
@@ -54,9 +53,9 @@ public class CardSecurityService implements UserDetailsService {
         try {
             String sql = "SELECT c.username FROM mybank_app_customer c JOIN mybank_app_account a ON c.customer_id = a.customer_id  JOIN mybank_app_debitcard d ON a.account_number = d.account_number WHERE d.account_number =  ?";
             return jdbcTemplate.queryForObject(sql, new Object[]{accountNumber}, String.class);
-        } catch (Exception e) {
+        } catch (Exception exception) {
 
-            e.printStackTrace();
+            exception.printStackTrace();
         }
         return null;
     }
@@ -73,9 +72,9 @@ public class CardSecurityService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        CardSecurity cardSecurity = findByUserName(username);
-        if (cardSecurity == null)
+        Customer customer = findByUserName(username);
+        if (customer == null)
             throw new UsernameNotFoundException(username);
-        return cardSecurity;
+        return customer;
     }
 }

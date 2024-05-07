@@ -10,14 +10,13 @@
     </parent>
     <groupId>debits.cards.application</groupId>
     <artifactId>card-spring-boot</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <name>DLTE--MyBank-Project-DAO</name>
     <description>Demo project for My bank Project DAO</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
@@ -31,7 +30,6 @@
             <artifactId>ojdbc6</artifactId>
             <scope>runtime</scope>
             <version>11.2.0.4</version>
-
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -40,6 +38,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>

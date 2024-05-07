@@ -1,6 +1,6 @@
 package debit.card.application.security;
 
-import debits.cards.dao.entities.CardSecurity;
+import debits.cards.dao.entities.Customer;
 import debits.cards.dao.services.CardSecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -20,7 +20,7 @@ public class CardSecurityApi {
         PasswordEncoder passwordEncoder;
 
         @PostMapping("/register")
-        public CardSecurity save(@RequestBody CardSecurity cardSecurity){
+        public Customer save(@RequestBody Customer cardSecurity){
             cardSecurity.setPassword(passwordEncoder.encode(cardSecurity.getPassword()));
             return cardSecurityServices.signingUp(cardSecurity);
         }

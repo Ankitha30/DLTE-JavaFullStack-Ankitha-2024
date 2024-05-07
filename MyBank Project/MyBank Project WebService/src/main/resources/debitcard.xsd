@@ -25,7 +25,12 @@
     </xsd:complexType>
 
     <xsd:element name="viewDebitCardRequest">
-        <xsd:complexType/>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="customerId" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+
     </xsd:element>
 
     <xsd:element name="viewDebitCardResponse">

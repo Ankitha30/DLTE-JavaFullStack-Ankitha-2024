@@ -3,28 +3,15 @@ package debits.cards.dao.entities;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import java.util.Collection;
 
 public class Customer implements UserDetails {
 
-    @Pattern(regexp = "^[a-zA-Z ]+$", message = "{customer.name.valid}")
-    @NotNull(message= "{customer.name.null}")
     private String customerName;
-    @NotNull(message= "{customer.address.null}")
     private String customerAddress;
-    @NotNull(message= "{customer.status.null}")
     private String customerStatus;
-    @Digits(integer = 10, fraction = 0, message = "{contact.valid}")
-    @NotNull(message= "{customer.contact.null}")
     private Long customerContact;
-    @Pattern(regexp = "^[a-zA-Z ]+$", message = "{customer.name.valid}")
-    @NotNull(message= "{customer.name.null}")
     private String username;
-    @Pattern(regexp = "^[a-zA-Z0-9 ]+$", message = "{customer.name.valid}")
-    @NotNull(message= "{customer.name.null}")
     private String password;
     private final int maxAttempt = 3;
     private Integer attempts;
@@ -36,9 +23,6 @@ public class Customer implements UserDetails {
     public void setCustomerId(Integer customerId) {
         this.customerId = customerId;
     }
-
-    @Digits(integer = 10, fraction = 0, message = "{card.customer.valid}")
-
     private Integer customerId;
 
     public String getCustomerName() {

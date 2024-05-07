@@ -44,7 +44,7 @@ BEGIN
         ELSIF v_account_status != 'active' THEN
             p_status := 'SQLCODE-002'; --  "Account is not active"
         ELSE 
-            p_status := 'SQLCODE-003'; --  "Debit card limit update failed"
+            p_status := 'SQLCODE-003'; --  "Debit card  update failed"
         END IF;
     EXCEPTION
         WHEN NO_DATA_FOUND THEN

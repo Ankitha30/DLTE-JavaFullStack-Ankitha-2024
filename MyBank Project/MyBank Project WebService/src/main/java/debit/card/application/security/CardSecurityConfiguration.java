@@ -70,6 +70,8 @@ public class CardSecurityConfiguration {
         httpSecurity.authorizeRequests().antMatchers("/bank/register").permitAll();
 //        httpSecurity.authorizeRequests().antMatchers("/debitcardrepo/debitcard.wsdl").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/css/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/images/**").permitAll();
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
 

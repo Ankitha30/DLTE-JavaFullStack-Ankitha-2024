@@ -1,6 +1,6 @@
 package debit.card.application.security;
 
-import debits.cards.dao.entities.CardSecurity;
+import debits.cards.dao.entities.Customer;
 import debits.cards.dao.services.CardSecurityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,45 +24,57 @@ public class CardFailure extends SimpleUrlAuthenticationFailureHandler {
     @Autowired
     CardSecurityService service;
 
-    Logger logger= LoggerFactory.getLogger(CardFailure.class);
-    ResourceBundle resourceBundle=ResourceBundle.getBundle("cards");
+    Logger logger = LoggerFactory.getLogger(CardFailure.class);
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("cards");
 
 
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
-        try{
+        try {
             String username = request.getParameter("username");
-
-            CardSecurity customer = service.findByUserName(username);
-            System.out.println(customer.toString());
-            if(customer!=null) {
-                if (customer.getCustomerStatus().equalsIgnoreCase("active")) {
-                    if (customer.getAttempts() < customer.getMaxAttempt()) {
-                        customer.setAttempts(customer.getAttempts() + 1);
-                        service.updateAttempts(customer);
-                        logger.warn(resourceBundle.getString("invalid.data"));
-                        exception = new LockedException("Invalid Password\n"+(4 - customer.getAttempts()) + " Attempts remaining");
-                        String err = customer.getAttempts() + " " + exception.getMessage();
-                        logger.warn(err);
-                        super.setDefaultFailureUrl("/web/?error=" + err);
+            if (username != null && !username.isEmpty()) {
+                Customer customer = service.findByUserName(username);
+                if (customer != null) {
+                    if (customer.getCustomerStatus().equalsIgnoreCase("active")) {
+                        if (customer.getAttempts() < customer.getMaxAttempt()) {
+                            customer.setAttempts(customer.getAttempts() + 1);
+                            service.updateAttempts(customer);
+                            logger.warn(resourceBundle.getString("invalid.data"));
+                            exception = new LockedException("Invalid Password\n" + (4 - customer.getAttempts()) + " Attempts remaining");
+                            String err = customer.getAttempts() + " " + exception.getMessage();
+                            logger.warn(err);
+                            super.setDefaultFailureUrl("/web/?error=" + err);
+                        } else {
+                            service.updateStatus(customer);
+                            logger.warn(resourceBundle.getString("account.suspend"));
+                            exception = new LockedException(resourceBundle.getString("account.suspend"));
+                            setDefaultFailureUrl("/web/?error=" + exception.getMessage());
+                        }
                     } else {
-                        service.updateStatus(customer);
-                        exception = new LockedException(resourceBundle.getString("max.reached"));
+                        logger.warn(resourceBundle.getString("contact.admin"));
+                        exception = new LockedException(resourceBundle.getString("contact.admin"));
                         super.setDefaultFailureUrl("/web/?error=" + exception.getMessage());
                     }
-                }
-                else {
+                } else {
                     super.setDefaultFailureUrl("/web/?errors=User not exists");
                 }
+            } else {
+                // Handle case where username parameter is null or empty
+                logger.warn(resourceBundle.getString("invalid.username"));
+                exception = new LockedException(resourceBundle.getString("invalid.username"));
+                super.setDefaultFailureUrl("/web/?error=" + exception.getMessage());
             }
-        }catch (UsernameNotFoundException e){
+        } catch (
+                UsernameNotFoundException e) {
             logger.info(e.toString());
             logger.warn(resourceBundle.getString("account.suspended"));
             exception = new LockedException(resourceBundle.getString("user.not.found"));
             super.setDefaultFailureUrl("/web/?error=" + exception.getMessage());
 
         }
-        super.onAuthenticationFailure(request, response, exception);
+        super.
+
+                onAuthenticationFailure(request, response, exception);
     }
 
 
