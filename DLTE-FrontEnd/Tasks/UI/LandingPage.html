@@ -43,19 +43,19 @@
                 const credentials = btoa(username+":"+password)
 
                 $.ajax({
-                    url:"http://localhost:8082/login",
+                    url:"http://localhost:8082/web/",
                     type:"GET",
                     beforeSend:function(handler){
                         handler.setRequestHeader("Authorization","Basic "+credentials)
                     },
                     success:function(response){
-                        // alert(JSON.stringify(response))
+                        alert(JSON.stringify(response))
                         sessionStorage.setItem("logged",credentials)
                         location.assign("http://127.0.0.1:5500/Tasks/UI/DashBoard.html")
                     },
                     error:function(xhr, status, error){
-                        // console.log(xhr.responseText)
-                        // alert(JSON.stringify(error))
+                        console.log(xhr.responseText)
+                        alert(JSON.stringify(error))
                         location.assign("http://127.0.0.1:5500/Tasks/UI/LandingPage.html")
                     }
                 })

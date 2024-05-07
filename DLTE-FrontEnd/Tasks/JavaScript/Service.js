@@ -1,5 +1,5 @@
 const cardData = {
-    "123456789": [
+    "17896570987961": [
         { "debitCardNumber": "1111 2222 3333 4444", "customerId": "001", "debitCardCvv": "123", "debitCardPin": "5678", "debitCardStatus": "Active", "domesticLimit": "1000", "internationalLimit": "5000" },
         { "debitCardNumber": "5555 6666 7777 8888", "customerId": "001", "debitCardCvv": "456", "debitCardPin": "9012", "debitCardStatus": "Block", "domesticLimit": "1500", "internationalLimit": "7500" },
         { "debitCardNumber": "2222 4343 5678 1234", "customerId": "001", "debitCardCvv": "246", "debitCardPin": "1234", "debitCardStatus": "Block", "domesticLimit": "5600", "internationalLimit": "9800" },
@@ -8,7 +8,7 @@ const cardData = {
         { "debitCardNumber": "2222 4343 5678 1234", "customerId": "001", "debitCardCvv": "246", "debitCardPin": "1234", "debitCardStatus": "Block", "domesticLimit": "5600", "internationalLimit": "9800" },
         { "debitCardNumber": "2222 4343 5678 1234", "customerId": "001", "debitCardCvv": "246", "debitCardPin": "1234", "debitCardStatus": "Block", "domesticLimit": "5600", "internationalLimit": "9800" }],
     
-    "987654321": [
+    "19876543219870": [
         { "debitCardNumber": "9999 0000 1111 2222", "customerId": "002", "debitCardCvv": "789", "debitCardPin": "3456", "debitCardStatus": "Active", "domesticLimit": "2000", "internationalLimit": "1000" }
     ]
 };
@@ -61,4 +61,3 @@ function showCardDetails(debitCardNumber, customerId, debitCardCvv, debitCardPin
     const modal = new bootstrap.Modal(document.getElementById('cardDetailsModal'));
     modal.show();
 }
-

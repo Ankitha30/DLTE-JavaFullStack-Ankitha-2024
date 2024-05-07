@@ -9,7 +9,50 @@
 </head>
 <body>
 
-<div class="container mt-5">
+   
+
+        <table class="table mt-3">
+            <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Date</th>
+                <th>Sender</th>
+                <th>Receiver</th>
+                <th>Remarks</th>
+                <th>Amount</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="transaction : ${transactions}">
+                <td th:text="${transaction.transactionId}"></td>
+                <td th:text="${transaction.transactionDate}"></td>
+                <td th:text="${transaction.transactionBy}"></td>
+                <td th:text="${transaction.transactionTo}"></td>
+                <td th:text="${transaction.remarks}"></td>
+                <td th:text="${transaction.transactionAmount}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container mt-5">
     <h2>Debit Card Application Form</h2>
     <form id="debitCardForm">
         <div class="form-group">
@@ -48,8 +91,11 @@
             <input type="text" class="form-control" id="applicantPAN" name="applicantPAN" required>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-con">
+
+        </div>
     </form>
-</div>
+</div> -->
 
 <!-- Bootstrap JS and dependencies (jQuery, Popper.js) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -1,5 +1,5 @@
 const cardData = {
-    "123456789": [{
+    "19876543219870": [{
             "debitCardNumber": "1111 2222 3333 4444",
             "customerId": "001",
             "debitCardCvv": "123",
@@ -63,7 +63,7 @@ const cardData = {
             "internationalLimit": "9800"
         }
     ],
-    "987654321": [{
+    "17896570987961": [{
         "debitCardNumber": "9999 0000 1111 2222",
         "customerId": "002",
         "debitCardCvv": "789",
@@ -77,7 +77,7 @@ const cardData = {
         "customerId": "002",
         "debitCardCvv": "789",
         "debitCardPin": "3456",
-        "debitCardStatus": "Active",
+        "debitCardStatus": "Block",
         "domesticLimit": 2000,
         "internationalLimit": 1000
     }
