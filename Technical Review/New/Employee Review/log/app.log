@@ -1,0 +1,4 @@
+12:42:20.625 [34m[main][0;39m INFO  com.console.EmployeeMenu - [34mNot valid format[0;39m 
+12:42:21.486 [34m[main][0;39m INFO  com.console.EmployeeMenu - [34mNot valid format[0;39m 
+12:42:22.364 [34m[main][0;39m INFO  com.console.EmployeeMenu - [34mNot valid format[0;39m 
+12:42:23.684 [1;31m[main][0;39m ERROR com.console.EmployeeMenu - [1;31mInput mismatch occurred [0;39m 

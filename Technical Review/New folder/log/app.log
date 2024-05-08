@@ -1,0 +1,15 @@
+15:01:07.275 [1;31m[main][0;39m ERROR o.console.CollectAndDisplayDetails - [1;31mInput mismatch occurred null[0;39m 
+15:01:50.706 [1;31m[main][0;39m ERROR o.console.CollectAndDisplayDetails - [1;31mInput mismatch occurred [0;39m 
+07:36:44.239 [34m[main][0;39m INFO  org.repository.DataAnalyzer - [34mData has been successfully written to the file.[0;39m 
+07:39:19.176 [1;31m[main][0;39m ERROR o.console.CollectAndDisplayDetails - [1;31mInvalid phone number.
+ Please re-enter the valid Phone number.
+[0;39m 
+07:44:07.623 [31m[main][0;39m WARN  o.console.CollectAndDisplayDetails - [31mInvalid Pin.
+ Please re-enter the valid Pin.
+[0;39m 
+07:44:16.736 [34m[main][0;39m INFO  org.repository.DataAnalyzer - [34mData has been successfully written to the file.[0;39m 
+07:51:07.382 [34m[main][0;39m INFO  org.repository.DataAnalyzer - [34mData has been successfully written to the file.[0;39m 
+07:52:34.179 [31m[main][0;39m WARN  o.console.CollectAndDisplayDetails - [31mInvalid PIN.
+ Please re-enter the valid PIN.
+[0;39m 
+07:53:13.960 [34m[main][0;39m INFO  org.repository.DataAnalyzer - [34mData has been successfully written to the file.[0;39m 
